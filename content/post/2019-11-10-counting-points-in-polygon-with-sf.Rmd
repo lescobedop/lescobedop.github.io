@@ -1,0 +1,146 @@
+---
+title: Counting points in polygon with sf
+author: Lucho Escobedo
+date: '2019-11-10'
+slug: counting-points-in-polygon-with-sf
+categories:
+  - R
+tags:
+  - sf
+  - rstats
+  - rspatial
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+### Introduction
+
+Most of my work as a data scientist has been dedicated to marketing and sales projects. Almost always, I relied on geocomputation to create out-of-the-box features that help me explain customers and product behavior.
+
+Here is an example from the real world. I remember a question -more like a confession- coming from a senior member of the client's team: *"We would like to know how many competitors do our stores have between 1-5 kilometers?"*. I did the counts, and end up including this and other calculations in my models. Also I found out that there was a lot of room for store consolidation, and that led to another different project.
+
+To summarize, it was not the first and only time I received this question (or its *distance* variation), but actually recieved it **countless** of times. It may sound very familiar to me because of my background, but from my experience most of the time the reader will find that knowing how to deal with geographic data is very useful. 
+
+In this mini-project I will create 50 meter buffers based on the client's stores, and will count how many competitors lie within those areas. Let's start!
+
+But first, the libraries:
+```{r libraries, message=FALSE}
+library(sf)
+library(dplyr)
+library(ggplot2)
+
+```
+
+
+### Loading the data
+
+The fictional data set is called `LocationsStores.csv` and provides geographic coordinates (WGS84 datum). The data has a total of 39 stores with information regarding their size (`employees`), sales (`avgmonthsales`) and membership (`class`).
+
+```{r Loading Data, include = TRUE}
+
+setwd("/Users/luchoescobedo/Documents/WORK/Projects/SpatialFunctions/")
+locations <- read.csv("LocationStores.csv")
+
+dim(locations)
+head(locations)
+str(locations)
+
+```
+
+The data comes in a format that reads coordinates as continuous variables. What we need to do is project the coordinates into the geographic space, and convert them into spatial entities. In order to do this task, we use the package `sf` and the function `st_as_sf()`. Please, note that we explicitly include the the coordinate reference system (CRS) for WGS84.
+
+Once we have our data in a spatial entity format, it is possible to manipulate it. the graph below is just a way of displaying the information provided by the spatial entities irrespective of location. The plot shows pink circles for stores belonging to our client, and blue triangles for the competitors stores. the size vary in terms of their number of employees. 
+
+```{r Transforming data, fig.align='center'}
+
+# Reading the data
+locations_sf <- st_as_sf(locations, coords = c("lon", "lat"), crs = "+init=epsg:4326")
+
+# Plot the map
+ggplot(locations, aes(colour = class, size = employees, shape = class)) + 
+  geom_sf(data = locations_sf) +
+  labs(title = "Stores location" ,
+       subtitle = "Clients and Competitors",
+        x ="Longitude", y = "Latitude") +
+  theme(legend.position = "none",
+        axis.text.x  = element_text(size = 6),
+        axis.text.y  = element_text(size = 6))
+
+```
+
+### Creating the buffers
+
+The next step is creating the buffers based on the locations of the clients' stores. Clients and competitors are points in the space subject to geographic distortion. As such, every time my points have geographic coordinates and need to perform any type of distance analysis, I change the geographic coordinates to a projected coordinates. 
+
+Geographic coordinates are based on a spheroid and utilize angular units (degrees), whereas projected coordinates are based on a plane and utilize linear units. In this mini-project I use meters. The transfomation is easy to do using st_transform and inluding the ESPG number of the projection (UTM 18S).
+
+```{r Constructing the buffer, fig.align='center'}
+# Changing to projected coordinates
+locations_sf_utm <- st_transform(locations_sf, 32718)
+
+# Splitting the data
+competitor <- locations_sf_utm %>% 
+  filter(class == "Competitor")
+
+client <- locations_sf_utm %>% 
+  filter(class == "Client")
+
+
+buffers <- st_buffer(client, 50)
+buffers <- buffers %>% select(id, class)
+
+ggplot(client, aes(colour = class)) + 
+  geom_sf(data = buffers, alpha = 0.7) +
+  geom_sf(data = client) +
+  labs(title = "Stores location" ,
+       subtitle = "Clients and Buffers",
+        x ="Longitude", y = "Latitude") +
+  theme(legend.position = "none",
+        axis.text.x  = element_text(size = 6),
+        axis.text.y  = element_text(size = 6))
+
+```
+Please, note that once the coordinates are changed, I split the data into a competitors set and a client set. I created the buffers using the latter with the function `st_buffer()`, which receives a spatial entity and a radius in the units the projection is (meters). At the end of this computation I will have 2 sets of spatial entities: points (clients and competitors stores) and polygons (buffers). The plot below shows how the buffers look like. The centers of the buffers are the clients' stores.
+
+### Running the analysis 
+
+Now with the point spatial entity (competitor) and polygon spatial entity (buffers), we perform a spatial join. I created a function using `st_join()`, that allow me to count how many of the 11 competitors is within the 28 buffers. 
+
+```{r Count function}
+count_in_buffer <- function(polygon, point) {
+  temp = st_join(point, polygon, join = st_within)
+  temp2 = count(as_tibble(temp), id.y)
+  temp2 = temp2 %>% filter(!is.na(id.y)) %>% rename(id = id.y, count_comp = n)
+  }
+```
+
+The result of this function is a data frame showing the id of the client's buffer and the number of competitors that stores have at 50 meters distance.
+
+```{r Application, fig.align='center'}
+(competitors_count <- count_in_buffer(buffers, competitor))
+
+buffer_ids <- competitors_count$id
+
+buffers_ss <- buffers[buffers$id %in% buffer_ids, ]
+
+ggplot(client, aes(colour = class)) + 
+  geom_sf(data = buffers_ss, alpha = 0.7) +
+  geom_sf(data = client) +
+  geom_sf(data = competitor) +
+  labs(title = "Competitors within 50 meters" ,
+       subtitle = "Clients buffers",
+        x ="Longitude", y = "Latitude") +
+  theme(legend.position = "none",
+        axis.text.x  = element_text(size = 6),
+        axis.text.y  = element_text(size = 6))
+
+```
+
+### Final thoughts
+
+The plot shows that there exist 6 stores from my client havig at least 1 competitor in a 50 meter radius. The table shows the pairwise identification. A next step in this analysis could be integrating characteristics from the individual store in the analysis, such as number of employees, monthly sales, and years active in the market. 
+
+Something to keep in mind is that there is a bigger opportunity for consolidation in my client's stores. Would my client consider a bigger store to consolidate sales of certain areas? What would be the impact of creating a bigger store at expense of closing smaller stores?  

@@ -1,0 +1,113 @@
+---
+title: Creating a Nearest Competitor Function
+author: Lucho Escobedo
+date: '2019-11-16'
+slug: creating-a-nearest-competitor-function
+categories:
+  - R
+tags:
+  - sp
+  - tidyverse
+  - rstats
+  - rspatial
+---
+
+
+
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<p>In my first post I mentioned that it is often relevant to use geocomputation to create out-of-the-box features that help explain customers and product behavior. As you may recall, I counted how many competitors my client’s stores had in a 50 meter radius… but, if you think about it, that is limiting the analysis based on a pre-specified radius. Maybe we can extend the analysis, but how can we do it?</p>
+<p>In this mini-project I will create a function to calculate distance of my client’s stores to their nearest competitor. In the end, we will have a table showing the distance for every store of my client to the the nearest store of the competition, so it wil be a 1-to-one relationship. Let’s start!</p>
+</div>
+<div id="loading-the-data" class="section level3">
+<h3>Loading the data</h3>
+<p>First the libraries:</p>
+<pre class="r"><code>library(sp)
+library(rgeos)
+library(rgdal)
+library(tidyverse)</code></pre>
+<p>Just like in the previous post, I am using the fictional data called <code>LocationsStores.csv</code>. This data provides geographic coordinates (WGS84 datum), has a total of 39 stores with information regarding their size (<code>employees</code>), sales (<code>avgmonthsales</code>) and membership (<code>class</code>).</p>
+<p>Unless you are using a geograhic information software, the coordinates stored in a *.csv file will be treated as continuous variables. We need to transform the coordinates into spatial objects and for that it is worth using the package <code>sp</code>. This packages has a function called <code>SpatialPointsDataFrame()</code> that takes as arguments the coordinates (<code>xy</code>), the data itself (<code>locations</code>) and the coordinates reference system (<code>proj4string</code>) of the locations. Please, note that we explicitly include the the coordinate reference system (CRS) for WGS84.</p>
+<p>Once we have our data in a spatial entity format, it is possible to manipulate it. Just like in the previous post, I’ll change the coordinates from geographics to projected as the latter are better for distance analysis (<code>locations_spdf_utm</code>). I used the UTM Zone 18S projection. Likewise, I have splitted the data so that we can recreate the distances between clients and competitors as 2 differente entities.</p>
+<pre class="r"><code># Transforming to UTM 18S
+locations_spdf_utm &lt;- spTransform(locations_spdf,
+                                  CRS = &quot;+init=epsg:32718 +proj=utm +zone=18 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs&quot;)
+
+# Splitting the data
+competitor &lt;- locations_spdf_utm[locations_spdf_utm$class == &quot;Competitor&quot;,]
+client &lt;- locations_spdf_utm[locations_spdf_utm$class == &quot;Client&quot;,]</code></pre>
+</div>
+<div id="creating-the-nearest-competitor-function" class="section level3">
+<h3>Creating the Nearest Competitor Function</h3>
+<p>The next step is creating a function that allows us knowing what is the nearest competitors for each of my client’s stores and what is that distance. In order to do that I created a small function called <code>ncomp</code> which stands for nearest competitor.</p>
+<pre class="r"><code>## Function: Distances between different entities ##
+ncomp &lt;- function(entity1, entity2) {
+  dist &lt;- gDistance(entity2[, 1], entity1[, 1], byid = T)
+  dist_min &lt;- apply(dist, 1, function(x) order(x, decreasing = F)[1])
+  df &lt;- cbind(entity1[, 1], entity2[, 1][dist_min,], apply(dist, 1, function(x) sort(x, decreasing=F)[1]))
+  colnames(df@data) &lt;- c(&quot;from_id&quot;, &quot;to_id&quot;, &quot;distance&quot;)
+  df &lt;- df@data
+  df &lt;- df[order(df$distance),]
+  df$distance &lt;- round(df$distance, 1)
+  return(df)
+}</code></pre>
+<p>My function allows me to calculate, sort and select the smallest distance between two spatial entities. Likewise, the output will be a data frame that will have 3 columns: client id (<code>from_id</code>), competitors id (<code>to_id</code>) and the distance between them (<code>distance</code>).</p>
+</div>
+<div id="results" class="section level3">
+<h3>Results</h3>
+<p>A simple <code>range()</code> function can tell you a lot about the variation of distances between clients and competitor stores. There are stores that are vistually together, and there are stores that at least share a block.</p>
+<pre class="r"><code># Applying the function
+client_dist &lt;- ncomp(client, competitor)
+
+# Seeing the results
+client_dist[1:10, ]</code></pre>
+<pre><code>##    from_id   to_id distance
+## 21 1472881 1366972     11.8
+## 8   427597  423816     24.4
+## 22 1499598 1469834     26.0
+## 7   425262  423816     31.4
+## 28 1531273 1158588     33.6
+## 24 1504912 1505187     39.0
+## 27 1526140  649671     54.5
+## 20 1472346 1391603     59.1
+## 1   423518  423523     59.5
+## 2   423543  423816     61.1</code></pre>
+<pre class="r"><code># Checking what is the overall range of distances between locations
+range(client_dist$distance)</code></pre>
+<pre><code>## [1]  11.8 308.1</code></pre>
+<p>If we spend just a little more time manipulating the data, we can create distance brakets so that we better establish the distribution of the distances between cients and competitors.</p>
+<pre class="r"><code># Creating the brakets
+client_dist &lt;- client_dist %&gt;% mutate(range = ifelse(distance &lt; 50,
+                                                     &quot;Less than 50m&quot;,
+                                                     ifelse(distance &gt;= 50 &amp; distance &lt; 100, 
+                                                            &quot;50m - 100m&quot;,
+                                                            ifelse(distance &gt;= 100 &amp; distance &lt; 150, 
+                                                                   &quot;100m - 150m&quot;,
+                                                                   ifelse(distance &gt;= 150 &amp; distance &lt; 200, 
+                                                                          &quot;150m - 200m&quot;,
+                                                                          ifelse(distance &gt;= 200, &quot;More than 200m&quot;, &quot;error&quot;))))))
+
+# Re-ordering the labels created
+client_dist_table &lt;- client_dist %&gt;% 
+        group_by(range) %&gt;% 
+        tally() %&gt;%
+        mutate(freq = round(100 * n/sum(n), 0))
+
+client_dist_table$range &lt;- ordered(client_dist_table$range, 
+                                   levels = c(&quot;Less than 50m&quot;, &quot;50m - 100m&quot;,
+                                             &quot;100m - 150m&quot;, &quot;150m - 200m&quot;, 
+                                             &quot;More than 200m&quot;))</code></pre>
+<p>From the graph below we have a much better landscape on how my client is located with respect its competitors. For instance, 60% of my client’s stores have at least one competitor between 100 meters.</p>
+<pre class="r"><code>ggplot(data = client_dist_table, aes(x = range, y = freq)) + 
+        geom_bar(stat = &quot;identity&quot;) + 
+        coord_flip() +
+        geom_text(aes(label = paste(freq, &quot;%&quot;, sep =&quot;&quot;)),
+                  hjust = -0.15, size = 2.5) +
+        labs(title = &quot;Distance brakets between clients and competitors&quot;, 
+         x = &quot;Percentage&quot;, y = &quot;Distance Range&quot;)</code></pre>
+<p><img src="/post/2019-11-11-creating-a-nearest-competitor-function_files/figure-html/Graph-1.png" width="672" /></p>
+</div>
+<div id="final-thoughts" class="section level3">
+<h3>Final thoughts</h3>
+<p>We’ve only assessed the distance between clients and competitors stores, but not their impact. As a possible next step, it could be interesting to see the magnitude of the sales with respect to the distance between stores. Also, it could be very interesting to see if distances are as short between client’s stores only. In a way, the data shows that clients stores may be subject of cannibalism.</p>
+</div>

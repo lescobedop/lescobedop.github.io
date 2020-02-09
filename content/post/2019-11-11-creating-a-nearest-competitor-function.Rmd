@@ -1,0 +1,156 @@
+---
+title: Creating a Nearest Competitor Function
+author: Lucho Escobedo
+date: '2019-11-16'
+slug: creating-a-nearest-competitor-function
+categories:
+  - R
+tags:
+  - sp
+  - tidyverse
+  - rstats
+  - rspatial
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+rm(list=ls())
+
+```
+
+
+### Introduction
+
+In my first post I mentioned that it is often relevant to use geocomputation to create out-of-the-box features that help explain customers and product behavior. As you may recall, I counted how many competitors my client's stores had in a 50 meter radius... but, if you think about it, that is limiting the analysis based on a pre-specified radius. Maybe we can extend the analysis, but how can we do it?
+
+In this mini-project I will create a function to calculate distance of my client's stores to their nearest competitor. In the end, we will have a table showing the distance for every store of my client to the the nearest store of the competition, so it wil be a 1-to-one relationship. Let's start!
+
+
+### Loading the data
+
+First the libraries:
+```{r libraries, message=FALSE}
+library(sp)
+library(rgeos)
+library(rgdal)
+library(tidyverse)
+
+```
+
+Just like in the previous post, I am using the fictional data called `LocationsStores.csv`. This data provides geographic coordinates (WGS84 datum), has a total of 39 stores with information regarding their size (`employees`), sales (`avgmonthsales`) and membership (`class`).
+
+```{r Loading Data, include = FALSE}
+
+setwd("/Users/luchoescobedo/Documents/WORK/Projects/SpatialFunctions/")
+locations <- read.csv("LocationStores.csv")
+
+head(locations)
+str(locations)
+
+```
+
+Unless you are using a geograhic information software, the coordinates stored in a *.csv file will be treated as continuous variables. We need to transform the coordinates into spatial objects and for that it is worth using the package `sp`. This packages has a function called `SpatialPointsDataFrame()` that takes as arguments the coordinates (`xy`), the data itself (`locations`) and the coordinates reference system (`proj4string`) of the locations. Please, note that we explicitly include the the coordinate reference system (CRS) for WGS84.
+
+```{r Transforming data, echo=FALSE, include = FALSE}
+# Reading the data
+xy <- locations[,c(2,3)]
+
+locations_spdf <- SpatialPointsDataFrame(coords = xy, 
+                                         data = locations,
+                                         proj4string = CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
+
+```
+
+Once we have our data in a spatial entity format, it is possible to manipulate it. Just like in the previous post, I'll change the coordinates from geographics to projected as the latter are better for distance analysis (`locations_spdf_utm`). I used the UTM Zone 18S projection. Likewise, I have splitted the data so that we can recreate the distances between clients and competitors as 2 differente entities.
+
+```{r Transforming the data}
+# Transforming to UTM 18S
+locations_spdf_utm <- spTransform(locations_spdf,
+                                  CRS = "+init=epsg:32718 +proj=utm +zone=18 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
+
+# Splitting the data
+competitor <- locations_spdf_utm[locations_spdf_utm$class == "Competitor",]
+client <- locations_spdf_utm[locations_spdf_utm$class == "Client",]
+
+```
+
+### Creating the Nearest Competitor Function
+
+The next step is creating a function that allows us knowing what is the nearest competitors for each of my client's stores and what is that distance. In order to do that I created a small function called `ncomp` which stands for nearest competitor. 
+
+```{r Distance function}
+## Function: Distances between different entities ##
+ncomp <- function(entity1, entity2) {
+  dist <- gDistance(entity2[, 1], entity1[, 1], byid = T)
+  dist_min <- apply(dist, 1, function(x) order(x, decreasing = F)[1])
+  df <- cbind(entity1[, 1], entity2[, 1][dist_min,], apply(dist, 1, function(x) sort(x, decreasing=F)[1]))
+  colnames(df@data) <- c("from_id", "to_id", "distance")
+  df <- df@data
+  df <- df[order(df$distance),]
+  df$distance <- round(df$distance, 1)
+  return(df)
+}
+```
+
+My function allows me to calculate, sort and select the smallest distance between two spatial entities. Likewise, the output will be a data frame that will have 3 columns: client id (`from_id`), competitors id (`to_id`) and the distance between them (`distance`).
+
+### Results
+
+A simple `range()` function can tell you a lot about the variation of distances between clients and competitor stores. There are stores that are vistually together, and there are stores that at least share a block.
+
+```{r Results}
+# Applying the function
+client_dist <- ncomp(client, competitor)
+
+# Seeing the results
+client_dist[1:10, ]
+
+# Checking what is the overall range of distances between locations
+range(client_dist$distance)
+
+```
+
+If we spend just a little more time manipulating the data, we can create distance brakets so that we better establish the distribution of the distances between cients and competitors.
+
+```{r Creating brakets}
+# Creating the brakets
+client_dist <- client_dist %>% mutate(range = ifelse(distance < 50,
+                                                     "Less than 50m",
+                                                     ifelse(distance >= 50 & distance < 100, 
+                                                            "50m - 100m",
+                                                            ifelse(distance >= 100 & distance < 150, 
+                                                                   "100m - 150m",
+                                                                   ifelse(distance >= 150 & distance < 200, 
+                                                                          "150m - 200m",
+                                                                          ifelse(distance >= 200, "More than 200m", "error"))))))
+
+# Re-ordering the labels created
+client_dist_table <- client_dist %>% 
+        group_by(range) %>% 
+        tally() %>%
+        mutate(freq = round(100 * n/sum(n), 0))
+
+client_dist_table$range <- ordered(client_dist_table$range, 
+                                   levels = c("Less than 50m", "50m - 100m",
+                                             "100m - 150m", "150m - 200m", 
+                                             "More than 200m"))
+```
+
+From the graph below we have a much better landscape on how my client is located with respect its competitors. For instance, 60\% of my client's stores have at least one competitor between 100 meters.
+
+```{r Graph}
+ggplot(data = client_dist_table, aes(x = range, y = freq)) + 
+        geom_bar(stat = "identity") + 
+        coord_flip() +
+        geom_text(aes(label = paste(freq, "%", sep ="")),
+                  hjust = -0.15, size = 2.5) +
+        labs(title = "Distance brakets between clients and competitors", 
+         x = "Percentage", y = "Distance Range")
+        
+
+```
+
+
+### Final thoughts
+
+We've only assessed the distance between clients and competitors stores, but not their impact. As a possible next step, it could be interesting to see the magnitude of the sales with respect to the distance between stores. Also, it could be very interesting to see if distances are as short between client's stores only. In a way, the data shows that clients stores may be subject of cannibalism.
