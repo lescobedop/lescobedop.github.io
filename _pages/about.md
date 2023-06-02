@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Data and AI Executibe.PhD in Geospatial Economics. #<a href='#'>Affiliations</a>. 
 
 profile:
   align: right
@@ -28,7 +28,3 @@ His unwavering commitment to excellence prioritizes end-user satisfaction while 
 As a respected industry speaker, Lucho sheds light on large-scale machine learning models' implementation, deployment, and monitoring and their impact on companies' bottom line.
 
 Lucho's educational credentials include a Ph.D. in Geospatial Economics from the esteemed University of Illinois at Urbana-Champaign and a Fulbright Scholarship, reflecting his commitment to excellence and lifelong learning.
-
-You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
