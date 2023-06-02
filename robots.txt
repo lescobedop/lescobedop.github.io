@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://lescobedop.github.io/al-folio/sitemap.xml
+Sitemap: https://lescobedop.github.io/sitemap.xml
