@@ -25,6 +25,4 @@ Lucho masters every aspect of the data lifecycle. Guiding top-tier teams of data
 
 His unwavering commitment to excellence prioritizes end-user satisfaction while aligning initiatives with business strategies. Lucho's collaborative approach fosters an environment that generates pioneering data products and actionable insights, fueling growth and providing a competitive advantage. By spearheading robust product development processes, he streamlines data-driven decision-making, accelerates time-to-market, enhances insights, and optimizes cost efficiencies.
 
-As a respected industry speaker, Lucho sheds light on large-scale machine learning models' implementation, deployment, and monitoring and their impact on companies' bottom line.
-
 Lucho's educational credentials include a Ph.D. in Geospatial Economics from the esteemed University of Illinois at Urbana-Champaign and a Fulbright Scholarship, reflecting his commitment to excellence and lifelong learning.
