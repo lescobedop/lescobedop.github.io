@@ -11,73 +11,94 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD
+    - title: PhD in Geospatial Economics
       institution: University of Illinois, Urbana-Champaign, United States
       year: 2017
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+       # - 'Understanding the spatial pattern of retail in lima: a study of concentration and colocation'
+       # - 'Spatial point pattern analysis of manufacturing concentration: evidence from micro and small manufacturing establishments in metropolitan lima'
+       # - 'Exploring medicine price variation in an urban context: the case of Metropolitan Lima'
+        - title: Three papers in Economic Geography
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+            - 'Understanding the spatial pattern of retail in Lima: a study of concentration and colocation'
+            - 'Spatial point pattern analysis of manufacturing concentration: evidence from micro and small manufacturing establishments in Metropolitan Lima'
+            - 'Exploring medicine price variation in an urban context: the case of Metropolitan Lima'
+    - title: MS Geospatial Economics
+      institution: University of Illinois, Urbana-Champaign, United States
+      year: 2012
       description:
-        - Description 1.
-        - Description 2.
+        - title: Employment spatial structure in Metropolitan Lima
+          contents:
+            - 'Lima has a dispersed polycentricity employment spatial structure.'
+            - 'Specialized subcenters, especially in the service sector, significantly shape employment distribution in Lima.'
+            - 'Concentrating activities and organizing subcenters in developing areas can enhance decentralization and economic efficiency.'
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Senior Director of Data and Analytics Engineering
+      institution: Automatic Data Processing - ADP, Miami FL, United States.
+      year: Jul '23 - Pres
       description:
         - Description 1.
         - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        #- title: Description 3.
+        #  contents:
+        #    - Sub-description 1.
+        #    - Sub-description 2.
+    - title: Senior Director of Data Science and Analytics
+      institution: REEF Technology, Miami FL, United States.
+      year: May '20 - Jul '23
+      description:
+        - Description 1.
+        - Description 2.
+    
+    - title: Director of Data Science
+      institution: REEF Technology, Miami FL, United States.
+      year: May '20 - Jul '23
       description:
         - Description 1.
         - Description 2.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Senior Data Scientist
+      institution: McKinsey & Company, Sao Paulo, Brazil.
+      year: Aug '17 - Aug '19
       description:
+        - Description 1.
+        - Description 2.
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    - title: Analytics Consultant
+      institution: Center for Innovation in Teaching & Learning, Champaign IL, United States.
+      year: Aug '13 - Jul '17
+      description:
+        - Description 1.
+        - Description 2.
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+#- title: Open Source Projects
+#  type: time_table
+#  contents:
+#    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+#      year: 2015-now
+#      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2013
       items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
+        - Tinker Foundation Fellowship to support doctoral dissertation research.
+
+    - year: 2010
       items: 
-        - Max Planck Medal
+        - Fulbright Scholarship to pursue graduate education in the United States.
+    
+    - year: 2009
+      items: 
+        - Consortium for Economic and Social Research (CIES) Scholarship to study the effects of malaria on the regional economy of Loreto. 
+
+    - year: 2008
+      items: 
+        - Latin American Council of Social Sciences Scholarship to study the incidence of natural disasters as an intensifying effect of poverty.
 
 - title: Academic Interests
   type: nested_list
@@ -92,6 +113,10 @@
         - Description 2.
 
 - title: Other Interests
-  type: list
+  type: nested_list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - title: Hobbies
+      items: 
+        - Grappling
+        - Strength training
+        - Football
