@@ -9,8 +9,8 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Head of Data at REEF Technology</p>
-    <p>PhD in Geospatial Economics</p>
+    <p>Head of Data at REEF</p>
+    <!-- <p>PhD in Geospatial Economics</p> -->
     <p>Based in Miami, Florida</p>
 
 news: true  # includes a list of news items
