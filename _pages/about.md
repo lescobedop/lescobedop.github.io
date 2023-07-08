@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Senior Director of Data and Analytics Engineerings at ADP REEF</p>
+    <p>Data and Analytics Engineerings at ADP</p>
     <!-- <p>PhD in Geospatial Economics</p> -->
     <p>Based in Miami, Florida</p>
 
