@@ -48,31 +48,31 @@
         #    - Sub-description 2.
     - title: Senior Director of Data Science and Analytics
       institution: REEF Technology, Miami FL, United States.
-      year: May '20 - Jul '23
+      year: May '20 - Jun '23
       description:
-        - Description 1.
-        - Description 2.
+        - Achieved significant cost reductions and data quality improvements through the implementation of consistent data management processes and technology optimization.
+        - Constituted global policies, KPIs, and frameworks to drive operational efficiency and ensure a guaranteed ROI through data-driven decision-making.
     
     - title: Director of Data Science
       institution: REEF Technology, Miami FL, United States.
       year: May '20 - Jul '23
       description:
-        - Description 1.
-        - Description 2.
+        - Leveraged data science and technology to maximize growth, optimize operations, and drive improvements in customer feedback, forecasting accuracy, and network optimization.
+        - Delivered remarkable outcomes by introducing cutting-edge solutions, expanding data science teams, and implementing strategic initiatives for revenue maximization and operational efficiency.
 
     - title: Senior Data Scientist
       institution: McKinsey & Company, Sao Paulo, Brazil.
       year: Aug '17 - Aug '19
       description:
-        - Description 1.
-        - Description 2.
+        - Attained exceptional financial gains and significant cost savings by seamlessly applying classical statistical modelling, econometrics, machine learning algorithms, and simulation-based optimization techniques.
+        - Solved complex challenges across diverse industries, resulting in remarkable operational improvements and the successful implementation of data-driven strategies and groundbreaking solutions.
 
     - title: Analytics Consultant
       institution: Center for Innovation in Teaching & Learning, Champaign IL, United States.
       year: Aug '13 - Jul '17
       description:
-        - Description 1.
-        - Description 2.
+        - Executed groundbreaking strategies, elevating student experiences, optimizing operations, and revolutionizing accessibility to cutting-edge data analytics resources. 
+        - Led transformative changes, leveraging advanced techniques to deliver game-changing insights and improvements across research domains.
 
 #- title: Open Source Projects
 #  type: time_table
