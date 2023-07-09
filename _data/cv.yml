@@ -103,14 +103,14 @@
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Urban economic dynamics of Latin America.
       items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Crime and its impact on the decline of property value.
+        - Location and co-location of retail and manufacturing establishments.
+    - title: Scalable and efficient data processing frameworks for large-scale machine learning.
       items:
-        - Description 1.
-        - Description 2.
+        - Design and optimization of distributed computing frameworks specifically tailored for large-scale machine learning.
+        - Processing streaming data in real-time to enable continuous learning and decision-making in AI systems.
 
 - title: Other Interests
   type: nested_list
