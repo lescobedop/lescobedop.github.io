@@ -118,7 +118,7 @@
       items: 
         - Crime and its impact on the decline of property value.
         - Location and co-location of retail and manufacturing establishments.
-    - title: Scalable Data processing Techniques
+    - title: Scalable data processing techniques
       items:
         - Preprocessing large-scale datasets in AI applications.
         - Processing streaming data in real-time to enable continuous learning and decision-making in AI systems.
