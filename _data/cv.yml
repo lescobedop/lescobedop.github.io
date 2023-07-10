@@ -114,13 +114,13 @@
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Urban economic dynamics of Latin America.
+    - title: Urban economic dynamics of Latin America
       items: 
         - Crime and its impact on the decline of property value.
         - Location and co-location of retail and manufacturing establishments.
-    - title: Scalable and efficient data processing frameworks for large-scale machine learning.
+    - title: Scalable Data processing Techniques
       items:
-        - Design and optimization of distributed computing frameworks specifically tailored for large-scale machine learning.
+        - Preprocessing large-scale datasets in AI applications.
         - Processing streaming data in real-time to enable continuous learning and decision-making in AI systems.
 
 - title: Other Interests
