@@ -8,31 +8,6 @@
     - name: Languages
       value: English, Spanish, Portuguese
 
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD in Geospatial Economics
-      institution: University of Illinois, Urbana-Champaign, United States
-      year: 2017
-      description:
-       # - 'Understanding the spatial pattern of retail in lima: a study of concentration and colocation'
-       # - 'Spatial point pattern analysis of manufacturing concentration: evidence from micro and small manufacturing establishments in metropolitan lima'
-       # - 'Exploring medicine price variation in an urban context: the case of Metropolitan Lima'
-        - title: Three papers in Economic Geography
-          contents:
-            - 'Understanding the spatial pattern of retail in Lima: a study of concentration and colocation'
-            - 'Spatial point pattern analysis of manufacturing concentration: evidence from micro and small manufacturing establishments in Metropolitan Lima'
-            - 'Exploring medicine price variation in an urban context: the case of Metropolitan Lima'
-    - title: MS Geospatial Economics
-      institution: University of Illinois, Urbana-Champaign, United States
-      year: 2012
-      description:
-        - title: Employment spatial structure in Metropolitan Lima
-          contents:
-            - 'Lima has a dispersed polycentricity employment spatial structure.'
-            - 'Specialized subcenters, especially in the service sector, significantly shape employment distribution in Lima.'
-            - 'Concentrating activities and organizing subcenters in developing areas can enhance decentralization and economic efficiency.'
-
 - title: Experience
   type: time_table
   contents:
@@ -80,6 +55,31 @@
 #    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
 #      year: 2015-now
 #      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD in Geospatial Economics
+      institution: University of Illinois, Urbana-Champaign, United States
+      year: 2017
+      description:
+       # - 'Understanding the spatial pattern of retail in lima: a study of concentration and colocation'
+       # - 'Spatial point pattern analysis of manufacturing concentration: evidence from micro and small manufacturing establishments in metropolitan lima'
+       # - 'Exploring medicine price variation in an urban context: the case of Metropolitan Lima'
+        - title: Three papers in Economic Geography
+          contents:
+            - 'Understanding the spatial pattern of retail in Lima: a study of concentration and colocation'
+            - 'Spatial point pattern analysis of manufacturing concentration: evidence from micro and small manufacturing establishments in Metropolitan Lima'
+            - 'Exploring medicine price variation in an urban context: the case of Metropolitan Lima'
+    - title: MS Geospatial Economics
+      institution: University of Illinois, Urbana-Champaign, United States
+      year: 2012
+      description:
+        - title: Employment spatial structure in Metropolitan Lima
+          contents:
+            - 'Lima has a dispersed polycentricity employment spatial structure.'
+            - 'Specialized subcenters, especially in the service sector, significantly shape employment distribution in Lima.'
+            - 'Concentrating activities and organizing subcenters in developing areas can enhance decentralization and economic efficiency.'
 
 - title: Honors and Awards
   type: time_table
