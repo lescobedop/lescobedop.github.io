@@ -21,16 +21,27 @@
         #  contents:
         #    - Sub-description 1.
         #    - Sub-description 2.
+
+    - title: VP of Data
+      institution: REEF Technology, Miami FL, United States.
+      year: Jan '23 - Jul '23
+      description:
+        - Pioneered the advancement towards AI by spearheading the development and implementation of a data engineering excellence strategy.
+        - Established robust frameworks, centralized data lakes, and scalable infrastructure, laying the foundation for advanced AI applications.
+        #- title: Description 3.
+        #  contents:
+        #    - Sub-description 1.
+        #    - Sub-description 2.
     - title: Senior Director of Data Science and Analytics
       institution: REEF Technology, Miami FL, United States.
-      year: May '20 - Jun '23
+      year: Oct '21 - Dec '22
       description:
         - Achieved significant cost reductions and data quality improvements through the implementation of consistent data management processes and technology optimization.
         - Constituted global policies, KPIs, and frameworks to drive operational efficiency and ensure a guaranteed ROI through data-driven decision-making.
     
     - title: Director of Data Science
       institution: REEF Technology, Miami FL, United States.
-      year: May '20 - Jul '23
+      year: May '20 - Sep '21
       description:
         - Leveraged data science and technology to maximize growth, optimize operations, and drive improvements in customer feedback, forecasting accuracy, and network optimization.
         - Delivered remarkable outcomes by introducing cutting-edge solutions, expanding data science teams, and implementing strategic initiatives for revenue maximization and operational efficiency.
