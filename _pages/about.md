@@ -30,7 +30,7 @@ social: true  # includes social icons at the bottom of the page
 </div>
 
 
-<div style="margin-top: 2rem;"> <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<div style="margin-top: 2rem;margin-bottom: 2rem;"> <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
   <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
   <script>
   (function() {
