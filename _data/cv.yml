@@ -19,7 +19,7 @@
         - Optimize data platform architecture, fostering scalability and performance while ensuring seamless data monitoring, observability, and system enablement.
         - Oversee the entire data lifecycle, from ingestion to retirement, focusing on the generation and upkeep of valuable data assets to drive business insights and innovation.
         - Establish and enforce data governance policies, ensuring quality, integrity, and security across the organization.
-        - Build world class data team through robust talent development strategies, fostering professional growth and expertise.
+        - Build a world class data team through robust talent development strategies, fostering professional growth and expertise.
         #- title: Description 3.
         #  contents:
         #    - Sub-description 1.
@@ -49,19 +49,37 @@
         - Leveraged data science and technology to maximize growth, optimize operations, and drive improvements in customer feedback, forecasting accuracy, and network optimization.
         - Delivered remarkable outcomes by introducing cutting-edge solutions, expanding data science teams, and implementing strategic initiatives for revenue maximization and operational efficiency.
 
+    - title: Senior Analytics Consultant
+      institution: Center for Innovation in Teaching & Learning, Champaign IL, United States.
+      year: Sep '19 - Apr '20
+      description:
+        - Executed groundbreaking strategies, elevating student and faculty experiences, optimizing operations, and revolutionizing accessibility to cutting-edge data analytics resources. 
+        - Led transformative changes, leveraging advanced techniques to deliver game-changing insights and improvements across research domains.
+
     - title: Senior Data Scientist
       institution: McKinsey & Company, Sao Paulo, Brazil.
       year: Aug '17 - Aug '19
       description:
-        - Attained exceptional financial gains and significant cost savings by seamlessly applying classical statistical modelling, econometrics, machine learning algorithms, and simulation-based optimization techniques.
+        - Attained exceptional financial gains and significant cost savings by seamlessly applying classical statistical modeling, econometrics, machine learning algorithms, and simulation-based optimization techniques.
         - Solved complex challenges across diverse industries, resulting in remarkable operational improvements and the successful implementation of data-driven strategies and groundbreaking solutions.
 
     - title: Analytics Consultant
       institution: Center for Innovation in Teaching & Learning, Champaign IL, United States.
       year: Aug '13 - Jul '17
       description:
-        - Executed groundbreaking strategies, elevating student experiences, optimizing operations, and revolutionizing accessibility to cutting-edge data analytics resources. 
-        - Led transformative changes, leveraging advanced techniques to deliver game-changing insights and improvements across research domains.
+        - Organized statistical methods workshops at the University of Illinois, enhancing faculty and student proficiency in R and Stata for robust data analysis. 
+        - Analyzed Coursera course video viewing patterns, driving strategies to enhance registration of new students and improve overall course participation
+        - Assessed English leveling courses' impact on international students' GPA, informing admissions to consider promising candidates despite English proficiency gaps.
+        - Predicted student progression in Intensive English Institute courses, guiding implementation of tailored strategies to optimize learning outcomes.
+        - Defined the effectiveness of new video role-play technology platforms for sales training through statistical analysis, informing future training methodologies.
+
+    - title: Researcher
+      institution: Group for the Analysis of Development, Lima, Peru.
+      year: Oct '06 - Jul '10
+      description:
+        - Designed, implemented, and developed in-depth local studies on human-environment interactions within the context of extractive industries in rural Peruvian communities. 
+        - Conducted comprehensive analyses on the economic and social impacts of both private and public investments at urban and regional levels in Peru.
+        - Led the Geographic Information Systems (GIS) team in the collection, management, and analysis of spatial data.
 
 #- title: Open Source Projects
 #  type: time_table
@@ -73,7 +91,7 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD in Geospatial Economics
+    - title: PhD, Geospatial Economics
       institution: University of Illinois, Urbana-Champaign, United States
       year: 2017
       description:
@@ -85,7 +103,7 @@
             - 'Understanding the spatial pattern of retail in Lima: a study of concentration and colocation'
             - 'Spatial point pattern analysis of manufacturing concentration: evidence from micro and small manufacturing establishments in Metropolitan Lima'
             - 'Exploring medicine price variation in an urban context: the case of Metropolitan Lima'
-    - title: MS Geospatial Economics
+    - title: MS, Geospatial Economics
       institution: University of Illinois, Urbana-Champaign, United States
       year: 2012
       description:
@@ -94,6 +112,14 @@
             - 'Lima has a dispersed polycentricity employment spatial structure.'
             - 'Specialized subcenters, especially in the service sector, significantly shape employment distribution in Lima.'
             - 'Concentrating activities and organizing subcenters in developing areas can enhance decentralization and economic efficiency.'
+    - title: BA, Geography & Environment
+      institution: Pontificia Universidad Catolica del Peru, Lima, Peru
+      year: 2006
+      description:
+        - title: Enhancing educational accessibility in Peru
+          contents:
+            - 'Developed an advanced spatial model to generate regional accessibility indicators for public educational services in Peru.'
+            - 'The accesibility model correlates transportation metrics with learning outcomes and links to variables like malnutrition and poverty, providing valuable insights for policymakers.'
 
 - title: Honors and Awards
   type: time_table
