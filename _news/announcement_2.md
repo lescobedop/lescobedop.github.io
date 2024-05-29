@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A long announcement with details
+title: Interview with Anna Anisin
 date: 2022-08-17 16:00:00-0400
 inline: false
 related_posts: false
