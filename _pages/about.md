@@ -29,20 +29,3 @@ social: true  # includes social icons at the bottom of the page
   <p>Lucho's educational credentials include a Ph.D. in Geospatial Economics from the esteemed University of Illinois at Urbana-Champaign and a Fulbright Scholarship, reflecting his commitment to excellence and lifelong learning.</p>
 </div>
 
-
-<div style="margin-top: 2rem;margin-bottom: 2rem;"> <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-  <script>
-  (function() {
-    var target = document.currentScript;
-    window.addEventListener('load', function() {
-      calendar.schedulingButton.load({
-        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0uyZ6_rl1YQf-PydxkVyBxB1a0w-FqRo9vNoskcKwCEMfuzZ0mmbFhJcs_POF9-kBNWys6ovBg?gv=true',
-        color: '#039BE5',
-        label: 'Book an appointment',
-        target,
-      });
-    });
-  })();
-  </script>
-  </div>
