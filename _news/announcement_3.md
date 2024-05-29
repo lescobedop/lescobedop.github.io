@@ -7,6 +7,3 @@ related_posts: false
 ---
 
 Thank you to Data Science Salon for the <a href="https://www.linkedin.com/feed/update/urn:li:activity:6900194921190699008/">opportunity to discuss Data Science in production.</a>
-
-
-
