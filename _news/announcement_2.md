@@ -1,32 +1,49 @@
 ---
 layout: post
 title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
+date: 2022-08-17 16:00:00-0400
 inline: false
 related_posts: false
 ---
 
-Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
+In this conversation with Anna Anisin, I discuss our journey at REEF in building an MLOps platform from scratch. 
 
 ***
 
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
+This presentation explores MLOps, the field dedicated to managing the lifecycle of machine learning models. It delves into the challenges of transitioning models from development to real-world production environments.  The discussion emphasizes the importance of fostering data science teams with a robust blend of technical expertise and the ability to collaborate effectively.  Crucially, MLOps initiatives must align with business goals and involve stakeholders across the organization.  Success hinges on building a team with diverse skillsets, encompassing data scientists, engineers, and DevOps professionals. 
 
-#### Hipster list
+#### Here are the key points:
 <ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
+    <li>MLOps Overview: MLOps is crucial for turning machine learning models into reliable, value-generating systems in production. It's a young field, but essential for automating and managing the machine learning lifecycle, from data collection to model deployment and monitoring.</li>
+    <li>Building vs. Buying: At REEF, we chose to build our platform in-house to develop internal capabilities and grow our team's expertise. We use a mix of open-source and paid software, carefully selecting tools to fit our specific use cases and ensuring the platform remains extensible.</li>
+    <li>Key Capabilities:</li>
+<ul>
+    <li>We use Linux-based EC2 instances for development and debugging.</li>
+    <li>CI/CD with Jenkins helps automate our training and scoring pipelines.</li>
+    <li>Apache Airflow orchestrates our training and inference pipelines.</li>
+    <li>SageMaker provides scalable model deployment on AWS infrastructure.</li>
+</ul>
+    <li>Challenges and Best Practices:</li>
+<ul>
+    <li>Leadership Alignment: Top-down support and stakeholder buy-in are crucial.</li>
+    <li>Team Capability Assessment: Understanding our engineering and data science team's current skills.</li>
+    <li>Clear Use Cases: Defining business cases to demonstrate the platform's value.</li>
+</ul>
+    <li> Desired Profiles for MLOps Roles: We look for collaborative individuals with experience in productionizing models, strong technical skills, and the ability to work well within a matrix organization. Curiosity and grit are essential traits, promoting a culture of continuous learning and persistence.</li>
 </ul>
 
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
+Overall, our approach at Reef emphasizes strategic capability building, selecting the right tools, and ensuring organizational alignment to successfully implement MLOps.
 
 ***
 
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.
+For additional information, please refer to the video:
 
-> We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-> —Anais Nin
+<div style="text-align: center;">
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/I8vMctnZ-8k" title="DSS Break: Building an MLOps Platform from Scratch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
+
+> Machine learning algorithms are not just models, they are systems... and these systems are expected to continuously generate value and operate in production
+> —Lucho Escobedo
+
+MLOps: The key to deploying machine learning models. Learn the challenges & build winning data science teams. Like & comment the video!
