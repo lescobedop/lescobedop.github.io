@@ -2,19 +2,26 @@
 layout: page
 permalink: /contact/
 title: contact
-description: 
+description:
 nav: true
 nav_order: 4
 ---
 
 <div>
-  <p>Dr. Lucho Escobedo is an accomplished leader in data, machine learning and product development, driving impactful outcomes globally. With 15+ years of international experience, he delivers strategic and transformative solutions, revolutionizing organizations through data-driven decision-making.</p>
+  <p>I'm passionate about fostering connections within the data community!</p> 
 
-  <p>Leading top-tier data experts, he molds and expands data and engineering teams to create innovative products that redefine entire industries. Lucho's steadfast dedication to excellence centers around ensuring end-user satisfaction and aligning initiatives with business strategies.</p>
+  <p>I'm always interested in meeting fellow data professionals, particularly those based in Florida and Latin America. Whether you're a seasoned expert or just starting your journey, I believe there's immense value in exchanging ideas and fostering connections within our dynamic field. </p>
 
-  <p>Through his collaborative approach, he cultivates an environment that generates cutting-edge data products and valuable insights, driving growth and establishing a competitive edge. By spearheading robust product development processes, he streamlines data-driven decision-making, expedites time-to-market, improves insights, and maximizes cost efficiencies.</p>
+  <p>Here are some ways we can connect</p>
 
-  <p>Lucho's educational credentials include a Ph.D. in Geospatial Economics from the esteemed University of Illinois at Urbana-Champaign and a Fulbright Scholarship, reflecting his commitment to excellence and lifelong learning.</p>
+ <ul>
+  <li>Expanding Your Network: Looking to connect with others in the Florida and Latin American data space? Let's chat about upcoming events, conferences, or fostering our own local meetups.</li>
+  <li>Data Strategy & Lifecycle: Have questions about crafting a data strategy or optimizing your data lifecycle? I'm happy to discuss best practices and share insights from my experiences.</li>
+  <li>The Journey Towards AI: Curious about the path towards implementing AI solutions? Let's explore current trends and potential challenges together.</li>
+  <li>Pro Bono Opportunities: Are you passionate about using data for social good? I'm open to exploring pro bono collaborations for worthy causes.</li>
+</ul>
+
+  <p>While I hold a demanding full-time position as Head of Data, I'm always eager to connect with passionate individuals outside of work hours. You can schedule a time to chat with me through the calendar link below!.</p>
 </div>
 
 <div style="margin-top: 2rem;margin-bottom: 2rem;"> <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
