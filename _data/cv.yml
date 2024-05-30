@@ -124,6 +124,7 @@
 - title: Honors and Awards
   type: time_table
   contents:
+<<<<<<< HEAD
     - year: 2013
       items: 
         - Tinker Foundation Fellowship to support doctoral dissertation research.
@@ -139,15 +140,32 @@
     - year: 2008
       items: 
         - Latin American Council of Social Sciences Scholarship to study the incidence of natural disasters as an intensifying effect of poverty.
+=======
+    - year: 1921
+      items:
+        - Nobel Prize in Physics
+        - Matteucci Medal
+    - year: 2029
+      items:
+        - Max Planck Medal
+>>>>>>> origin/master
 
 - title: Academic Interests
   type: nested_list
   contents:
+<<<<<<< HEAD
     - title: Urban economic dynamics of Latin America
       items: 
         - Crime and its impact on the decline of property value.
         - Location and co-location of retail and manufacturing establishments.
     - title: Scalable data processing techniques
+=======
+    - title: Topic 1.
+      items:
+        - Description 1.
+        - Description 2.
+    - title: Topic 2.
+>>>>>>> origin/master
       items:
         - Preprocessing large-scale datasets in AI applications.
         - Processing streaming data in real-time to enable continuous learning and decision-making in AI systems.

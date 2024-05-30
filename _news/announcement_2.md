@@ -8,11 +8,16 @@ related_posts: false
 
 In this conversation with Anna Anisin, I discuss our journey at REEF in building an MLOps platform from scratch. 
 
-***
+---
 
 This presentation explores MLOps, the field dedicated to managing the lifecycle of machine learning models. It delves into the challenges of transitioning models from development to real-world production environments.  The discussion emphasizes the importance of fostering data science teams with a robust blend of technical expertise and the ability to collaborate effectively.  Crucially, MLOps initiatives must align with business goals and involve stakeholders across the organization.  Success hinges on building a team with diverse skillsets, encompassing data scientists, engineers, and DevOps professionals. 
 
+<<<<<<< HEAD
 #### Here are the key points:
+=======
+#### Hipster list
+
+>>>>>>> origin/master
 <ul>
     <li>MLOps Overview: MLOps is crucial for turning machine learning models into reliable, value-generating systems in production. It's a young field, but essential for automating and managing the machine learning lifecycle, from data collection to model deployment and monitoring.</li>
     <li>Building vs. Buying: At REEF, we chose to build our platform in-house to develop internal capabilities and grow our team's expertise. We use a mix of open-source and paid software, carefully selecting tools to fit our specific use cases and ensuring the platform remains extensible.</li>
@@ -34,7 +39,7 @@ This presentation explores MLOps, the field dedicated to managing the lifecycle 
 
 Overall, our approach at Reef emphasizes strategic capability building, selecting the right tools, and ensuring organizational alignment to successfully implement MLOps.
 
-***
+---
 
 For additional information, please refer to the video:
 
