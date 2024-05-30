@@ -21,7 +21,7 @@ nav_order: 4
   <li>Pro Bono Opportunities: Are you passionate about using data for social good? I'm open to exploring pro bono collaborations for worthy causes.</li>
 </ul>
 
-  <p>While I hold a demanding full-time position as Head of Data, I'm always eager to connect with passionate individuals outside of work hours. You can schedule a time to chat with me through the calendar link below!.</p>
+  <p>Despite my busy schedule as Head of Data, I'm always energized by connecting with passionate individuals. Feel free to reach out via email or schedule some time on my calendar below!</p>
 </div>
 
 <div style="margin-top: 2rem;margin-bottom: 2rem;"> <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
