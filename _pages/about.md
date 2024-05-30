@@ -9,9 +9,8 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Data Leader at ADP</p>
-    <!-- <p>PhD in Geospatial Economics</p> -->
-    <p>Based in Miami, Florida</p>
+    <p style="text-align: center;">Data Leader at ADP</p>
+    <p style="text-align: center;">Based in Miami, Florida</p>
 
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
