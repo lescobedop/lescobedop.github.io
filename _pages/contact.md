@@ -12,13 +12,16 @@ nav_order: 4
 
   <p>I'm always interested in meeting fellow data professionals, particularly those based in Florida and Latin America. Whether you're a seasoned expert or just starting your journey, I believe there's immense value in exchanging ideas and fostering connections within our dynamic field. </p>
 
-  <p>Here are some ways we can connect</p>
+  <p>Here are some reason why we should connect</p>
 
  <ul>
-  <li>Expanding Your Network: Looking to connect with others in the Florida and Latin American data space? Let's chat about upcoming events, conferences, or fostering our own local meetups.</li>
-  <li>Data Strategy & Lifecycle: Have questions about crafting a data strategy or optimizing your data lifecycle? I'm happy to discuss best practices and share insights from my experiences.</li>
-  <li>The Journey Towards AI: Curious about the path towards implementing AI solutions? Let's explore current trends and potential challenges together.</li>
-  <li>Pro Bono Opportunities: Are you passionate about using data for social good? I'm open to exploring pro bono collaborations for worthy causes.</li>
+<ul style="list-style: disc; padding: 0;">
+  <li style="margin-bottom: 1.5rem;">Expanding our network: Looking to connect with others in the Florida and Latin American data space? Let's chat about upcoming events, conferences, or fostering our own local meetups.</li>
+  <li style="margin-bottom: 1.5rem;">Data strategy & lifecycle: Have questions about crafting a data strategy or optimizing your data lifecycle? I'm happy to discuss best practices and share insights from my experiences.</li>
+  <li style="margin-bottom: 1.5rem;">The journey towards AI: Curious about the path towards implementing AI solutions? Let's explore current trends and potential challenges together.</li>
+  <li style="margin-bottom: 1.5rem;">Pro Bono opportunities: Are you passionate about using data for social good? I'm open to exploring pro bono collaborations for worthy causes.</li>
+</ul>
+
 </ul>
 
   <p>Despite my busy schedule as Head of Data, I'm always energized by connecting with passionate individuals. Feel free to reach out via email or schedule some time on my calendar below!</p>
