@@ -18,7 +18,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi, I’m Lucho Escobedo—a passionate leader, entrepreneur, and lifelong learner in the world of data, AI, and business innovation. As the Head of Data at ADP, I lead data-driven initiatives for business units, optimizing operations, enhancing customer experiences, and boosting revenue. My work has delivered solutions that unlocked millions in value for the business, demonstrating the transformative potential of strategic data leadership.
+Hi, I’m Lucho Escobedo—a passionate leader, entrepreneur, and lifelong learner in the world of data, AI, and business innovation. As the Head of Data at ADP, I lead data-driven initiatives for business units, optimizing operations, enhancing customer experiences, and boosting revenue. My work has delivered solutions that unlocked millions in value for the company, demonstrating the transformative potential of strategic data leadership.
 
 Beyond my corporate role, I’m an entrepreneur and investor, leading Green Street Holdings, a strategic investment firm committed to empowering exceptional businesses and entrepreneurs. Through tailored partnerships and value creation, we identify and support promising companies with strong fundamentals and high-growth potential.
 
