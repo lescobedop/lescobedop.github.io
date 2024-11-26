@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Technologist | Entrepreneur | Athlete
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <div style="text-align: center;">
+      <p style="margin-bottom: 50px;">📍 Miami, Florida</p>
+    </div>
 
 news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -26,10 +26,6 @@ With over 15 years of experience at the intersection of technology and managemen
 
 Outside of work, I channel my competitive spirit into strength training, powerlifting, and Brazilian jiu-jitsu, where I’ve proudly earned two gold medals as an active competitor. I believe in the discipline of continuous improvement, whether in the gym, on the mat, or in business.
 
-If you see something here that resonates, or if you think I can help you in any way, please don’t hesitate to reach out.
-
-📩 Reach me at contact@luchoescobedo.com
-
-Let’s create something extraordinary together!
+If you see something here that resonates, or if you think I can help you in any way, please don’t hesitate to reach out. Let’s create something extraordinary together!
 
 
