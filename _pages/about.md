@@ -18,8 +18,18 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Data and Analytics, Consulting, Business, Entrepreneurship, Peru, US, Jiu Jitsu. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi, I’m Lucho Escobedo—a passionate leader, entrepreneur, and lifelong learner in the world of data, AI, and business innovation. As the Head of Data at ADP, I lead data-driven initiatives for business units, optimizing operations, enhancing customer experiences, and boosting revenue. My work has delivered solutions that unlocked millions in value for the business, demonstrating the transformative potential of strategic data leadership.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Beyond my corporate role, I’m an entrepreneur and investor, leading Green Street Holdings, a strategic investment firm committed to empowering exceptional businesses and entrepreneurs. Through tailored partnerships and value creation, we identify and support promising companies with strong fundamentals and high-growth potential.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+With over 15 years of experience at the intersection of technology and management consulting, I bring a unique combination of data expertise, business strategy, and leadership to every endeavor. My career includes impactful roles at McKinsey & Company, REEF Technology and collaborations with international teams to build scalable data capabilities and drive innovation.
+
+Outside of work, I channel my competitive spirit into strength training, powerlifting, and Brazilian jiu-jitsu, where I’ve proudly earned two gold medals as an active competitor. I believe in the discipline of continuous improvement, whether in the gym, on the mat, or in business.
+
+If you see something here that resonates, or if you think I can help you in any way, please don’t hesitate to reach out.
+
+📩 Reach me at contact@luchoescobedo.com
+
+Let’s create something extraordinary together!
+
+
