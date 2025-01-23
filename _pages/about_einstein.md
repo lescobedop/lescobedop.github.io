@@ -1,5 +1,9 @@
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi, I’m Lucho Escobedo, a data-driven leader with a passion for innovation and business transformation. As Head of Data at ADP, I lead initiatives that optimize operations, improve customer experiences, and boost revenue, generating millions in value and demonstrating the power of data leadership.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Beyond my corporate role, I co-founded two ventures. Kipu, a boutique consulting firm, specializes in data and AI, offering strategic consulting, AI/ML development, team building, and workshops to deliver impactful results. Green Street Holdings focuses on acquiring and investing in high-growth companies, fostering strong fundamentals, and guiding organizations to success through tailored partnerships.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+With over 15 years of experience in technology and management consulting, I bring a unique mix of data expertise, business strategy, and leadership. My career includes roles at McKinsey & Company and REEF Technology, where I created scalable data solutions and led innovation.
+
+Outside of work, I pursue strength training and Brazilian jiu-jitsu, embracing the discipline of continuous improvement—whether in the gym, on the mat, or in business.
+
+If you see alignment or think I can help, feel free to reach out. Let’s create something extraordinary together!
