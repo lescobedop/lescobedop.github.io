@@ -442,19 +442,34 @@ ninja.data = [{
             },},{id: "news-visit-bushido-life-if-you-want-premium-quality-training-gear",
           title: 'Visit Bushido Life if you want premium quality training gear.',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-green-street-holdings",
+          title: 'Green Street Holdings',
+          description: "Investments",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
+              window.location.href = "/projects/10_project/";
             },},{id: "projects-project-2",
           title: 'project 2',
           description: "a project with a background image and giscus comments",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
+              window.location.href = "/projects/11_project/";
             },},{id: "projects-project-3-with-very-long-name",
           title: 'project 3 with very long name',
           description: "a project that redirects to another website",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/12_project/";
+            },},{id: "projects-green-street-holdings",
+          title: 'Green Street Holdings',
+          description: "Small Business Investments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},{id: "projects-bushido-life",
+          title: 'Bushido Life',
+          description: "My e-store for premium quality training gear",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{id: "projects-welcome-to-kipu",
+          title: 'Welcome to Kipu',
+          description: "Unlocking the potential of data &amp; AI for your business",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-project-4",
