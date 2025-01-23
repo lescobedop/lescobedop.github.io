@@ -1,33 +1,30 @@
 ---
 layout: post
-title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
+title: It's finally here!
+date: 2025-01-01 01:00:00-0400
 inline: false
 related_posts: false
 ---
 
-Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
+Hey everyone,
 
----
+I'm thrilled to finally unveil my official website! 
 
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
+For years, I've been fortunate to work with incredible teams, build impactful businesses, and contribute to the growth of organizations across diverse sectors. Now, I'm excited to share my journey, insights, and perspectives with a wider audience. 
 
-#### Hipster list
+On my website, you'll find information about my professional background, including my current role at ADP and my entrepreneurial ventures:
 
-<ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
-</ul>
+* **Green Street Holdings:** Where we invest in and support the backbone of our communities – small businesses. 
+* **Kipu:** A boutique data and AI consultancy dedicated to helping organizations unlock their full potential through data-driven strategies.
 
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
+You can also learn a bit about me outside of work – my passion for Brazilian Jiu-Jitsu, my commitment to continuous improvement, and my belief in the power of collaboration.
 
----
+I'm eager to connect with like-minded individuals, explore new opportunities, and contribute to meaningful conversations. Please, feel free to add me to your network via [LinkedIn](https://www.linkedin.com/in/luchoescobedo/) or send me a message at [contact@luchoescobedo.com](mailto:contact@luchoescobedo.com) 
 
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.
+I invite you to explore my website and feel free to reach out if you see an area of alignment or simply want to connect.
 
-> We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-> —Anais Nin
+Best regards,
 
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
+Lucho Escobedo
+
+
