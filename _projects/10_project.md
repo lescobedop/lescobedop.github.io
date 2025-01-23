@@ -1,27 +1,22 @@
 ---
 layout: page
-title: Bushido Life
-description: My e-store for premium quality training gear 
-img: assets/img/samurai_face.png
-redirect: https://unsplash.com
-importance: 2
-category: fun
-giscus_comments: true
-hidden: false
+title: Green Street Holdings
+description: Investments
+img: assets/img/gsh/GreenStreetHoldings_background.jpg
+importance: 1
+category: work
+related_publications: true
+hidden: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Green Street Holdings was founded with a powerful belief: that small businesses are the heart of thriving communities. We invest in local businesses that solve problems and provide great service—businesses that are not just valuable, but essential to building wealth and long-term prosperity.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Many small business owners plan to run their businesses for life, but when the time comes, we help ensure their legacy is preserved through a seamless transition. By investing in these businesses, we support the entrepreneurs who drive local economies, fostering growth, stability, and community.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Our mission is clear: to empower the people behind the businesses that keep communities strong and vibrant, and to help create legacies that last for generations.
+
+We invite you to explore our website at [greenstreet-holding.com](https://greenstreet-holding.com) to learn more about what we do. Additionally, we offer a free consultation. Please contact us via email at [info@greenstreet-holding.com](mailto:info@greenstreet-holding.com) for further details.
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -46,8 +41,8 @@ To give your project a background in the portfolio page, just add the img tag to
     This image can also have a caption. It's like magic.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
+You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
+Say you wanted to write a bit about your project before you posted the rest of the images.
 You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
 
 <div class="row justify-content-sm-center">

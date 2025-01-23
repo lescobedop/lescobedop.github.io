@@ -1,13 +1,12 @@
 ---
 layout: page
-title: Bushido Life
-description: My e-store for premium quality training gear 
-img: assets/img/samurai_face.png
-redirect: https://unsplash.com
+title: project 2
+description: a project with a background image and giscus comments
+img: assets/img/3.jpg
 importance: 2
-category: fun
+category: work
 giscus_comments: true
-hidden: false
+hidden: true
 ---
 
 Every project has a beautiful feature showcase page.
