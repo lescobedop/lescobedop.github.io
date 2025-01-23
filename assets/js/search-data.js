@@ -431,16 +431,16 @@ ninja.data = [{
           window.location.href = "/blog/2015/formatting-and-links/";
         
       },
-    },{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+    },{id: "news-i-m-incredibly-excited-to-share-that-i-ve-joined-the-founding-teams-of-two-innovative-companies-based-in-peru-visit-green-street-holdings-and-kipu-to-learn-more",
+          title: 'I’m incredibly excited to share that I’ve joined the founding teams of two...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-it-39-s-finally-here",
+          title: 'It&amp;#39;s finally here!',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+            },},{id: "news-visit-bushido-life-if-you-want-premium-quality-training-gear",
+          title: 'Visit Bushido Life if you want premium quality training gear.',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
