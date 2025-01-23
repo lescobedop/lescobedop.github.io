@@ -1,81 +1,45 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: Welcome to Kipu
+description: Unlocking the potential of data & AI for your business
+img: assets/img/kipu_consulting.jpeg
 importance: 3
 category: work
+hidden: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+The world of data and AI is filled with hype. At Kipu, we focus on what truly matters: solving real business problems with trustworthy data, clear governance, and cross-functional collaboration. We’ve seen companies fall victim to shiny object syndrome—chasing the latest trends without a solid foundation. Our approach is grounded in proven strategies that deliver ROI by addressing fundamentals first. Whether you’re just starting out or looking to scale, we guide you through each step of the journey to unlock your organization’s full potential.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/kipu_consulting2.jpeg" title="kipu" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Where strategy meets innovation: Building data-driven futures at Kipu.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### What We Do
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+1. **Data & AI Strategy**  
+   We collaborate with your leadership to develop strategies that align data and AI capabilities with your business goals, ensuring measurable impact.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+2. **AI/ML Development**  
+   Our team builds and deploys advanced AI/ML systems to automate processes, generate actionable insights, and optimize operations.
 
-{% raw %}
+3. **Team Building**  
+   We help you build high-performing data and AI teams by recruiting key talent, defining roles, and establishing effective workflows.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+4. **Workshops**  
+   We offer workshops on topics such as MLOps, AI/ML literacy, data product development, and more to upskill your teams.
 
-{% endraw %}
+### Why Kipu?
+
+At Kipu, we are passionate about helping companies harness the transformative power of data and AI to drive innovation, improve decision-making, and achieve sustainable growth. With over two decades of combined experience, we provide strategic consulting and advisory services tailored to your unique business challenges.
+
+Our mission is simple: To empower organizations to build sustainable, data-driven futures. Whether it’s crafting a comprehensive data strategy, deploying cutting-edge AI systems, or training your teams to thrive in a digital-first world, we bring a blend of deep industry expertise and entrepreneurial spirit to deliver exceptional results.
+
+### Let’s Build Something Amazing
+
+At Kipu, we’re here to help you unlock the power of data and AI. Visit our website at [kipuai.com](http://kipuai.com) to learn more about our services, or reach out via email at [contact@kipuai.com](mailto:contact@kipuai.com) for a free consultation and discover how we can help your organization thrive."
