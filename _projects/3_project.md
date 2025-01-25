@@ -5,7 +5,7 @@ description: Unlocking the potential of data & AI for your business
 img: assets/img/kipu_consulting.jpeg
 importance: 3
 category: work
-hidden: true
+draft: true
 ---
 
 The world of data and AI is filled with hype. At Kipu, we focus on what truly matters: solving real business problems with trustworthy data, clear governance, and cross-functional collaboration. We’ve seen companies fall victim to shiny object syndrome—chasing the latest trends without a solid foundation. Our approach is grounded in proven strategies that deliver ROI by addressing fundamentals first. Whether you’re just starting out or looking to scale, we guide you through each step of the journey to unlock your organization’s full potential.
