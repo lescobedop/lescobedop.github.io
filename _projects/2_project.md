@@ -7,7 +7,7 @@ redirect: /404
 importance: 2
 category: fun
 giscus_comments: true
-hidden: true
+hidden: false
 ---
 
 Every project has a beautiful feature showcase page.
