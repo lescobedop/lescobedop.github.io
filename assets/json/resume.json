@@ -25,13 +25,13 @@
   "work": [
     {
       "name": "Green Street Holdings",
-      "location": "Lima, Peru",
       "position": "Co-Founder",
       "url": "https://greenstreet-holdings.com",
       "startDate": "2024-01-01",
       "endDate": "Today",
       "summary": "We invest in local businesses that solve real-world problems and provide great service",
-      "highlights": ["Investments"]
+      "highlights": ["Investments"],
+      "location": "Lima, Peru"
     },
 
     {
@@ -41,7 +41,8 @@
       "startDate": "2025-01-01",
       "endDate": "Today",
       "summary": "We help companies harness the transformative power of data and AI to drive innovation, improve decision-making, and achieve sustainable growth",
-      "highlights": ["Consulting"]
+      "highlights": ["Consulting"],
+      "location": "Lima, Peru"
     },
 
     {
@@ -51,7 +52,8 @@
       "startDate": "2023-06-01",
       "endDate": "Today",
       "summary": "Lead data-driven initiatives to optimize operations, enhance customer experiences, and boost revenue",
-      "highlights": ["Data Strategy"]
+      "highlights": ["Data Strategy"],
+      "location": "Miami, FL"
     },
 
     {
@@ -61,7 +63,8 @@
       "startDate": "2023-01-01",
       "endDate": "2023-06-01",
       "summary": "Spearheaded the integration of data engineering, analytics, and AI, enhancing efficiency, reducing costs, and empowering data-driven decision-making",
-      "highlights": ["AI enablement"]
+      "highlights": ["AI enablement"],
+      "location": "Miami, FL"
     },
 
     {
@@ -71,7 +74,8 @@
       "startDate": "2021-11-01",
       "endDate": "2023-01-01",
       "summary": "Established streamline data lifecycle processes, boosting ROI and operational efficiency",
-      "highlights": ["Data and ML Operations"]
+      "highlights": ["Data and ML Operations"],
+      "location": "Miami, FL"
     },
 
     {
@@ -81,7 +85,8 @@
       "startDate": "2020-05-01",
       "endDate": "2021-11-01",
       "summary": "Transformed data science at REEF Technology, driving revenue growth, reducing costs of business operations and improviong customer experience",
-      "highlights": ["Transformative Data Science"]
+      "highlights": ["Transformative Data Science"],
+      "location": "Miami, FL"
     },
 
     {
@@ -91,7 +96,8 @@
       "startDate": "2017-08-01",
       "endDate": "2019-09-01",
       "summary": "Partnered with clients across industries in Latin America and the U.S. to generate meaningful impact and value through data science and optimization",
-      "highlights": ["Data science-driven impact."]
+      "highlights": ["Data science-driven impact."],
+      "location": "Sao Paulo, Brazil"
     },
 
     {
@@ -101,7 +107,8 @@
       "startDate": "2013-08-01",
       "endDate": "2017-07-01",
       "summary": "Helped higher education institutions optimize performance, engagement, and retention through data-driven training and analytics solutions",
-      "highlights": ["Education Analytics"]
+      "highlights": ["Education Analytics"],
+      "location": "Champaign, IL"
     },
 
     {
@@ -111,7 +118,8 @@
       "startDate": "2006-06-01",
       "endDate": "2010-06-01",
       "summary": "Conducted applied research and analysis to inform public policy recommendations, focusing on economic, social, and environmental issues",
-      "highlights": ["Public Policy Research"]
+      "highlights": ["Public Policy Research"],
+      "location": "Lima, Peru"
     }
   ],
 
