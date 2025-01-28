@@ -5,7 +5,7 @@ description: another project with an image 🎉
 img: assets/img/6.jpg
 importance: 4
 category: fun
-hidden: false
+hidden: true
 ---
 
 <div class="row">
