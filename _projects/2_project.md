@@ -3,7 +3,7 @@ layout: page
 title: Bushido Life
 description: My e-store for premium quality training gear 
 img: assets/img/samurai_face.png
-redirect: /404
+redirect: https://bushidolife.store/
 importance: 2
 category: fun
 giscus_comments: true
