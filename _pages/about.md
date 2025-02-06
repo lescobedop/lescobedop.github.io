@@ -19,7 +19,7 @@ social: true # includes social icons at the bottom of the page
 ---
 Hi, I’m Lucho Escobedo, a data-driven leader with a passion for innovation and business transformation. As Head of Data at ADP, I lead initiatives that optimize operations, improve customer experiences, and boost revenue, generating millions in value.
 
-Beyond my corporate role, I'm also an entrepreneur. I co-founded Kipu, a boutique consulting firm specializing in data and AI. We offer strategic consulting, AI/ML development, team building, and workshops, delivering impactful results for our clients. I also co-founded Green Street Holdings, a company that acquires and invests in small businesses, fostering strong fundamentals and driving their success through tailored partnerships.
+Beyond my corporate role, I'm also an entrepreneur. I co-founded Kipu, a boutique consulting firm specializing in data and AI strategy for companies in Latin American and the Caribbean. We offer strategic consulting, AI/ML development, team building, and workshops, delivering impactful results for our clients. I also co-founded Green Street Holdings, a company that acquires and invests in small businesses, fostering strong fundamentals and driving their success through tailored partnerships.
 
 With 15+ years in technology and management consulting, I've progressively built expertise in data, strategy, and leadership, delivering impactful results for businesses. My experience spans McKinsey & Company, REEF Technology, and ADP, where I've focused on developing scalable data solutions and driving innovation.
 
