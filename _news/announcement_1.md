@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Visit [Bushido Life](https://bushidolife.store) if you want premium quality training gear.
+Visit [Bushido Life](https://bushidolife.store) if you want premium quality no-gi gear.
