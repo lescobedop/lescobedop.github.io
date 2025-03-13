@@ -60,8 +60,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-visit-bushido-life-if-you-want-premium-quality-no-gi-gear",
-          title: 'Visit Bushido Life if you want premium quality no-gi gear.',
+            },},{id: "news-visit-bushido-life-if-you-want-premium-quality-grappling-gear",
+          title: 'Visit Bushido Life if you want premium quality grappling gear.',
           description: "",
           section: "News",},{id: "projects-green-street-holdings",
           title: 'Green Street Holdings',
