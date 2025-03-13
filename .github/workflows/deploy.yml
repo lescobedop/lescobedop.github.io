@@ -64,22 +64,39 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout Repository 🛎️
         uses: actions/checkout@v4
 
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2.2"  # Downgraded from 3.3.5 to 3.2.2 (compatible with Nokogiri)
+          ruby-version: "3.2.2"  # Downgraded to fix Nokogiri issues
           bundler-cache: true
 
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
-          python-version: "3.13"
+          python-version: "3.9"  # Ensures compatibility with Jupyter tools
           cache: "pip"
 
-      - name: Update _config.yml ⚙️
+      - name: Install Jupyter Notebook Dependencies 📖
+        run: |
+          pip3 install --upgrade nbconvert jupyter
+
+      - name: Install ImageMagick for Image Processing 🖼️
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Debug Installed Versions 🛠️
+        run: |
+          ruby -v
+          bundle -v
+          python --version
+          jupyter --version
+          convert -version || echo "ImageMagick (convert) not found"
+
+      - name: Update `_config.yml` ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
           commitChange: false
@@ -87,25 +104,23 @@ jobs:
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
 
-      - name: Install Dependencies 🔧
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick
-          pip3 install --upgrade pip
-          pip3 install jupyter nbconvert
-
-      - name: Build Site 🏗️
+      - name: Install Dependencies & Build Jekyll Site 🔧
         run: |
           export JEKYLL_ENV=production
-          bundle exec jekyll build
+          bundle install
+          bundle exec jekyll build || (echo "Jekyll Build Failed ❌"; exit 1)
 
-      - name: Purge unused CSS 🧹
+      - name: Purge Unused CSS 🧹
         run: |
           npm install -g purgecss
-          purgecss -c purgecss.config.js
+          purgecss -c purgecss.config.js || echo "PurgeCSS Failed ❌"
 
-      - name: Deploy 🚀
+      - name: Deploy to GitHub Pages 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+
+      - name: Debug Deployment Files 📂
+        run: |
+          ls -lah _site
