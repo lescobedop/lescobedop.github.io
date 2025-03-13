@@ -62,13 +62,14 @@ layout: default
   </header>
 
   <article class="post-content">
-  {% if page.toc %}
+{% if page.toc %}
   <div id="table-of-contents">
-  <h2>Table of Contents</h2>
-  {% include toc.html %}
+    <h2>Table of Contents</h2>
+    {% include toc.html %}
   </div>
   <hr>
 {% endif %}
+
     <div id="markdown-content">
       {{ content }}
     </div>
