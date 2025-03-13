@@ -255,6 +255,7 @@ keep_files:
 
 # Plug-ins
 plugins:
+  - jekyll-toc
   - jekyll-archives
   - jekyll-email-protect
   - jekyll-feed
