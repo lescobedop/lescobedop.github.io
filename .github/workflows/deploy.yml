@@ -5,56 +5,10 @@ on:
     branches:
       - master
       - main
-    paths:
-      - "assets/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!CONTRIBUTING.md"
-      - "!CUSTOMIZE.md"
-      - "!FAQ.md"
-      - "!INSTALL.md"
-      - "!README.md"
   pull_request:
     branches:
       - master
       - main
-    paths:
-      - "assets/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!CONTRIBUTING.md"
-      - "!CUSTOMIZE.md"
-      - "!FAQ.md"
-      - "!INSTALL.md"
-      - "!README.md"
   workflow_dispatch:
 
 permissions:
@@ -64,64 +18,56 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository 🛎️
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Ruby 💎
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2.2" # Ensures compatibility with Jekyll
+          ruby-version: "3.2.2"
           bundler-cache: true
 
-      - name: Setup Python 🐍
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.9"
           cache: "pip"
 
-      - name: Install Jupyter Notebook Dependencies 📖
+      - name: Install Jupyter Notebook
         run: |
-          pip3 install --upgrade nbconvert jupyter
+          pip install --upgrade pip
+          pip install --upgrade nbconvert jupyter
 
-      - name: Install ImageMagick for Image Processing 🖼️
+      - name: Install ImageMagick
         run: |
           sudo apt-get update
           sudo apt-get install -y imagemagick
+          sudo ln -s /usr/bin/magick /usr/bin/convert || true  # Ensures compatibility
 
-      - name: Debug Installed Versions 🛠️
+      - name: Verify Installations
         run: |
-          echo "🔍 Ruby Version:" && ruby -v
-          echo "🔍 Bundler Version:" && bundle -v
-          echo "🐍 Python Version:" && python --version
-          echo "📖 Jupyter Version:" && jupyter --version
-          echo "🖼️ Checking ImageMagick:" 
-          convert -version || echo "❌ ImageMagick (convert) not found"
+          echo "Ruby:" && ruby -v
+          echo "Bundler:" && bundle -v
+          echo "Python:" && python --version
+          echo "Jupyter:" && jupyter --version
+          echo "ImageMagick:" && convert -version || echo "ImageMagick not found"
 
-      - name: Update `_config.yml` ⚙️
-        uses: fjogeleit/yaml-update-action@main
-        with:
-          commitChange: false
-          valueFile: "_config.yml"
-          propertyPath: "giscus.repo"
-          value: ${{ github.repository }}
-
-      - name: Install Dependencies & Build Jekyll Site 🔧
+      - name: Install Dependencies and Build Site
         run: |
           export JEKYLL_ENV=production
           bundle install
-          bundle exec jekyll build || (echo "❌ Jekyll Build Failed"; exit 1)
+          bundle exec jekyll build || (echo "Jekyll Build Failed" && exit 1)
 
-      - name: Purge Unused CSS 🧹
+      - name: Purge Unused CSS
         run: |
           npm install -g purgecss
-          purgecss -c purgecss.config.js || echo "❌ PurgeCSS Failed"
+          purgecss -c purgecss.config.js || echo "PurgeCSS Failed"
 
-      - name: Deploy to GitHub Pages 🚀
+      - name: Deploy to GitHub Pages
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
 
-      - name: Debug Deployment Files 📂
-        run: |
-          ls -lah _site
+      - name: Debug Deployment Files
+        run: ls -lah _site
