@@ -35,14 +35,18 @@ jobs:
 
       - name: Install Jupyter Notebook
         run: |
-          pip install --upgrade pip
-          pip install --upgrade nbconvert jupyter
+          pip install --upgrade pip jupyter nbconvert
+
+      - name: Verify Jupyter Installation
+        run: |
+          jupyter --version || echo "Jupyter not found"
+          jupyter nbconvert --version || echo "nbconvert not found"
 
       - name: Install ImageMagick
         run: |
           sudo apt-get update
-          sudo apt-get install -y imagemagick
-          sudo ln -s /usr/bin/magick /usr/bin/convert || true  # Ensures compatibility
+          sudo apt-get install -y imagemagick imagemagick-6.q16
+          sudo ln -s /usr/bin/convert-im6.q16 /usr/bin/convert || true
 
       - name: Verify Installations
         run: |
@@ -50,7 +54,12 @@ jobs:
           echo "Bundler:" && bundle -v
           echo "Python:" && python --version
           echo "Jupyter:" && jupyter --version
-          echo "ImageMagick:" && convert -version || echo "ImageMagick not found"
+          echo "ImageMagick:"
+          if ! command -v convert &> /dev/null; then
+            echo "ImageMagick not found" && exit 1
+          else
+            convert -version
+          fi
 
       - name: Install Dependencies and Build Site
         run: |
