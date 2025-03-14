@@ -1,10 +1,10 @@
 <ul>
   {% for heading in page.content | split: '<h2>' %}
     {% if forloop.first == false %}
+      {% assign heading_text = heading | split: '</h2>' | first | strip_html %}
+      {% assign heading_slug = heading_text | slugify %}
       <li>
-        <a href="#{{ heading | split: '</h2>' | first | strip_html | slugify }}">
-          {{ heading | split: '</h2>' | first | strip_html }}
-        </a>
+        <a href="#{{ heading_slug }}">{{ heading_text }}</a>
       </li>
     {% endif %}
   {% endfor %}
