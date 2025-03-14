@@ -35,18 +35,42 @@ jobs:
 
       - name: Install Jupyter Notebook
         run: |
-          pip install --upgrade pip jupyter nbconvert
+          python -m pip install --upgrade pip
+          pip install jupyter nbconvert
+          echo "Checking Jupyter install..."
+          which jupyter || echo "Jupyter not found in PATH"
+          echo "Adding Jupyter to PATH..."
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
 
       - name: Verify Jupyter Installation
         run: |
-          jupyter --version || echo "Jupyter not found"
-          jupyter nbconvert --version || echo "nbconvert not found"
+          echo "Checking Jupyter availability..."
+          which jupyter
+          jupyter --version
+          jupyter nbconvert --version
+          if [ ! -f "assets/jupyter/blog.ipynb" ]; then
+            echo "Missing blog.ipynb file!"
+            exit 1
+          fi
 
       - name: Install ImageMagick
         run: |
           sudo apt-get update
           sudo apt-get install -y imagemagick imagemagick-6.q16
-          sudo ln -s /usr/bin/convert-im6.q16 /usr/bin/convert || true
+          if ! command -v convert &> /dev/null; then
+            echo "Imagemagick not found, searching for alternatives..."
+            if [ -f "/usr/bin/convert-im6.q16" ]; then
+              echo "Found convert-im6.q16, creating symlink..."
+              sudo ln -s /usr/bin/convert-im6.q16 /usr/bin/convert
+            elif [ -f "/usr/bin/convert-im7.q16" ]; then
+              echo "Found convert-im7.q16, creating symlink..."
+              sudo ln -s /usr/bin/convert-im7.q16 /usr/bin/convert
+            else
+              echo "ImageMagick installation failed. No 'convert' found."
+              exit 1
+            fi
+          fi
+          echo "ImageMagick installation complete."
 
       - name: Verify Installations
         run: |
