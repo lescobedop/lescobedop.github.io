@@ -70,13 +70,13 @@ jobs:
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2.2" # Downgraded to fix Nokogiri issues
+          ruby-version: "3.2.2" # Ensures compatibility with Jekyll
           bundler-cache: true
 
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
-          python-version: "3.9" # Ensures compatibility with Jupyter tools
+          python-version: "3.9"
           cache: "pip"
 
       - name: Install Jupyter Notebook Dependencies 📖
@@ -90,11 +90,12 @@ jobs:
 
       - name: Debug Installed Versions 🛠️
         run: |
-          ruby -v
-          bundle -v
-          python --version
-          jupyter --version
-          convert -version || echo "ImageMagick (convert) not found"
+          echo "🔍 Ruby Version:" && ruby -v
+          echo "🔍 Bundler Version:" && bundle -v
+          echo "🐍 Python Version:" && python --version
+          echo "📖 Jupyter Version:" && jupyter --version
+          echo "🖼️ Checking ImageMagick:" 
+          convert -version || echo "❌ ImageMagick (convert) not found"
 
       - name: Update `_config.yml` ⚙️
         uses: fjogeleit/yaml-update-action@main
@@ -108,12 +109,12 @@ jobs:
         run: |
           export JEKYLL_ENV=production
           bundle install
-          bundle exec jekyll build || (echo "Jekyll Build Failed ❌"; exit 1)
+          bundle exec jekyll build || (echo "❌ Jekyll Build Failed"; exit 1)
 
       - name: Purge Unused CSS 🧹
         run: |
           npm install -g purgecss
-          purgecss -c purgecss.config.js || echo "PurgeCSS Failed ❌"
+          purgecss -c purgecss.config.js || echo "❌ PurgeCSS Failed"
 
       - name: Deploy to GitHub Pages 🚀
         if: github.event_name != 'pull_request'
