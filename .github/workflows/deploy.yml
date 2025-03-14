@@ -70,13 +70,13 @@ jobs:
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2.2"  # Downgraded to fix Nokogiri issues
+          ruby-version: "3.2.2" # Downgraded to fix Nokogiri issues
           bundler-cache: true
 
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
-          python-version: "3.9"  # Ensures compatibility with Jupyter tools
+          python-version: "3.9" # Ensures compatibility with Jupyter tools
           cache: "pip"
 
       - name: Install Jupyter Notebook Dependencies 📖

@@ -3,7 +3,7 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches:
-      - main  # Run on push to main
+      - main # Run on push to main
 
 jobs:
   build-deploy:
@@ -15,7 +15,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1  # Use latest compatible version
+          ruby-version: 3.1 # Use latest compatible version
           bundler-cache: true
 
       - name: Install Jekyll and Dependencies
@@ -30,6 +30,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  # Deploy built site
-          publish_branch: gh-pages  # Ensure gh-pages has the built version
+          publish_dir: ./_site # Deploy built site
+          publish_branch: gh-pages # Ensure gh-pages has the built version
 

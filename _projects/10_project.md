@@ -17,7 +17,6 @@ Our mission is clear: to empower the people behind the businesses that keep comm
 
 We invite you to explore our website at [greenstreet-holding.com](https://greenstreet-holding.com) to learn more about what we do. Additionally, we offer a free consultation. Please contact us via email at [info@greenstreet-holding.com](mailto:info@greenstreet-holding.com) for further details.
 
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}

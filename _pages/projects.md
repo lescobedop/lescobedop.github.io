@@ -8,6 +8,7 @@ nav_order: 3
 display_categories: [work, fun]
 horizontal: false
 ---
+
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
@@ -38,9 +39,10 @@ horizontal: false
   {% endfor %}
 
 {% else %}
-  {% assign visible_projects = site.projects | where: "hidden", false %}
-  {% assign sorted_projects = visible_projects | sort: "importance" %}
-  {% if page.horizontal %}
+{% assign visible_projects = site.projects | where: "hidden", false %}
+{% assign sorted_projects = visible_projects | sort: "importance" %}
+{% if page.horizontal %}
+
   <div class="container">
     <div class="row row-cols-1 row-cols-md-2">
     {% for project in sorted_projects %}

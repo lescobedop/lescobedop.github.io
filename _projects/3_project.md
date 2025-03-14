@@ -10,7 +10,6 @@ hidden: false
 
 The world of data and AI is filled with hype. At Kipu, we focus on what truly matters: solving real business problems with trustworthy data, clear governance, and cross-functional collaboration. We’ve seen companies fall victim to shiny object syndrome—chasing the latest trends without a solid foundation. Our approach is grounded in proven strategies that deliver ROI by addressing fundamentals first. Whether you’re just starting out or looking to scale, we guide you through each step of the journey to unlock your organization’s full potential.
 
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/kipu_consulting2.jpeg" title="kipu" class="img-fluid rounded z-depth-1" %}
