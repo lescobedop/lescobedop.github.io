@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bushido Life
-description: My e-store for premium quality training gear 
+description: My e-store for premium quality training gear
 img: assets/img/samurai_face.png
 redirect: https://bushidolife.store/
 importance: 2

@@ -208,53 +208,25 @@
     {
       "name": "Data",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Data Strategy",
-        "Data Products",
-        "Data Engineering",
-        "Data Science",
-        "Machine Learning",
-        "Artificial Intelligence"
-      ]
+      "keywords": ["Data Strategy", "Data Products", "Data Engineering", "Data Science", "Machine Learning", "Artificial Intelligence"]
     },
 
     {
       "name": "Products",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Product Strategy",
-        "Product Lifecycle",
-        "Product Marketing",
-        "Design Thinking",
-        "Customer Success",
-        "Digital Transformation"
-      ]
+      "keywords": ["Product Strategy", "Product Lifecycle", "Product Marketing", "Design Thinking", "Customer Success", "Digital Transformation"]
     },
 
     {
       "name": "Investments",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Investment Strategy",
-        "Go-to-Market",
-        "Operational Efficiency",
-        "Valuation",
-        "Small Businesses",
-        "Competitive Analysis"
-      ]
+      "keywords": ["Investment Strategy", "Go-to-Market", "Operational Efficiency", "Valuation", "Small Businesses", "Competitive Analysis"]
     },
 
     {
       "name": "Sports",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Brazillian Jiu Jitsu",
-        "Stregth Training",
-        "Hypertrophy",
-        "Power Training",
-        "Soccer",
-        "Nutrition"
-      ]
+      "keywords": ["Brazillian Jiu Jitsu", "Stregth Training", "Hypertrophy", "Power Training", "Soccer", "Nutrition"]
     }
   ]
 }
