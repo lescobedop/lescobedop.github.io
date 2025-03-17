@@ -40,7 +40,7 @@ jobs:
           wget -qO miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
           bash miniconda.sh -b -p $HOME/miniconda
           rm miniconda.sh
-    
+
           echo "Setting up Conda..."
           echo "$HOME/miniconda/bin" >> $GITHUB_PATH
           export PATH="$HOME/miniconda/bin:$PATH"
@@ -52,23 +52,36 @@ jobs:
           echo "Activating Conda environment permanently..."
           echo "source $HOME/miniconda/bin/activate jekyll-env" >> ~/.bashrc
 
-      - name: Ensure Jupyter is in PATH
+      - name: Debug Conda Environment & Jupyter
         run: |
           set -e
           export PATH="$HOME/miniconda/bin:$PATH"
           source $HOME/miniconda/bin/activate jekyll-env
-          
-          # Ensure Jupyter is accessible from PATH
-          echo "Checking Jupyter installation..."
-          which jupyter || echo "⚠️ Jupyter is NOT in the default PATH!"
-          
-          if ! command -v jupyter &> /dev/null; then
-            echo "❌ ERROR: Jupyter is not found! Manually adding to PATH..."
-            echo "$HOME/miniconda/envs/jekyll-env/bin" >> $GITHUB_PATH
-          fi
 
-          echo "Final Jupyter version: $(jupyter --version)"
-          echo "Final nbconvert version: $(jupyter nbconvert --version)"
+          echo "🔍 Checking Conda environments..."
+          conda info --envs
+
+          echo "🔍 Checking Jupyter installation..."
+          conda list | grep jupyter || echo "❌ Jupyter is missing from Conda!"
+
+          echo "🔍 Checking Jupyter binary location..."
+          which jupyter || echo "❌ Jupyter is NOT in the default PATH!"
+
+      - name: Force Jupyter into PATH
+        run: |
+          set -e
+          export PATH="$HOME/miniconda/envs/jekyll-env/bin:$HOME/miniconda/bin:$PATH"
+          source $HOME/miniconda/bin/activate jekyll-env
+          
+          echo "✅ Ensuring Jupyter is in PATH"
+          echo "PATH: $PATH"
+
+          if ! command -v jupyter &> /dev/null; then
+            echo "❌ Jupyter is still missing!"
+            exit 1
+          else
+            echo "✅ Jupyter found: $(which jupyter)"
+          fi
 
       - name: Verify Jupyter Before Running Jekyll
         run: |
