@@ -38,7 +38,7 @@ jobs:
           set -e  # Exit immediately if any command fails
           echo "Updating pip and installing Jupyter..."
           python -m pip install --upgrade pip
-          pip install --quiet jupyter nbconvert
+          pip install --quiet jupyter nbconvert ipykernel
 
           echo "Verifying Jupyter installation..."
           if ! command -v jupyter &> /dev/null; then
@@ -55,11 +55,15 @@ jobs:
         run: |
           set -e
           echo "Checking Jupyter availability..."
-          which jupyter || { echo "Jupyter not found"; exit 1; }
-          jupyter --version
-          jupyter nbconvert --version
+          if ! command -v jupyter &> /dev/null; then
+            echo "❌ ERROR: Jupyter not found!" 
+            exit 1
+          fi
 
-          # Check if blog notebook exists, but do NOT fail the build
+          echo "Jupyter version: $(jupyter --version)"
+          echo "nbconvert version: $(jupyter nbconvert --version)"
+
+          # Ensure 'assets/jupyter/blog.ipynb' exists
           if [ ! -f "assets/jupyter/blog.ipynb" ]; then
             echo "⚠️ Warning: Missing assets/jupyter/blog.ipynb file!"
           else
