@@ -52,15 +52,25 @@ jobs:
           echo "Activating Conda environment permanently..."
           echo "source $HOME/miniconda/bin/activate jekyll-env" >> ~/.bashrc
 
-      - name: Debug Python and Pip Versions
+      - name: Ensure Jupyter is in PATH
         run: |
-          echo "Checking Python and Pip versions..."
-          python --version || echo "❌ Python not found"
-          python3 --version || echo "❌ Python3 not found"
-          pip --version || echo "❌ Pip not found"
-          pip3 --version || echo "❌ Pip3 not found"
+          set -e
+          export PATH="$HOME/miniconda/bin:$PATH"
+          source $HOME/miniconda/bin/activate jekyll-env
+          
+          # Ensure Jupyter is accessible from PATH
+          echo "Checking Jupyter installation..."
+          which jupyter || echo "⚠️ Jupyter is NOT in the default PATH!"
+          
+          if ! command -v jupyter &> /dev/null; then
+            echo "❌ ERROR: Jupyter is not found! Manually adding to PATH..."
+            echo "$HOME/miniconda/envs/jekyll-env/bin" >> $GITHUB_PATH
+          fi
 
-      - name: Verify Jupyter Installation
+          echo "Final Jupyter version: $(jupyter --version)"
+          echo "Final nbconvert version: $(jupyter nbconvert --version)"
+
+      - name: Verify Jupyter Before Running Jekyll
         run: |
           set -e
           export PATH="$HOME/miniconda/bin:$PATH"
