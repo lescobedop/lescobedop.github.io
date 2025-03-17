@@ -53,19 +53,15 @@ jobs:
             exit 1
           fi
 
-      - name: Install ImageMagick
+      - name: Install GraphicsMagick (Alternative to ImageMagick)
         run: |
           sudo apt-get update
-          sudo apt-get install -y imagemagick imagemagick-6.q16 imagemagick-7
-          echo "Verifying ImageMagick installation..."
-          if command -v convert &> /dev/null; then
-            echo "ImageMagick installed successfully: $(convert -version)"
-          elif command -v magick &> /dev/null; then
-            echo "Using ImageMagick 7 with 'magick' instead of 'convert'"
-            sudo ln -sf "$(command -v magick)" /usr/bin/convert
+          sudo apt-get install -y graphicsmagick
+          echo "Verifying GraphicsMagick installation..."
+          if command -v gm &> /dev/null; then
+            echo "GraphicsMagick installed successfully: $(gm version)"
           else
-            echo "ImageMagick installation failed. No 'convert' or 'magick' found."
-            dpkg -L imagemagick || echo "Could not find ImageMagick package files"
+            echo "GraphicsMagick installation failed. No 'gm' found."
             exit 1
           fi
 
@@ -75,11 +71,11 @@ jobs:
           echo "Bundler:" && bundle -v
           echo "Python:" && python --version
           echo "Jupyter:" && jupyter --version
-          echo "ImageMagick:"
-          if ! command -v convert &> /dev/null; then
-            echo "ImageMagick not found" && exit 1
+          echo "GraphicsMagick:"
+          if ! command -v gm &> /dev/null; then
+            echo "GraphicsMagick not found" && exit 1
           else
-            convert -version
+            gm version
           fi
 
       - name: Install Dependencies and Build Site
