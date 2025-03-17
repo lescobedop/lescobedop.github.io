@@ -33,30 +33,27 @@ jobs:
           python-version: "3.9"
           cache: "pip"
 
-      - name: Install Jupyter Notebook
+      - name: Debug Python and Pip Versions
+        run: |
+          echo "Checking Python and Pip versions..."
+          python --version || echo "❌ Python not found"
+          python3 --version || echo "❌ Python3 not found"
+          pip --version || echo "❌ Pip not found"
+          pip3 --version || echo "❌ Pip3 not found"
+
+      - name: Install Jupyter via APT (Al-Folio method)
         run: |
           set -e  # Exit immediately if any command fails
-          echo "Updating pip and installing Jupyter..."
-          python -m pip install --upgrade pip
-          pip install --quiet jupyter nbconvert ipykernel
-
-          echo "Verifying Jupyter installation..."
-          if ! command -v jupyter &> /dev/null; then
-            echo "Jupyter not found! Adding it to PATH..."
-            echo "$HOME/.local/bin" >> $GITHUB_PATH
-          else
-            echo "Jupyter is installed: $(jupyter --version)"
-          fi
-
-          echo "Installing Jupyter kernels..."
-          python -m ipykernel install --user
+          echo "Installing Jupyter Notebook using APT..."
+          sudo apt-get update
+          sudo apt-get install -y jupyter-nbconvert
 
       - name: Verify Jupyter Installation
         run: |
           set -e
           echo "Checking Jupyter availability..."
           if ! command -v jupyter &> /dev/null; then
-            echo "❌ ERROR: Jupyter not found!" 
+            echo "❌ ERROR: Jupyter not found!"
             exit 1
           fi
 
