@@ -40,13 +40,16 @@ jobs:
           wget -qO miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
           bash miniconda.sh -b -p $HOME/miniconda
           rm miniconda.sh
+    
+          echo "Setting up Conda..."
           echo "$HOME/miniconda/bin" >> $GITHUB_PATH
+          export PATH="$HOME/miniconda/bin:$PATH"
 
           echo "Creating Conda environment..."
           source $HOME/miniconda/bin/activate
           conda create -n jekyll-env -y python=3.9 jupyter jupyterlab nbconvert
 
-          echo "Activating Conda environment..."
+          echo "Activating Conda environment permanently..."
           echo "source $HOME/miniconda/bin/activate jekyll-env" >> ~/.bashrc
 
       - name: Debug Python and Pip Versions
@@ -60,8 +63,9 @@ jobs:
       - name: Verify Jupyter Installation
         run: |
           set -e
+          export PATH="$HOME/miniconda/bin:$PATH"
           source $HOME/miniconda/bin/activate jekyll-env
-          
+    
           echo "Checking Jupyter availability..."
           if ! command -v jupyter &> /dev/null; then
             echo "❌ ERROR: Jupyter not found!"
@@ -71,7 +75,6 @@ jobs:
           echo "Jupyter version: $(jupyter --version)"
           echo "nbconvert version: $(jupyter nbconvert --version)"
 
-          # Ensure 'assets/jupyter/blog.ipynb' exists
           if [ ! -f "assets/jupyter/blog.ipynb" ]; then
             echo "⚠️ Warning: Missing assets/jupyter/blog.ipynb file!"
           else
@@ -81,25 +84,11 @@ jobs:
       - name: Install Dependencies and Build Site
         run: |
           set -e
+          export PATH="$HOME/miniconda/bin:$PATH"
           source $HOME/miniconda/bin/activate jekyll-env
           export JEKYLL_ENV=production
           bundle install
           bundle exec jekyll build || (echo "Jekyll Build Failed" && exit 1)
-
-      - name: Install GraphicsMagick
-        run: |
-          set -e  # Stop script on any error
-          sudo apt-get update
-          sudo apt-get install -y graphicsmagick graphicsmagick-imagemagick-compat
-          
-          # Verify installation
-          if ! command -v gm &> /dev/null; then
-            echo "GraphicsMagick installation failed"
-            exit 1
-          fi
-
-          echo "GraphicsMagick installed successfully:"
-          gm version
 
       - name: Verify Installations
         run: |
@@ -107,16 +96,22 @@ jobs:
           echo "Bundler:" && bundle -v
           echo "Python:" && python --version
           echo "Jupyter:" && jupyter --version
-          
-          echo "GraphicsMagick:"
-          if ! command -v gm &> /dev/null; then
-            echo "GraphicsMagick not found" && exit 1
-          else
-            gm version
-          fi
 
       - name: Convert Images with GraphicsMagick
         run: |
+          echo "Installing GraphicsMagick..."
+          sudo apt-get update
+          sudo apt-get install -y graphicsmagick graphicsmagick-imagemagick-compat
+          
+          echo "Verifying GraphicsMagick installation..."
+          if ! command -v gm &> /dev/null; then
+            echo "❌ ERROR: GraphicsMagick not found"
+            exit 1
+          fi
+
+          echo "GraphicsMagick installed successfully:"
+          gm version
+
           echo "Converting images using GraphicsMagick..."
           find assets/img/ -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.tiff" -o -iname "*.gif" \) | while read file; do
             output="${file%.*}.webp"
@@ -132,7 +127,7 @@ jobs:
       - name: Purge Unused CSS
         run: |
           npm install -g purgecss
-          purgecss -c purgecss.config.js || echo "PurgeCSS Failed"
+          purgecss -c purgecss.config.js || echo "⚠️ Warning: PurgeCSS Failed"
 
       - name: Deploy to GitHub Pages
         if: github.event_name != 'pull_request'
