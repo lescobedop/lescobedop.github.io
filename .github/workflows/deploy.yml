@@ -33,6 +33,22 @@ jobs:
           python-version: "3.9"
           cache: "pip"
 
+      - name: Install Miniconda & Jupyter (Al-Folio method)
+        run: |
+          set -e
+          echo "Installing Miniconda..."
+          wget -qO miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+          bash miniconda.sh -b -p $HOME/miniconda
+          rm miniconda.sh
+          echo "$HOME/miniconda/bin" >> $GITHUB_PATH
+
+          echo "Creating Conda environment..."
+          source $HOME/miniconda/bin/activate
+          conda create -n jekyll-env -y python=3.9 jupyter jupyterlab nbconvert
+
+          echo "Activating Conda environment..."
+          echo "source $HOME/miniconda/bin/activate jekyll-env" >> ~/.bashrc
+
       - name: Debug Python and Pip Versions
         run: |
           echo "Checking Python and Pip versions..."
@@ -41,16 +57,11 @@ jobs:
           pip --version || echo "❌ Pip not found"
           pip3 --version || echo "❌ Pip3 not found"
 
-      - name: Install Jupyter via APT (Al-Folio method)
-        run: |
-          set -e  # Exit immediately if any command fails
-          echo "Installing Jupyter Notebook using APT..."
-          sudo apt-get update
-          sudo apt-get install -y jupyter-nbconvert
-
       - name: Verify Jupyter Installation
         run: |
           set -e
+          source $HOME/miniconda/bin/activate jekyll-env
+          
           echo "Checking Jupyter availability..."
           if ! command -v jupyter &> /dev/null; then
             echo "❌ ERROR: Jupyter not found!"
@@ -67,6 +78,14 @@ jobs:
             echo "✅ Jupyter Notebook file detected."
           fi
 
+      - name: Install Dependencies and Build Site
+        run: |
+          set -e
+          source $HOME/miniconda/bin/activate jekyll-env
+          export JEKYLL_ENV=production
+          bundle install
+          bundle exec jekyll build || (echo "Jekyll Build Failed" && exit 1)
+
       - name: Install GraphicsMagick
         run: |
           set -e  # Stop script on any error
@@ -81,7 +100,6 @@ jobs:
 
           echo "GraphicsMagick installed successfully:"
           gm version
-
 
       - name: Verify Installations
         run: |
@@ -110,13 +128,6 @@ jobs:
             fi
           done
           echo "✅ Image conversion complete."
-
-
-      - name: Install Dependencies and Build Site
-        run: |
-          export JEKYLL_ENV=production
-          bundle install
-          bundle exec jekyll build || (echo "Jekyll Build Failed" && exit 1)
 
       - name: Purge Unused CSS
         run: |
