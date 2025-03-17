@@ -260,7 +260,6 @@ plugins:
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-get-json
-  - jekyll-imagemagick
   - jekyll-jupyter-notebook
   - jekyll-link-attributes
   - jekyll-minifier
@@ -405,13 +404,9 @@ external_links:
 # Responsive WebP Images (GraphicsMagick Implementation)
 # -----------------------------------------------------------------------------
 
-# Disable ImageMagick, since we are using GraphicsMagick
-imagemagick:
-  enabled: false  
-
-# Enable GraphicsMagick
 graphicsmagick:
-  enabled: true  # Enables GraphicsMagick instead of ImageMagick
+  enabled: true  # Enables responsive images
+  convert_command: "gm convert"  # Use GraphicsMagick instead of ImageMagick
   widths:
     - 480
     - 800
@@ -428,7 +423,8 @@ graphicsmagick:
     webp: "-quality 85"
 
 # Lazy loading images
-lazy_loading_images: true # Enables lazy loading of images (recommended)
+lazy_loading_images: true
+
 
 
 # -----------------------------------------------------------------------------
