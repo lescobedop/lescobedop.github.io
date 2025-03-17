@@ -48,6 +48,8 @@ jobs:
             echo "Jupyter is installed: $(jupyter --version)"
           fi
 
+          echo "Installing Jupyter kernels..."
+          python -m ipykernel install --user
 
       - name: Verify Jupyter Installation
         run: |
@@ -63,7 +65,6 @@ jobs:
           else
             echo "✅ Jupyter Notebook file detected."
           fi
-
 
       - name: Install GraphicsMagick
         run: |
@@ -94,6 +95,20 @@ jobs:
           else
             gm version
           fi
+
+      - name: Convert Images with GraphicsMagick
+        run: |
+          echo "Converting images using GraphicsMagick..."
+          find assets/img/ -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.tiff" -o -iname "*.gif" \) | while read file; do
+            output="${file%.*}.webp"
+            if [ ! -f "$output" ]; then  # Avoid re-processing existing files
+              gm convert "$file" -quality 85 "$output"
+              echo "Converted: $file -> $output"
+            else
+              echo "Skipped (already exists): $output"
+            fi
+          done
+          echo "✅ Image conversion complete."
 
 
       - name: Install Dependencies and Build Site
