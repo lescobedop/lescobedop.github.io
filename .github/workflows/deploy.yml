@@ -113,6 +113,14 @@ jobs:
           bundle install
           bundle exec jekyll build || (echo "Jekyll Build Failed" && exit 1)
 
+      - name: Debug Jupyter Before Running Jekyll
+        run: |
+          set -e
+          echo "🔹 Checking Jupyter before Jekyll build"
+          which jupyter || echo "❌ Jupyter is NOT in PATH!"
+          jupyter --version || echo "❌ Jupyter is NOT working!"
+          jupyter nbconvert --version || echo "❌ nbconvert is NOT working!"
+
       - name: Verify Installations
         run: |
           echo "Ruby:" && ruby -v
