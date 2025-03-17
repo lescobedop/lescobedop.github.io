@@ -56,21 +56,18 @@ jobs:
       - name: Install ImageMagick
         run: |
           sudo apt-get update
-          sudo apt-get install -y imagemagick imagemagick-6.q16
-          if ! command -v convert &> /dev/null; then
-            echo "Imagemagick not found, searching for alternatives..."
-            if [ -f "/usr/bin/convert-im6.q16" ]; then
-              echo "Found convert-im6.q16, creating symlink..."
-              sudo ln -s /usr/bin/convert-im6.q16 /usr/bin/convert
-            elif [ -f "/usr/bin/convert-im7.q16" ]; then
-              echo "Found convert-im7.q16, creating symlink..."
-              sudo ln -s /usr/bin/convert-im7.q16 /usr/bin/convert
-            else
-              echo "ImageMagick installation failed. No 'convert' found."
-              exit 1
-            fi
+          sudo apt-get install -y imagemagick imagemagick-6.q16 imagemagick-7
+          echo "Verifying ImageMagick installation..."
+          if command -v convert &> /dev/null; then
+            echo "ImageMagick installed successfully: $(convert -version)"
+          elif command -v magick &> /dev/null; then
+            echo "Using ImageMagick 7 with 'magick' instead of 'convert'"
+            sudo ln -sf "$(command -v magick)" /usr/bin/convert
+          else
+            echo "ImageMagick installation failed. No 'convert' or 'magick' found."
+            dpkg -L imagemagick || echo "Could not find ImageMagick package files"
+            exit 1
           fi
-          echo "ImageMagick installation complete."
 
       - name: Verify Installations
         run: |
@@ -103,4 +100,6 @@ jobs:
           folder: _site
 
       - name: Debug Deployment Files
-        run: ls -lah _site
+        run: |
+          echo "Listing files in _site directory:"
+          ls -lah _site
