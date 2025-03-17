@@ -405,12 +405,13 @@ external_links:
 # Responsive WebP Images (GraphicsMagick Implementation)
 # -----------------------------------------------------------------------------
 
-# MAKE SURE GraphicsMagick is installed and on your PATH before enabling this.
-# In a terminal, run:
-#   gm version
+# Disable ImageMagick, since we are using GraphicsMagick
 imagemagick:
-  enabled: true # Enables responsive images for your site
-  convert_command: "gm convert" # Use GraphicsMagick instead of ImageMagick
+  enabled: false  
+
+# Enable GraphicsMagick
+graphicsmagick:
+  enabled: true  # Enables GraphicsMagick instead of ImageMagick
   widths:
     - 480
     - 800

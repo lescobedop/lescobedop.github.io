@@ -35,35 +35,51 @@ jobs:
 
       - name: Install Jupyter Notebook
         run: |
+          set -e  # Exit immediately if any command fails
+          echo "Updating pip and installing Jupyter..."
           python -m pip install --upgrade pip
-          pip install jupyter nbconvert
-          echo "Checking Jupyter install..."
-          which jupyter || echo "Jupyter not found in PATH"
-          echo "Adding Jupyter to PATH..."
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          pip install --quiet jupyter nbconvert
+
+          echo "Verifying Jupyter installation..."
+          if ! command -v jupyter &> /dev/null; then
+            echo "Jupyter not found! Adding it to PATH..."
+            echo "$HOME/.local/bin" >> $GITHUB_PATH
+          else
+            echo "Jupyter is installed: $(jupyter --version)"
+          fi
+
 
       - name: Verify Jupyter Installation
         run: |
+          set -e
           echo "Checking Jupyter availability..."
-          which jupyter
+          which jupyter || { echo "Jupyter not found"; exit 1; }
           jupyter --version
           jupyter nbconvert --version
+
+          # Check if blog notebook exists, but do NOT fail the build
           if [ ! -f "assets/jupyter/blog.ipynb" ]; then
-            echo "Missing blog.ipynb file!"
+            echo "⚠️ Warning: Missing assets/jupyter/blog.ipynb file!"
+          else
+            echo "✅ Jupyter Notebook file detected."
+          fi
+
+
+      - name: Install GraphicsMagick
+        run: |
+          set -e  # Stop script on any error
+          sudo apt-get update
+          sudo apt-get install -y graphicsmagick graphicsmagick-imagemagick-compat
+          
+          # Verify installation
+          if ! command -v gm &> /dev/null; then
+            echo "GraphicsMagick installation failed"
             exit 1
           fi
 
-      - name: Install GraphicsMagick (Alternative to ImageMagick)
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y graphicsmagick
-          echo "Verifying GraphicsMagick installation..."
-          if command -v gm &> /dev/null; then
-            echo "GraphicsMagick installed successfully: $(gm version)"
-          else
-            echo "GraphicsMagick installation failed. No 'gm' found."
-            exit 1
-          fi
+          echo "GraphicsMagick installed successfully:"
+          gm version
+
 
       - name: Verify Installations
         run: |
@@ -71,12 +87,14 @@ jobs:
           echo "Bundler:" && bundle -v
           echo "Python:" && python --version
           echo "Jupyter:" && jupyter --version
+          
           echo "GraphicsMagick:"
           if ! command -v gm &> /dev/null; then
             echo "GraphicsMagick not found" && exit 1
           else
             gm version
           fi
+
 
       - name: Install Dependencies and Build Site
         run: |
