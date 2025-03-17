@@ -1,0 +1,232 @@
+{
+  "basics": {
+    "name": "Lucho Escobedo",
+    "label": "",
+    "image": "",
+    "email": "contact@luchoescobedo.com",
+    "phone": "",
+    "url": "https://luchoescobedo.com",
+    "summary": "Technologist, Entrepreneur and Investor, fostering tailored and innovative solutions for sustainable business growth.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Miami",
+      "countryCode": "US",
+      "region": "Florida"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "AlbertEinstein",
+        "url": "https://twitter.com/AlbertEinstein"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Green Street Holdings",
+      "position": "Co-Founder",
+      "url": "https://greenstreet-holdings.com",
+      "startDate": "2024-01-01",
+      "endDate": "Today",
+      "summary": "We invest in local businesses that solve real-world problems and provide great service.",
+      "highlights": ["Small Businesses, Investments, Advisory"],
+      "location": "Lima, PE"
+    },
+
+    {
+      "name": "Kipu",
+      "position": "Co-Founder",
+      "url": "https://kipuai.com",
+      "startDate": "2025-01-01",
+      "endDate": "Today",
+      "summary": "We help Latin American and Caribbean companies harness the transformative power of data and AI to drive innovation, improve decision-making, and achieve sustainable growth.",
+      "highlights": ["Data & AI Strategy, Consulting, Latin America"],
+      "location": "Lima, PE"
+    },
+
+    {
+      "name": "Automatic Data Processing, ADP",
+      "position": "Head of Data, HRO",
+      "url": "https://adp.com",
+      "startDate": "2023-06-01",
+      "endDate": "Today",
+      "summary": "Lead data-driven initiatives to optimize operations, enhance customer experiences, and boost revenue.",
+      "highlights": ["Data Strategy, Data-Driven Decisions, ROI"],
+      "location": "Miami, US"
+    },
+
+    {
+      "name": "REEF Technology",
+      "position": "VP of Data & Analytics",
+      "url": "https://reeftechnology.com",
+      "startDate": "2023-01-01",
+      "endDate": "2023-06-01",
+      "summary": "Spearheaded the global integration of data engineering, analytics, and AI, enhancing efficiency, reducing costs, and empowering data-driven decision-making.",
+      "highlights": ["Global Data and AI Strategy"],
+      "location": "Miami, US"
+    },
+
+    {
+      "name": "REEF Technology",
+      "position": "Senior Director of Data Science & Analytics",
+      "url": "https://reeftechnology.com",
+      "startDate": "2021-11-01",
+      "endDate": "2023-01-01",
+      "summary": "Established streamline data products and lifecycle processes, boosting ROI and operational efficiency.",
+      "highlights": ["Data Products, Product Lifecycle, ROI"],
+      "location": "Miami, US"
+    },
+
+    {
+      "name": "REEF Technology",
+      "position": "Director of Data Science",
+      "url": "https://reeftechnology.com",
+      "startDate": "2020-05-01",
+      "endDate": "2021-11-01",
+      "summary": "Pioneered and scaled the data science function, delivering substantial revenue growth, optimizing operational efficiency, and improving customer satisfaction.",
+      "highlights": ["Data Science Pioneer, Scale Data Function"],
+      "location": "Miami, US"
+    },
+
+    {
+      "name": "Quantumblack, AI by McKinsey",
+      "position": "Senior Data Scientist",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/how-we-help-clients",
+      "startDate": "2017-08-01",
+      "endDate": "2019-09-01",
+      "summary": "Partnered with clients across industries in Latin America and the U.S. to generate meaningful impact and value through data science and optimization.",
+      "highlights": ["Data Science Consulting, Americas, High Business Impact"],
+      "location": "Sao Paulo, BR"
+    },
+
+    {
+      "name": "Center for Innovation in Teaching & Learning (CITL)",
+      "position": "Analytics Consultant",
+      "url": "https://citl.illinois.edu/",
+      "startDate": "2013-08-01",
+      "endDate": "2017-07-01",
+      "summary": "Helped higher education institutions optimize performance, engagement, and retention through data-driven training and analytics solutions.",
+      "highlights": ["Higher Education Analytics, Consulting"],
+      "location": "Champaign, US"
+    },
+
+    {
+      "name": "Group for the Analysis of Development, GRADE",
+      "position": "Researcher",
+      "url": "https://grade.org.pe/",
+      "startDate": "2006-06-01",
+      "endDate": "2010-06-01",
+      "summary": "Conducted applied research and analysis to inform public policy recommendations, focusing on economic, social, and environmental issues.",
+      "highlights": ["Evidence-Based Policy, Economic Policy Analysis"],
+      "location": "Lima, PE"
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "University of Illinois",
+      "location": "Champaign, US",
+      "url": "https://illinois.edu/",
+      "area": "Geospatial Economics",
+      "studyType": "PhD",
+      "startDate": "2012-01-08",
+      "endDate": "2017-01-05",
+      "score": "",
+      "courses": ["Spatio-Temporal Econometrics"]
+    },
+
+    {
+      "institution": "University of Illinois",
+      "location": "Champaign, US",
+      "url": "https://illinois.edu/",
+      "area": "Geospatial Economics",
+      "studyType": "MSc",
+      "startDate": "2010-01-08",
+      "endDate": "2012-01-05",
+      "score": "",
+      "courses": ["Spatial Econometrics"]
+    },
+
+    {
+      "institution": "Pontificia Universidad Catolica del Peru",
+      "location": "Lima, Peru",
+      "url": "https://www.pucp.edu.pe/",
+      "area": "Geography",
+      "studyType": "BA",
+      "startDate": "2001-01-03",
+      "endDate": "2006-01-12",
+      "score": "",
+      "courses": ["Geographic Accessibility of Education in Peru"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Tinker Fellowship",
+      "date": "2013-08-01",
+      "awarder": "Tinker Foundation",
+      "url": "https://tinker.org/",
+      "summary": "Awarded for the development of my doctorate dissertation proposal"
+    },
+
+    {
+      "title": "CLACSO Fellowship",
+      "date": "2010-10-01",
+      "awarder": "Consejo Latinoamericano de Ciencias Sociales, CLACSO",
+      "url": "https://www.clacso.org/",
+      "summary": "Awarded for the study of the impact of natural disasters on poverty in Peru's Andean region, identifying latent vulnerability patterns and poverty concentrations."
+    },
+
+    {
+      "title": "Fulbright Scholarship",
+      "date": "2010-04-01",
+      "awarder": "Fulbright Program",
+      "url": "https://us.fulbrightonline.org/",
+      "summary": "Granted to pursue graduate education in the University of Illinois at Urbana-Champaign"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker",
+      "icon": ""
+    },
+
+    {
+      "language": "English",
+      "fluency": "Fluent",
+      "icon": ""
+    },
+
+    {
+      "language": "Portuguese",
+      "fluency": "Fluent",
+      "icon": ""
+    }
+  ],
+  "interests": [
+    {
+      "name": "Data",
+      "icon": "fa-solid fa-tag",
+      "keywords": ["Data Strategy", "Data Products", "Data Engineering", "Data Science", "Machine Learning", "Artificial Intelligence"]
+    },
+
+    {
+      "name": "Products",
+      "icon": "fa-solid fa-tag",
+      "keywords": ["Product Strategy", "Product Lifecycle", "Product Marketing", "Design Thinking", "Customer Success", "Digital Transformation"]
+    },
+
+    {
+      "name": "Investments",
+      "icon": "fa-solid fa-tag",
+      "keywords": ["Investment Strategy", "Go-to-Market", "Operational Efficiency", "Valuation", "Small Businesses", "Competitive Analysis"]
+    },
+
+    {
+      "name": "Sports",
+      "icon": "fa-solid fa-tag",
+      "keywords": ["Brazillian Jiu Jitsu", "Stregth Training", "Hypertrophy", "Power Training", "Soccer", "Nutrition"]
+    }
+  ]
+}
