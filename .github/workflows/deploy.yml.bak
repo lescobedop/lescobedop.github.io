@@ -1,0 +1,172 @@
+name: Deploy site
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2.2"
+          bundler-cache: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+          cache: "pip"
+
+      - name: Install Miniconda & Jupyter (Al-Folio method)
+        run: |
+          set -e
+          echo "Installing Miniconda..."
+          wget -qO miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+          bash miniconda.sh -b -p $HOME/miniconda
+          rm miniconda.sh
+
+          echo "Setting up Conda..."
+          echo "$HOME/miniconda/bin" >> $GITHUB_PATH
+          export PATH="$HOME/miniconda/bin:$PATH"
+
+          echo "Creating Conda environment..."
+          source $HOME/miniconda/bin/activate
+          conda create -n jekyll-env -y python=3.9 jupyter jupyterlab nbconvert
+
+          echo "Activating Conda environment permanently..."
+          echo "source $HOME/miniconda/bin/activate jekyll-env" >> ~/.bashrc
+
+      - name: Debug Conda Environment & Jupyter
+        run: |
+          set -e
+          export PATH="$HOME/miniconda/bin:$PATH"
+          source $HOME/miniconda/bin/activate jekyll-env
+
+          echo "🔍 Checking Conda environments..."
+          conda info --envs
+
+          echo "🔍 Checking Jupyter installation..."
+          conda list | grep jupyter || echo "❌ Jupyter is missing from Conda!"
+
+          echo "🔍 Checking Jupyter binary location..."
+          which jupyter || echo "❌ Jupyter is NOT in the default PATH!"
+
+      - name: Force Jupyter into PATH
+        run: |
+          set -e
+          export PATH="$HOME/miniconda/envs/jekyll-env/bin:$HOME/miniconda/bin:$PATH"
+          source $HOME/miniconda/bin/activate jekyll-env
+          
+          echo "✅ Ensuring Jupyter is in PATH"
+          echo "PATH: $PATH"
+
+          if ! command -v jupyter &> /dev/null; then
+            echo "❌ Jupyter is still missing!"
+            exit 1
+          else
+            echo "✅ Jupyter found: $(which jupyter)"
+          fi
+
+      - name: Verify Jupyter Before Running Jekyll
+        run: |
+          set -e
+          export PATH="$HOME/miniconda/bin:$PATH"
+          source $HOME/miniconda/bin/activate jekyll-env
+    
+          echo "Checking Jupyter availability..."
+          if ! command -v jupyter &> /dev/null; then
+            echo "❌ ERROR: Jupyter not found!"
+            exit 1
+          fi
+
+          echo "Jupyter version: $(jupyter --version)"
+          echo "nbconvert version: $(jupyter nbconvert --version)"
+
+          if [ ! -f "assets/jupyter/blog.ipynb" ]; then
+            echo "⚠️ Warning: Missing assets/jupyter/blog.ipynb file!"
+          else
+            echo "✅ Jupyter Notebook file detected."
+          fi
+
+      - name: Install Dependencies and Build Site
+        run: |
+          set -e
+          export PATH="$HOME/miniconda/bin:$PATH"
+          source $HOME/miniconda/bin/activate jekyll-env
+          export JEKYLL_ENV=production
+          bundle install
+          bundle exec jekyll build || (echo "Jekyll Build Failed" && exit 1)
+
+      - name: Debug Jupyter Before Running Jekyll
+        run: |
+          set -e
+          echo "🔹 Checking Jupyter before Jekyll build"
+          which jupyter || echo "❌ Jupyter is NOT in PATH!"
+          jupyter --version || echo "❌ Jupyter is NOT working!"
+          jupyter nbconvert --version || echo "❌ nbconvert is NOT working!"
+
+      - name: Verify Installations
+        run: |
+          echo "Ruby:" && ruby -v
+          echo "Bundler:" && bundle -v
+          echo "Python:" && python --version
+          echo "Jupyter:" && jupyter --version
+
+      - name: Convert Images with GraphicsMagick
+        run: |
+          echo "Installing GraphicsMagick..."
+          sudo apt-get update
+          sudo apt-get install -y graphicsmagick graphicsmagick-imagemagick-compat
+          
+          echo "Verifying GraphicsMagick installation..."
+          if ! command -v gm &> /dev/null; then
+            echo "❌ ERROR: GraphicsMagick not found"
+            exit 1
+          fi
+
+          echo "GraphicsMagick installed successfully:"
+          gm version
+
+          echo "Converting images using GraphicsMagick..."
+          find assets/img/ -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.tiff" -o -iname "*.gif" \) | while read file; do
+            output="${file%.*}.webp"
+            if [ ! -f "$output" ]; then  # Avoid re-processing existing files
+              gm convert "$file" -quality 85 "$output"
+              echo "Converted: $file -> $output"
+            else
+              echo "Skipped (already exists): $output"
+            fi
+          done
+          echo "✅ Image conversion complete."
+
+      - name: Purge Unused CSS
+        run: |
+          npm install -g purgecss
+          purgecss -c purgecss.config.js || echo "⚠️ Warning: PurgeCSS Failed"
+
+      - name: Deploy to GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
+
+      - name: Debug Deployment Files
+        run: |
+          echo "Listing files in _site directory:"
+          ls -lah _site
