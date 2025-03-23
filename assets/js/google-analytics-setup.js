@@ -1,1 +1,9 @@
-function gtag(){window.dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","{{ site.google_analytics }}",{anonymize_ip:!0});
+// google-analytics-setup.js
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  window.dataLayer.push(arguments);
+}
+gtag("js", new Date());
+gtag("config", "{{ site.google_analytics }}", {
+  anonymize_ip: true,
+});

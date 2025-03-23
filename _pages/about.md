@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Technologist | Entrepreneur | Investor test
+subtitle: Technologist | Entrepreneur | Investor
 
 profile:
   align: right
