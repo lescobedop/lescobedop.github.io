@@ -93,7 +93,7 @@ $ pip install jupyter
 $ bundle exec jekyll serve
 ```
 
-To see the template running, open your browser and go to ``. You should see a copy of the theme's [demo website](https://alshedivat.github.io/al-folio/). Now, feel free to customize the theme however you like. After you are done, remember to **commit** your final changes.
+To see the template running, open your browser and go to `http://localhost:4000`. You should see a copy of the theme's [demo website](https://alshedivat.github.io/al-folio/). Now, feel free to customize the theme however you like. After you are done, remember to **commit** your final changes.
 
 ## Deployment
 
