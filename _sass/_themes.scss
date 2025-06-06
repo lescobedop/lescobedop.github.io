@@ -60,7 +60,7 @@
   }
 
   #back-to-top {
-    color: var(--global-back-to-top-text-color);
+    color: #000000;
     background: var(--global-back-to-top-bg-color);
     bottom: $back-to-top-bottom;
     right: $back-to-top-right;
@@ -127,7 +127,7 @@ html[data-theme-setting="dark"] {
   }
 
   #back-to-top {
-    color: var(--global-back-to-top-text-color);
+    color: #000000;
     background: var(--global-back-to-top-bg-color);
   }
 }
