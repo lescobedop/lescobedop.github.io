@@ -6,7 +6,7 @@
     "email": "contact@luchoescobedo.com",
     "phone": "",
     "url": "https://luchoescobedo.com",
-    "summary": "Technologist, Entrepreneur and Investor, fostering tailored and innovative solutions for sustainable business growth.",
+    "summary": "Entrepreneur, technologist, and investor, partnering with businesses to drive purposeful and sustainable growth.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -29,8 +29,8 @@
       "url": "https://greenstreet-holdings.com",
       "startDate": "2024-01-01",
       "endDate": "Today",
-      "summary": "We invest in local businesses that solve real-world problems and provide great service.",
-      "highlights": ["Small Businesses, Investments, Advisory"],
+      "summary": "We invest in businesses to strengthen their foundations, modernize with purpose, and build long-term resilience.",
+      "highlights": ["Small Businesses, Strategic Investment, Business Modernization"],
       "location": "Lima, PE"
     },
 
@@ -40,19 +40,19 @@
       "url": "https://kipuai.com",
       "startDate": "2025-01-01",
       "endDate": "Today",
-      "summary": "We help Latin American and Caribbean companies harness the transformative power of data and AI to drive innovation, improve decision-making, and achieve sustainable growth.",
-      "highlights": ["Data & AI Strategy, Consulting, Latin America"],
+      "summary": "We help organizations make data, technology, and AI meaningful by anchoring them in how they operate, decide, and grow.",
+      "highlights": ["Data, Technology & AI Strategy, Capability Building, Advisory Work"],
       "location": "Lima, PE"
     },
 
     {
       "name": "Automatic Data Processing, ADP",
-      "position": "Head of Data, HRO",
+      "position": "Head of Data & Analytics Engineering, HRO",
       "url": "https://adp.com",
       "startDate": "2023-06-01",
       "endDate": "Today",
-      "summary": "Lead data-driven initiatives to optimize operations, enhance customer experiences, and boost revenue.",
-      "highlights": ["Data Strategy, Data-Driven Decisions, ROI"],
+      "summary": "Drive a focused data strategy that strengthens foundations, scales platform capabilities, and prioritizes high-impact use cases.",
+      "highlights": ["Data Strategy, Platform Operations, Business Impact"],
       "location": "Miami, US"
     },
 
@@ -62,8 +62,8 @@
       "url": "https://reeftechnology.com",
       "startDate": "2023-01-01",
       "endDate": "2023-06-01",
-      "summary": "Spearheaded the global integration of data engineering, analytics, and AI, enhancing efficiency, reducing costs, and empowering data-driven decision-making.",
-      "highlights": ["Global Data and AI Strategy"],
+      "summary": "Integrated data, analytics, and AI functions to improve platforms and support decision-making at global scale.",
+      "highlights": ["Global Strategy, Platform Efficiency, Executive Enablement"],
       "location": "Miami, US"
     },
 
@@ -73,8 +73,8 @@
       "url": "https://reeftechnology.com",
       "startDate": "2021-11-01",
       "endDate": "2023-01-01",
-      "summary": "Established streamline data products and lifecycle processes, boosting ROI and operational efficiency.",
-      "highlights": ["Data Products, Product Lifecycle, ROI"],
+      "summary": "Directed and streamlined data science work to enable product-focused outcomes, operational gains, and scalable experimentation.",
+      "highlights": ["Product Data Science, Experimentation Frameworks"],
       "location": "Miami, US"
     },
 
@@ -84,8 +84,8 @@
       "url": "https://reeftechnology.com",
       "startDate": "2020-05-01",
       "endDate": "2021-11-01",
-      "summary": "Pioneered and scaled the data science function, delivering substantial revenue growth, optimizing operational efficiency, and improving customer satisfaction.",
-      "highlights": ["Data Science Pioneer, Scale Data Function"],
+      "summary": "Built and scaled the data science function to deliver revenue growth and operational improvements through applied machine learning.",
+      "highlights": ["Built DS Team, Applied ML, Revenue Growth"],
       "location": "Miami, US"
     },
 
@@ -95,8 +95,8 @@
       "url": "https://www.mckinsey.com/capabilities/quantumblack/how-we-help-clients",
       "startDate": "2017-08-01",
       "endDate": "2019-09-01",
-      "summary": "Partnered with clients across industries in Latin America and the U.S. to generate meaningful impact and value through data science and optimization.",
-      "highlights": ["Data Science Consulting, Americas, High Business Impact"],
+      "summary": "Led technical delivery and strategic advisory, helping clients across the Americas solve business challenges with high-impact solutions.",
+      "highlights": ["Multi-Industry, Client Delivery, Applied ML"],
       "location": "Sao Paulo, BR"
     },
 
@@ -106,8 +106,8 @@
       "url": "https://citl.illinois.edu/",
       "startDate": "2013-08-01",
       "endDate": "2017-07-01",
-      "summary": "Helped higher education institutions optimize performance, engagement, and retention through data-driven training and analytics solutions.",
-      "highlights": ["Higher Education Analytics, Consulting"],
+      "summary": "Advised faculty and researchers on study design, methods, and analysis to support rigorous, outcome-driven academic work.",
+      "highlights": ["Academic Advisory, Study Design, Analytics Support"],
       "location": "Champaign, US"
     },
 
@@ -117,8 +117,8 @@
       "url": "https://grade.org.pe/",
       "startDate": "2006-06-01",
       "endDate": "2010-06-01",
-      "summary": "Conducted applied research and analysis to inform public policy recommendations, focusing on economic, social, and environmental issues.",
-      "highlights": ["Evidence-Based Policy, Economic Policy Analysis"],
+      "summary": "Produced applied research to inform policy in economics, education, and the environment, with emphasis on measurable impact.",
+      "highlights": ["Policy Research, Impact Evaluation, Development Econmics"],
       "location": "Lima, PE"
     }
   ],
@@ -166,7 +166,7 @@
       "date": "2013-08-01",
       "awarder": "Tinker Foundation",
       "url": "https://tinker.org/",
-      "summary": "Awarded for the development of my doctorate dissertation proposal"
+      "summary": "Awarded for the development of my doctorate dissertation proposal."
     },
 
     {
@@ -182,7 +182,7 @@
       "date": "2010-04-01",
       "awarder": "Fulbright Program",
       "url": "https://us.fulbrightonline.org/",
-      "summary": "Granted to pursue graduate education in the University of Illinois at Urbana-Champaign"
+      "summary": "Granted to pursue graduate education in the United States."
     }
   ],
   "languages": [
