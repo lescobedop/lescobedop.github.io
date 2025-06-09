@@ -80,11 +80,6 @@ ninja.data = [{
           description: "Unlocking the potential of data &amp; AI for your business",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
             },},{
         id: "social-email",
         title: "Email",
