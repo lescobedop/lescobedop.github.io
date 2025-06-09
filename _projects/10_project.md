@@ -7,6 +7,7 @@ importance: 1
 category: work
 related_publications: true
 hidden: true
+search: false
 ---
 
 Green Street Holdings was founded with a powerful belief: that small businesses are the heart of thriving communities. We invest in local businesses that solve problems and provide great service—businesses that are not just valuable, but essential to building wealth and long-term prosperity.
