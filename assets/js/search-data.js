@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "news-i-m-incredibly-excited-to-share-that-i-ve-joined-the-founding-teams-of-two-innovative-companies-based-in-peru-visit-green-street-holdings-and-kipu-to-learn-more",
+        },{id: "post-a-sample-blog-post",
+      
+        title: "a sample blog post",
+      
+      description: "a sample blog post, new post.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/sample-post/";
+        
+      },
+    },{id: "news-i-m-incredibly-excited-to-share-that-i-ve-joined-the-founding-teams-of-two-innovative-companies-based-in-peru-visit-green-street-holdings-and-kipu-to-learn-more",
           title: 'I’m incredibly excited to share that I’ve joined the founding teams of two...',
           description: "",
           section: "News",},{id: "news-it-39-s-finally-here",
@@ -59,16 +70,6 @@ ninja.data = [{
           description: "Investments",
           section: "Projects",handler: () => {
               window.location.href = "/projects/10_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/11_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/12_project/";
             },},{id: "projects-green-street-holdings",
           title: 'Green Street Holdings',
           description: "Small Business Investments",
@@ -115,43 +116,13 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
-        id: 'social-email',
-        title: 'email',
-        section: 'Socials',
-        handler: () => {
-          window.open("mailto:%63%6F%6E%74%61%63%74@%6C%75%63%68%6F%65%73%63%6F%62%65%64%6F.%63%6F%6D", "_blank");
-        },
+        id: "social-email",
+        title: "Email",
+        section: "Social",
+        handler: () => {window.location.href = "mailto:contact@luchoescobedo.com";},
       },{
-        id: 'social-linkedin',
-        title: 'LinkedIn',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.linkedin.com/in/luchoescobedo", "_blank");
-        },
-      },{
-      id: 'light-theme',
-      title: 'Change theme to light',
-      description: 'Change the theme of the site to Light',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("light");
-      },
-    },
-    {
-      id: 'dark-theme',
-      title: 'Change theme to dark',
-      description: 'Change the theme of the site to Dark',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("dark");
-      },
-    },
-    {
-      id: 'system-theme',
-      title: 'Use system default theme',
-      description: 'Change the theme of the site to System Default',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("system");
-      },
-    },];
+        id: "social-linkedin",
+        title: "LinkedIn",
+        section: "Social",
+        handler: () => {window.open("https://www.linkedin.com/in/luchoescobedo", "_blank");},
+      },];
