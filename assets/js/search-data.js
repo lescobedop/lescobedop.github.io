@@ -67,11 +67,6 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-green-street-holdings",
           title: 'Green Street Holdings',
-          description: "Investments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/10_project/";
-            },},{id: "projects-green-street-holdings",
-          title: 'Green Street Holdings',
           description: "Small Business Investments",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
