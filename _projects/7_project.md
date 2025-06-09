@@ -7,6 +7,7 @@ importance: 1
 category: work
 related_publications: true
 hidden: true
+search: false
 ---
 
 Every project has a beautiful feature showcase page.
