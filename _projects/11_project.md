@@ -7,6 +7,7 @@ importance: 2
 category: work
 giscus_comments: true
 draft: true
+search: false
 ---
 
 Every project has a beautiful feature showcase page.

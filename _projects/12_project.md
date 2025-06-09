@@ -7,6 +7,7 @@ redirect: https://unsplash.com
 importance: 3
 category: work
 draft: true
+search: false
 ---
 
 Every project has a beautiful feature showcase page.
