@@ -8,6 +8,7 @@ importance: 2
 category: fun
 giscus_comments: true
 hidden: false
+search: false
 ---
 
 Every project has a beautiful feature showcase page.
