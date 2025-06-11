@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "post-a-sample-blog-post",
+        },{id: "post-",
+      
+        title: "",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/2025-05-06-The_Wolfs_Den/";
+        
+      },
+    },{id: "post-a-sample-blog-post",
       
         title: "a sample blog post",
       
