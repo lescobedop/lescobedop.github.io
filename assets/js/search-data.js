@@ -45,18 +45,18 @@ ninja.data = [{
       section: "Posts",
       handler: () => {
         
-          window.location.href = "/blog/2025/2025-05-06-The_Wolfs_Den/";
+          window.location.href = "/blog/2025/2025-05-06-sample-post/";
         
       },
-    },{id: "post-a-sample-blog-post",
+    },{id: "post-",
       
-        title: "a sample blog post",
+        title: "",
       
-      description: "a sample blog post, new post.",
+      description: "",
       section: "Posts",
       handler: () => {
         
-          window.location.href = "/blog/2025/sample-post/";
+          window.location.href = "/blog/2025/2025-05-06-The_Wolfs_Den/";
         
       },
     },{id: "news-i-m-incredibly-excited-to-share-that-i-ve-joined-the-founding-teams-of-two-innovative-companies-based-in-peru-visit-green-street-holdings-and-kipu-to-learn-more",
