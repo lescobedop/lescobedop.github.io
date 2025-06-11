@@ -37,26 +37,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "post-",
+        },{id: "post-from-solitude-to-strength-on-having-a-personal-den",
       
-        title: "",
+        title: "From solitude to strength: on having a personal den",
       
-      description: "",
+      description: "Reflections on solitude, identity, and the purpose behind The Wolf&#39;s Den.",
       section: "Posts",
       handler: () => {
         
-          window.location.href = "/blog/2025/2025-05-06-sample-post/";
-        
-      },
-    },{id: "post-",
-      
-        title: "",
-      
-      description: "",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/2025-05-06-The_Wolfs_Den/";
+          window.location.href = "/blog/2025/The_Wolfs_Den/";
         
       },
     },{id: "news-i-m-incredibly-excited-to-share-that-i-ve-joined-the-founding-teams-of-two-innovative-companies-based-in-peru-visit-green-street-holdings-and-kipu-to-learn-more",
