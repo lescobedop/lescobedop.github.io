@@ -135,7 +135,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: the wolf's den # blog_name will be displayed in your blog page
-blog_description: a little bit of everything
+blog_description: reflections on strategy, sovereignty, and the cultivation of self.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -169,9 +169,9 @@ disqus_shortname: al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-# external_sources:
-#  - name: medium.com
-#    rss_url: https://medium.com/@al-folio/feed
+external_sources:
+  - name: medium.com
+    rss_url: https://medium.com/feed/@luchoescobedo
 #  - name: Google Blog
 #    posts:
 #      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
