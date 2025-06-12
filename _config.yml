@@ -135,7 +135,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: The Wolf's Den # blog_name will be displayed in your blog page
-blog_description: On Clarity, Growth, and Inner Strength.
+blog_description: On Clarity, Growth, and Inner Strength
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
