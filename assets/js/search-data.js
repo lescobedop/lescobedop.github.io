@@ -72,7 +72,7 @@ ninja.data = [{
               window.location.href = "/projects/1_project/";
             },},{id: "projects-welcome-to-kipu",
           title: 'Welcome to Kipu',
-          description: "Unlocking the potential of data &amp; AI for your business",
+          description: "Expert partnership for ambitious companies building with purpose",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{
