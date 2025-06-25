@@ -15,7 +15,7 @@ For years, I've been fortunate to work with incredible teams, build impactful bu
 On my website, you'll find information about my professional background, including my current role at ADP and my entrepreneurial ventures:
 
 - **Green Street Holdings:** Where we invest in and support the backbone of our communities – small businesses.
-- **Kipu:** A boutique data and AI consultancy dedicated to helping organizations unlock their full potential through data-driven strategies.
+- **Kipu:** A boutique consulting firm at the intersection of technology and strategy, combining enterprise discipline with founder mindset.
 
 You can also learn a bit about me outside of work – my passion for Brazilian Jiu-Jitsu, my commitment to continuous improvement, and my belief in the power of collaboration.
 
