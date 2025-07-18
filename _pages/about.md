@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Entrepreneur | Technologist | Investor
+subtitle: Strategist | Entrepreneur | Investor
 
 profile:
   align: right
@@ -18,9 +18,9 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi, my name is Lucho Escobedo—an entrepreneur, technologist, and investor, driven by the idea that success begins with clarity and discipline. My work lives at the intersection of business, operational rigor, and the thoughtful use of data and technology.
+Hi, my name is Lucho Escobedo. I build and support businesses that thrive on clarity, discipline, and intelligent systems—whether through strategy, technology, or long-term investment. My work centers on helping organizations grow with intent and adapt with resilience.
 
-For almost 20 years, I’ve led global teams and scaled enterprise platforms, delivering $400M+ in business impact. Beyond corporate roles, I’ve focused my life on something broader: helping small and mid-sized businesses grow stronger, modernize with purpose, and build the resilience needed to navigate change and thrive.
+For almost 20 years, I’ve led global teams and scaled enterprise platforms, delivering $400M+ in business impact. Beyond corporate roles, I’ve focused my life on something broader: helping small and mid-sized businesses grow stronger, modernize with purpose, and withstand change with confidence.
 
 Through Green Street Holdings, I support companies through acquisitions, partnerships, and capital investments—guiding growth, modernization, and long-term resilience. With Kipu, I advise organizations on how to design and scale their technology strategies, especially in data and AI. I believe in creating structures that last, aligning teams around what matters, and building systems that evolve with purpose.
 
