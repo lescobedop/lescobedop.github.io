@@ -1,0 +1,23 @@
+{% for venture in data[1] %}
+  <div class="card mt-3 p-3">
+    <h3 class="card-title font-weight-medium">
+      {{ venture.name }} — <span class="font-weight-light">{{ venture.position }}</span>
+    </h3>
+    <p class="font-italic mb-1">
+      {{ venture.location }} | {{ venture.startDate | date: "%b %Y" }} – 
+      {% if venture.endDate == "Today" %}
+        Present
+      {% else %}
+        {{ venture.endDate | date: "%b %Y" }}
+      {% endif %}
+    </p>
+    <p>{{ venture.summary }}</p>
+    {% if venture.highlights %}
+      <ul>
+        {% for item in venture.highlights %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+{% endfor %}
