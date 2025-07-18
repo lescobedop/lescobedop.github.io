@@ -5,7 +5,7 @@
     </h3>
     <p class="font-italic mb-1">
       {{ venture.location }} | {{ venture.startDate | date: "%b %Y" }} – 
-      {% if venture.endDate == "Today" %}
+      {% if venture.endDate == "Today" or venture.endDate == "Present" %}
         Present
       {% else %}
         {{ venture.endDate | date: "%b %Y" }}
