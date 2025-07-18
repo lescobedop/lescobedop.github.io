@@ -6,7 +6,7 @@
     "email": "contact@luchoescobedo.com",
     "phone": "",
     "url": "https://luchoescobedo.com",
-    "summary": "Entrepreneur, technologist, and investor, partnering with businesses to drive purposeful and sustainable growth.",
+    "summary": "Strategist, entrepreneur, and investor, partnering with businesses to drive purposeful and sustainable growth.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -22,29 +22,7 @@
       }
     ]
   },
-  "work": [
-    {
-      "name": "Green Street Holdings",
-      "position": "Co-Founder",
-      "url": "https://greenstreet-holdings.com",
-      "startDate": "2024-01-01",
-      "endDate": "Today",
-      "summary": "We invest in businesses to strengthen their foundations, modernize with purpose, and build long-term resilience.",
-      "highlights": ["Small Businesses, Strategic Investment, Business Modernization"],
-      "location": "Lima, PE"
-    },
-
-    {
-      "name": "Kipu",
-      "position": "Co-Founder",
-      "url": "https://kipuai.com",
-      "startDate": "2025-01-01",
-      "endDate": "Today",
-      "summary": "We help organizations make data, technology, and AI meaningful by anchoring them in how they operate, decide, and grow.",
-      "highlights": ["Data, Technology & AI Strategy, Capability Building, Advisory Work"],
-      "location": "Lima, PE"
-    },
-
+  "work": [ 
     {
       "name": "Automatic Data Processing, ADP",
       "position": "Head of Data & Analytics Engineering, HRO",
@@ -119,6 +97,30 @@
       "endDate": "2010-06-01",
       "summary": "Produced applied research to inform policy in economics, education, and the environment, with emphasis on measurable impact.",
       "highlights": ["Policy Research, Impact Evaluation, Development Econmics"],
+      "location": "Lima, PE"
+    }
+  ],
+
+  "ventures": [
+    {
+      "name": "Kipu, Technology & Strategy",
+      "position": "Co-Founder",
+      "url": "https://kipuai.com",
+      "startDate": "2025-01-01",
+      "endDate": "Today",
+      "summary": "We help organizations make data, technology, and AI meaningful by anchoring them in how they operate, decide, and grow.",
+      "highlights": ["Data, Technology & AI Strategy, Capability Building, Advisory Work"],
+      "location": "Lima, PE"
+    },
+
+    {
+      "name": "Green Street Holdings",
+      "position": "Co-Founder",
+      "url": "https://greenstreet-holdings.com",
+      "startDate": "2024-01-01",
+      "endDate": "Today",
+      "summary": "We invest in businesses to strengthen their foundations, modernize with purpose, and build long-term resilience.",
+      "highlights": ["Small Businesses, Strategic Investment, Business Modernization"],
       "location": "Lima, PE"
     }
   ],
