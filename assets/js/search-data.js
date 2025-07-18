@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "post-from-solitude-to-strength-on-having-a-personal-den",
+        },{id: "post-all-things-change-when-we-do",
+      
+        title: "All things change when we do",
+      
+      description: "Reflections on transformation, identity, and how inner change reveals new dimensions of opportunity.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/On-Change/";
+        
+      },
+    },{id: "post-from-solitude-to-strength-on-having-a-personal-den",
       
         title: "From solitude to strength: on having a personal den",
       
@@ -64,6 +75,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-i-ve-joined-kaman-as-a-mentor-through-kipu-my-boutique-consulting-firm-i-ll-support-growth-stage-startups-as-they-scale-sharpen-their-strategy-and-prepare-for-international-expansion",
           title: 'I’ve joined Kaman as a mentor through Kipu, my boutique consulting firm. I’ll...',
+          description: "",
+          section: "News",},{id: "news-i-ve-joined-incuba-unach-as-a-mentor-through-kipu-i-ll-support-early-stage-startups-as-they-shape-their-strategy-build-products-and-turn-ideas-into-scalable-ventures",
+          title: 'I’ve joined Incuba UNACH as a mentor through Kipu. I’ll support early-stage startups...',
           description: "",
           section: "News",},{id: "projects-green-street-holdings",
           title: 'Green Street Holdings',
