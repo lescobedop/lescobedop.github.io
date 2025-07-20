@@ -41,7 +41,7 @@ ninja.data = [{
       
         title: "All things change when we do",
       
-      description: "Reflections on transformation, identity, and how inner change reveals new dimensions of opportunity.",
+      description: "A personal reflection on change, identity, and the quiet power of internal transformation.",
       section: "Posts",
       handler: () => {
         
