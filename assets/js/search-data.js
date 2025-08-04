@@ -37,9 +37,20 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "post-all-things-change-when-we-do",
+        },{id: "post-the-flight-home",
       
-        title: "All things change when we do",
+        title: "The Flight Home",
+      
+      description: "Tracing the invisible current between movement and meaning, and the choice to return with intention.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/The-Flight-home/";
+        
+      },
+    },{id: "post-all-things-change-when-we-do",
+      
+        title: "All Things Change When We Do",
       
       description: "A personal reflection on change, identity, and the quiet power of internal transformation.",
       section: "Posts",
@@ -50,7 +61,7 @@ ninja.data = [{
       },
     },{id: "post-from-solitude-to-strength-on-having-a-personal-den",
       
-        title: "From solitude to strength: on having a personal den",
+        title: "From Solitude to Strength: On Having A Personal Den",
       
       description: "Reflections on solitude, identity, and the purpose behind The Wolf&#39;s Den.",
       section: "Posts",
