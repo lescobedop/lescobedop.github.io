@@ -3,7 +3,7 @@ layout: post
 title: "From solitude to strength: on having a personal den"
 date: 2025-05-06 06:40:16
 description: Reflections on solitude, identity, and the purpose behind The Wolf's Den.
-tags: [identity, solitude, mindset, legacy]
+tags: []
 categories: reflections
 search: false
 hidden: true
