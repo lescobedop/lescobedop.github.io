@@ -41,7 +41,7 @@ ninja.data = [{
       
         title: "The Flight Home",
       
-      description: "Tracing the invisible current between movement and meaning, and the choice to return with intention.",
+      description: "Tracing the invisible current between movement and meaning.",
       section: "Posts",
       handler: () => {
         
