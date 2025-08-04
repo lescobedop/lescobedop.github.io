@@ -2,7 +2,7 @@
 layout: post
 title: "The Flight Home"
 date: 2025-08-04 10:40:00
-description: Tracing the invisible current between movement and meaning, and the choice to return with intention.
+description: Tracing the invisible current between movement and meaning.
 tags: [identity, family, return, legacy, purpose]
 categories: reflections
 ---
