@@ -24,11 +24,21 @@
   },
   "work": [ 
     {
+      "name": "Banco de Credito del Peru",
+      "position": "Head of Data & Advanced Analytics, Credit Risk",
+      "url": "https://www.viabcp.com",
+      "startDate": "2025-08-01",
+      "endDate": "Today",
+      "summary": "Lead advanced analytics and risk modeling to modernize credit decisioning and unlock scalable value across the business.",
+      "highlights": ["Data Strategy, Digital Transformation, Risk Modeling"],
+      "location": "Lima, PE"
+    },
+    {
       "name": "Automatic Data Processing, ADP",
       "position": "Head of Data & Analytics Engineering, HRO",
       "url": "https://adp.com",
       "startDate": "2023-06-01",
-      "endDate": "Today",
+      "endDate": "2025-07-31",
       "summary": "Drive a focused data strategy that strengthens foundations, scales platform capabilities, and prioritizes high-impact use cases.",
       "highlights": ["Data Strategy, Platform Operations, Business Impact"],
       "location": "Miami, US"
