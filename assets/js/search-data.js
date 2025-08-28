@@ -45,6 +45,17 @@ ninja.data = [{
       section: "Posts",
       handler: () => {
         
+          window.location.href = "/blog/2025/The_Way/";
+        
+      },
+    },{id: "post-the-flight-home",
+      
+        title: "The Flight Home",
+      
+      description: "Tracing the invisible current between movement and meaning.",
+      section: "Posts",
+      handler: () => {
+        
           window.location.href = "/blog/2025/The-Flight-home/";
         
       },
