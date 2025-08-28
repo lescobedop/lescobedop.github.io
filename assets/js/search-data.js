@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "post-the-flight-home",
+        },{id: "post-the-way-in-all-things",
+      
+        title: "The Way in All Things",
+      
+      description: "The quiet discovery that mastery is a transferable way of being.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/The_Way_Is/";
+        
+      },
+    },{id: "post-the-flight-home",
       
         title: "The Flight Home",
       
