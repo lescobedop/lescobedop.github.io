@@ -1,11 +1,13 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: BjjCercaDeMi
+description: BjjCercaDeMi.org is a community-driven directory that helps practitioners discover and compare Jiu-Jitsu academies through verified information, authentic media, and local insights.
+img: assets/img/bjjnearme.png
+redirect: https://bjjcercademi.org/
 importance: 3
 category: fun
-hidden: true
+giscus_comments: true
+hidden: false
 search: false
 ---
 
