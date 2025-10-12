@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "post-the-way-in-all-things",
+        },{id: "post-the-shape-that-remains",
+      
+        title: "The Shape That Remains",
+      
+      description: "On endurance, refinement, and the slow transformations that define us.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/The_Shape_That_Remains/";
+        
+      },
+    },{id: "post-the-way-in-all-things",
       
         title: "The Way in All Things",
       
