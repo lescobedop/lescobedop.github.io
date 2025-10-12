@@ -1,6 +1,6 @@
 ---
 layout: page
-title: BjjCercaDeMi.org
+title: BjjCercaDeMi
 description: Find Jiu-Jitsu academies near you with verified info and community insights.
 img: assets/img/bjjnearme.jpeg
 redirect: https://bjjcercademi.org/
