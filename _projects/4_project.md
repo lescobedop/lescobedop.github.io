@@ -1,8 +1,8 @@
 ---
 layout: page
 title: BjjCercaDeMi.org
-description: A community-driven directory that helps practitioners discover and compare Jiu-Jitsu academies.
-img: assets/img/bjjnearme.png
+description: Find Jiu-Jitsu academies near you with verified info and community insights.
+img: assets/img/bjjnearme.jpeg
 redirect: https://bjjcercademi.org/
 importance: 3
 category: fun
