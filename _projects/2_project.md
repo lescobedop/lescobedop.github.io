@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Bushido Life
+title: The Way
 description: My e-store for premium quality training gear
 img: assets/img/samurai_face.png
 redirect: https://bushidolife.store/
