@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[The Way](https://bushidolife.store/) is now on TikTok at [@thewaygear](https://www.tiktok.com/@thewaygear)—follow for training content and gear updates.
+[The Way](https://www.wearetheway.store/) is now on TikTok at [@thewaygear](https://www.tiktok.com/@thewaygear)—follow for training content and gear updates.
