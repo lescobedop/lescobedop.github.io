@@ -3,7 +3,7 @@ layout: page
 title: The Way
 description: My e-store for premium quality training gear
 img: assets/img/samurai_face.png
-redirect: https://bushidolife.store/
+redirect: https://www.wearetheway.store/
 importance: 2
 category: fun
 giscus_comments: true
