@@ -107,8 +107,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-visit-bushido-life-if-you-want-premium-quality-grappling-gear",
-          title: 'Visit Bushido Life if you want premium quality grappling gear.',
+            },},{id: "news-visit-the-way-if-you-want-premium-quality-training-gear",
+          title: 'Visit The Way if you want premium quality training gear.',
           description: "",
           section: "News",},{id: "news-i-had-the-privilege-of-leading-a-strategic-workshop-on-metrics-and-high-efficiency-startups-for-founders-participating-in-kaman-the-startup-accelerator-at-ucsp-more-details-here",
           title: 'I had the privilege of leading a strategic workshop on Metrics and High-Efficiency...',
