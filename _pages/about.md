@@ -18,7 +18,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi, my name is Lucho Escobedo. I build and support businesses that thrive on clarity, discipline, and intelligent systems—whether through strategy, technology, or long-term investment. My work centers on helping organizations grow with intent and adapt with resilience.
+I invest in small businesses, advise on technology strategy, and build around physical culture. My work is grounded in one idea: that clarity, discipline, and intelligent systems are what allow organizations to grow with intent and withstand change with confidence.
 
 For almost 20 years, I’ve led global teams and scaled enterprise platforms, delivering $400M+ in business impact. Beyond corporate roles, I’ve focused my life on something broader: helping small and mid-sized businesses grow stronger, modernize with purpose, and withstand change with confidence.
 
