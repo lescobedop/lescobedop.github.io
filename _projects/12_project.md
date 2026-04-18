@@ -7,6 +7,7 @@ redirect: https://unsplash.com
 importance: 3
 category: work
 draft: true
+hidden: true
 search: false
 ---
 
