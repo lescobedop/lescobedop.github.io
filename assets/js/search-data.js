@@ -59,7 +59,7 @@ ninja.data = [{
       
         title: "The Way in All Things",
       
-      description: "On the quality that transfers across every discipline, and Musashi&#39;s observation that the Way is not where you first find it.",
+      description: "The quiet discovery that mastery is a transferable way of being.",
       section: "Posts",
       handler: () => {
         
@@ -68,9 +68,9 @@ ninja.data = [{
       },
     },{id: "post-the-flight-home",
       
-        title: "“The Flight Home”",
+        title: "The Flight Home",
       
-      description: "On returning to Peru, the arithmetic of time with family, and what it means to build something that lasts.",
+      description: "Tracing the invisible current between movement and meaning.",
       section: "Posts",
       handler: () => {
         
@@ -79,20 +79,20 @@ ninja.data = [{
       },
     },{id: "post-all-things-change-when-we-do",
       
-        title: "“All Things Change When We Do”",
+        title: "All Things Change When We Do",
       
-      description: "On immigration, the gap between access and freedom, and how internal structure shapes everything else.",
+      description: "A personal reflection on change, identity, and the quiet power of internal transformation.",
       section: "Posts",
       handler: () => {
         
           window.location.href = "/blog/2025/On-Change/";
         
       },
-    },{id: "post-the-wolf-s-den",
+    },{id: "post-from-solitude-to-strength-on-having-a-personal-den",
       
-        title: "The Wolf’s Den",
+        title: "From Solitude to Strength: On Having A Personal Den",
       
-      description: "On solitude as assembly, and the space where the work begins.",
+      description: "Reflections on solitude, identity, and the purpose behind The Wolf&#39;s Den.",
       section: "Posts",
       handler: () => {
         
