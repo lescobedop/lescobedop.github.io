@@ -2,44 +2,50 @@
   "basics": {
     "name": "Lucho Escobedo",
     "label": "",
-    "image": "",
+    "image": "assets/img/prof_pic.png",
     "email": "contact@luchoescobedo.com",
     "phone": "",
     "url": "https://luchoescobedo.com",
-    "summary": "Strategist, entrepreneur, and investor, partnering with businesses to drive purposeful and sustainable growth.",
+    "summary": "Strategist, entrepreneur, and investor, committed to building organizations that grow with clarity, operate with discipline, and create lasting value.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Miami",
-      "countryCode": "US",
-      "region": "Florida"
+      "city": "Lima",
+      "countryCode": "PE",
+      "region": "Lima"
     },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
-    ]
+    "profiles": []
   },
-  "work": [ 
+  "work": [
+    {
+      "name": "Yanbal International",
+      "position": "Corporate Director of Data",
+      "url": "https://yanbal.com",
+      "startDate": "2026-04",
+      "endDate": null,
+      "summary": "Leading enterprise data strategy and governance across a multinational beauty company, with focus on platform maturity, AI adoption, and operational scalability across Latin America.",
+      "highlights": ["Data Strategy", "AI Enablement", "Governance", "Platform Maturity"],
+      "location": "Lima, PE"
+    },
+
     {
       "name": "Banco de Credito del Peru",
-      "position": "Head of Data & Advanced Analytics, Credit Risk",
+      "position": "Head of Credit Risk Modeling",
       "url": "https://www.viabcp.com",
-      "startDate": "2025-08-01",
-      "endDate": "Today",
-      "summary": "Lead advanced analytics and risk modeling to modernize credit decisioning and unlock scalable value across the business.",
+      "startDate": "2025-08",
+      "endDate": "2026-03",
+      "summary": "Led credit risk modeling and advanced analytics to modernize credit decisioning and build durable value across the business.",
       "highlights": ["Data Strategy, Digital Transformation, Risk Modeling"],
       "location": "Lima, PE"
     },
+
     {
       "name": "Automatic Data Processing, ADP",
       "position": "Head of Data & Analytics Engineering, HRO",
       "url": "https://adp.com",
-      "startDate": "2023-06-01",
-      "endDate": "2025-07-31",
-      "summary": "Drive a focused data strategy that strengthens foundations, scales platform capabilities, and prioritizes high-impact use cases.",
+      "startDate": "2023-06",
+      "endDate": "2025-07",
+      "summary": "Drove a focused data strategy that strengthened analytical foundations, scaled platform capabilities, and concentrated effort on the use cases with the greatest business consequence.",
       "highlights": ["Data Strategy, Platform Operations, Business Impact"],
       "location": "Miami, US"
     },
@@ -48,9 +54,9 @@
       "name": "REEF Technology",
       "position": "VP of Data & Analytics",
       "url": "https://reeftechnology.com",
-      "startDate": "2023-01-01",
-      "endDate": "2023-06-01",
-      "summary": "Integrated data, analytics, and AI functions to improve platforms and support decision-making at global scale.",
+      "startDate": "2023-01",
+      "endDate": "2023-06",
+      "summary": "Integrated data, analytics, and AI to strengthen platforms and improve the quality of decision-making across a global operation.",
       "highlights": ["Global Strategy, Platform Efficiency, Executive Enablement"],
       "location": "Miami, US"
     },
@@ -59,9 +65,9 @@
       "name": "REEF Technology",
       "position": "Senior Director of Data Science & Analytics",
       "url": "https://reeftechnology.com",
-      "startDate": "2021-11-01",
-      "endDate": "2023-01-01",
-      "summary": "Directed and streamlined data science work to enable product-focused outcomes, operational gains, and scalable experimentation.",
+      "startDate": "2021-11",
+      "endDate": "2023-01",
+      "summary": "Directed data science work to deliver measurable product improvements, operational gains, and a scalable experimentation capability.",
       "highlights": ["Product Data Science, Experimentation Frameworks"],
       "location": "Miami, US"
     },
@@ -70,8 +76,8 @@
       "name": "REEF Technology",
       "position": "Director of Data Science",
       "url": "https://reeftechnology.com",
-      "startDate": "2020-05-01",
-      "endDate": "2021-11-01",
+      "startDate": "2020-05",
+      "endDate": "2021-11",
       "summary": "Built and scaled the data science function to deliver revenue growth and operational improvements through applied machine learning.",
       "highlights": ["Built DS Team, Applied ML, Revenue Growth"],
       "location": "Miami, US"
@@ -81,9 +87,9 @@
       "name": "Quantumblack, AI by McKinsey",
       "position": "Senior Data Scientist",
       "url": "https://www.mckinsey.com/capabilities/quantumblack/how-we-help-clients",
-      "startDate": "2017-08-01",
-      "endDate": "2019-09-01",
-      "summary": "Led technical delivery and strategic advisory, helping clients across the Americas solve business challenges with high-impact solutions.",
+      "startDate": "2017-08",
+      "endDate": "2019-09",
+      "summary": "Led technical delivery and strategic advisory, helping clients across the Americas address complex business challenges with rigorous, applied solutions.",
       "highlights": ["Multi-Industry, Client Delivery, Applied ML"],
       "location": "Sao Paulo, BR"
     },
@@ -92,9 +98,9 @@
       "name": "Center for Innovation in Teaching & Learning (CITL)",
       "position": "Analytics Consultant",
       "url": "https://citl.illinois.edu/",
-      "startDate": "2013-08-01",
-      "endDate": "2017-07-01",
-      "summary": "Advised faculty and researchers on study design, methods, and analysis to support rigorous, outcome-driven academic work.",
+      "startDate": "2013-08",
+      "endDate": "2017-07",
+      "summary": "Advised faculty and researchers on study design, methodology, and analysis to support rigorous, evidence-based academic work.",
       "highlights": ["Academic Advisory, Study Design, Analytics Support"],
       "location": "Champaign, US"
     },
@@ -103,10 +109,10 @@
       "name": "Group for the Analysis of Development, GRADE",
       "position": "Researcher",
       "url": "https://grade.org.pe/",
-      "startDate": "2006-06-01",
-      "endDate": "2010-06-01",
+      "startDate": "2006-06",
+      "endDate": "2010-06",
       "summary": "Produced applied research to inform policy in economics, education, and the environment, with emphasis on measurable impact.",
-      "highlights": ["Policy Research, Impact Evaluation, Development Econmics"],
+      "highlights": ["Policy Research, Impact Evaluation, Development Economics"],
       "location": "Lima, PE"
     }
   ],
@@ -116,8 +122,8 @@
       "name": "Kipu, Technology & Strategy",
       "position": "Co-Founder",
       "url": "https://kipuai.com",
-      "startDate": "2025-01-01",
-      "endDate": "Today",
+      "startDate": "2025-01",
+      "endDate": null,
       "summary": "We help organizations make data, technology, and AI meaningful by anchoring them in how they operate, decide, and grow.",
       "highlights": ["Data, Technology & AI Strategy, Capability Building, Advisory Work"],
       "location": "Lima, PE"
@@ -127,8 +133,8 @@
       "name": "Green Street Holdings",
       "position": "Co-Founder",
       "url": "https://greenstreet-holdings.com",
-      "startDate": "2024-01-01",
-      "endDate": "Today",
+      "startDate": "2024-01",
+      "endDate": null,
       "summary": "We invest in businesses to strengthen their foundations, modernize with purpose, and build long-term resilience.",
       "highlights": ["Small Businesses, Strategic Investment, Business Modernization"],
       "location": "Lima, PE"
@@ -142,8 +148,8 @@
       "url": "https://illinois.edu/",
       "area": "Geospatial Economics",
       "studyType": "PhD",
-      "startDate": "2012-01-08",
-      "endDate": "2017-01-05",
+      "startDate": "2012-08",
+      "endDate": "2017-05",
       "score": "",
       "courses": ["Spatio-Temporal Econometrics"]
     },
@@ -154,8 +160,8 @@
       "url": "https://illinois.edu/",
       "area": "Geospatial Economics",
       "studyType": "MSc",
-      "startDate": "2010-01-08",
-      "endDate": "2012-01-05",
+      "startDate": "2010-08",
+      "endDate": "2012-05",
       "score": "",
       "courses": ["Spatial Econometrics"]
     },
@@ -166,8 +172,8 @@
       "url": "https://www.pucp.edu.pe/",
       "area": "Geography",
       "studyType": "BA",
-      "startDate": "2001-01-03",
-      "endDate": "2006-01-12",
+      "startDate": "2001-03",
+      "endDate": "2006-01",
       "score": "",
       "courses": ["Geographic Accessibility of Education in Peru"]
     }
@@ -238,7 +244,7 @@
     {
       "name": "Sports",
       "icon": "fa-solid fa-tag",
-      "keywords": ["Brazillian Jiu Jitsu", "Stregth Training", "Hypertrophy", "Power Training", "Soccer", "Nutrition"]
+      "keywords": ["Brazilian Jiu-Jitsu", "Strength Training", "Hypertrophy", "Power Training", "Soccer", "Nutrition"]
     }
   ]
 }
