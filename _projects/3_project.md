@@ -8,7 +8,7 @@ category: work
 hidden: false
 ---
 
-In a world where technology evolves faster than most teams can adapt, strategy provides the anchor. At Kipu, we offer clarity to guide high-stakes decisions, prioritize with intent, and build lasting capabilities. In moments of complexity or rapid growth, having a clear direction can make all the difference. Our approach is grounded in disciplined thinking and real-world context. Whether you're laying the first brick or refining your path to scale, we partner with you to turn complexity into confident direction.
+Technology moves faster than strategy can always anticipate. At Kipu, we provide the clarity that guides high-stakes decisions, structures priorities, and builds lasting capabilities. Our approach is grounded in disciplined thinking and direct operational experience. Whether you are establishing the foundation or refining the path to scale, we partner with you to convert complexity into confident direction.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -22,7 +22,7 @@ In a world where technology evolves faster than most teams can adapt, strategy p
 ### What We Do
 
 1. **Strategic Advisory**  
-   We support founders and leadership teams in making high-stakes decisions with clarity—defining direction, evaluating options, and prioritizing with intent.
+   We support founders and leadership teams in making high-stakes decisions with clarity, defining direction, evaluating options, and prioritizing with intent.
 
 2. **Technology & Data Advisory**  
    We provide practical, scalable guidance on data foundations, technology choices, and AI strategy, grounded in real-world experience.
@@ -31,7 +31,7 @@ In a world where technology evolves faster than most teams can adapt, strategy p
    We support your growth by defining key roles, attracting the right talent, and shaping workflows that evolve with your organization.
 
 4. **Workshops**  
-   We offer workshops and learning experiences to strengthen strategy, innovation, and technical fluency—tailored for leaders, operators, and university cohorts.
+   We offer workshops and learning experiences to strengthen strategy, innovation, and technical fluency, tailored for leaders, operators, and university cohorts.
 
 ### Why Kipu?
 
@@ -39,6 +39,6 @@ At Kipu, we partner with organizations that seek clarity in a fast-moving world.
 
 With over two decades of combined experience, we bring the discipline of enterprise and the mindset of founders to every engagement. Whether you're defining your next move, navigating complexity, or building the foundations to scale, we offer grounded, real-world support to help you move forward with purpose.
 
-### Let’s Build Something Amazing
+### Work With Kipu
 
-At Kipu, we offer the clarity of global experience to guide strategic decisions and build enduring capabilities. Visit our website at [kipuai.com](http://kipuai.com) to learn more about our services, or reach out via email at [contact@kipuai.com](mailto:contact@kipuai.com) for a free consultation and discover how we can help your organization thrive.
+Kipu brings the clarity of global experience to strategic decisions and capability building. To learn more about our services, visit [kipuai.com](http://kipuai.com) or reach out at [contact@kipuai.com](mailto:contact@kipuai.com) to discuss how we can support your work.
