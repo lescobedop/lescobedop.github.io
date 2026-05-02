@@ -9,42 +9,7 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
-          title: "blog",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/blog/";
-          },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "a growing collection of your cool projects.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/projects/";
-          },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
-        },{id: "nav-news",
-          title: "news",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/news/";
-          },
-        },{id: "nav-people",
-          title: "people",
-          description: "a fantastic group of people I&#39;m proud to work alongside.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/people/";
-          },
-        },{id: "post-the-shape-that-remains",
+  },{id: "post-the-shape-that-remains",
       
         title: "The Shape That Remains",
       
