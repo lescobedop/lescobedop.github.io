@@ -1,99 +1,89 @@
 ---
-layout: default
 ---
-{% assign year = page.date | date: '%Y' %}
-{% assign tags = page.tags | join: '' %}
-{% assign categories = page.categories | join: '' %}
-
-{% if page._styles %}
-  <!-- Page/Post style -->
-  <style type="text/css">
-    {{ page._styles }}
-  </style>
-{% endif %}
-
-{% assign url_beginning = page.url | slice: 0, 6 %}
-
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">
-      Created in {{ page.date | date: '%B %d, %Y' }}
-      {% if page.author %}by {{ page.author }}{% endif %}
-      {% if page.last_updated %}, last updated in {{ page.last_updated | date: '%B %d, %Y' }}{% endif %}
-      {% if page.meta %}• {{ page.meta }}{% endif %}
-    </p>
-
-    {% if tags != '' or categories != '' %}
-      <p class="post-tags">
-        {% if url_beginning == '/blog/' %}
-          <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl }}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
-        {% else %}
-          <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
-        {% endif %}
-
-        {% if tags != '' %}
-          &nbsp; &middot; &nbsp;
-          {% for tag in page.tags %}
-            {% if url_beginning == '/blog/' %}
-              <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl }}"> <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }} </a>
-            {% else %}
-              <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
-            {% endif %}
-            {% unless forloop.last %}&nbsp;{% endunless %}
-          {% endfor %}
-        {% endif %}
-
-        {% if categories != '' %}
-          &nbsp; &middot; &nbsp;
-          {% for category in page.categories %}
-            {% if url_beginning == '/blog/' %}
-              <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl }}">
-                <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
-              </a>
-            {% else %}
-              <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
-            {% endif %}
-            {% unless forloop.last %}&nbsp;{% endunless %}
-          {% endfor %}
-        {% endif %}
-      </p>
-    {% endif %}
-  </header>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} — Lucho Escobedo</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:url" content="{{ page.url | prepend: site.url }}">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#080909;--charcoal:#121415;--graphite:#242625;--mid:#3A3A37;
+  --silver:#B8B6AD;--dim:#77766F;--gold:#C4A56A;--gold-hi:#E5D19B;--gold-deep:#9A7B3F;
+  --serif:'DM Serif Display',Georgia,serif;
+  --sans:'Instrument Sans',system-ui,sans-serif;
+  --mono:'DM Mono','Courier New',monospace;
+  --gap:clamp(1.2rem,3vw,2.5rem);
+}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--silver);font-family:var(--sans);font-size:16px;line-height:1.7;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;padding:.85rem var(--gap);display:flex;align-items:center;justify-content:space-between;background:rgba(8,9,9,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--mid)}
+.nav-logo{font-family:var(--serif);font-size:1rem;color:var(--silver);text-decoration:none}
+.nav-links{display:flex;gap:1.75rem;list-style:none;align-items:center}
+.nav-links a{font-family:var(--mono);font-size:.68rem;color:var(--dim);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+main{max-width:720px;margin:0 auto;padding:4rem var(--gap) 6rem}
+.back-link{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);text-decoration:none;display:inline-flex;align-items:center;gap:.4rem;margin-bottom:3rem;transition:color .2s}
+.back-link::before{content:'←';color:var(--gold)}
+.back-link:hover{color:var(--gold)}
+.post-eyebrow{font-family:var(--mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:.75rem}
+h1.post-title{font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;letter-spacing:-.02em;color:var(--silver);margin-bottom:.75rem}
+.post-desc{font-size:.95rem;color:var(--dim);margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--mid);line-height:1.65}
+.post-content{font-size:1rem;line-height:1.85;color:var(--silver)}
+.post-content>*+*{margin-top:1.5rem}
+.post-content h2{font-family:var(--serif);font-size:1.75rem;color:var(--silver);margin-top:3rem;margin-bottom:.5rem;letter-spacing:-.02em;line-height:1.1}
+.post-content h3{font-family:var(--serif);font-size:1.25rem;color:var(--silver);margin-top:2.5rem;margin-bottom:.4rem}
+.post-content h4{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:2rem}
+.post-content p{margin-bottom:0}
+.post-content a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-deep);transition:opacity .2s}
+.post-content a:hover{opacity:.7}
+.post-content strong{color:var(--gold-hi);font-weight:600}
+.post-content em{font-style:italic}
+.post-content blockquote{border-left:2px solid var(--gold);padding:.75rem 1.5rem;margin:2rem 0;background:var(--charcoal)}
+.post-content blockquote p{color:var(--dim);margin:0}
+.post-content code{font-family:var(--mono);font-size:.85em;background:var(--graphite);padding:.15em .4em;color:var(--gold-hi)}
+.post-content pre{background:var(--charcoal);border:1px solid var(--mid);padding:1.5rem;overflow-x:auto;margin:2rem 0}
+.post-content pre code{background:none;padding:0;font-size:.88rem;color:var(--silver)}
+.post-content hr{border:none;border-top:1px solid var(--mid);margin:3rem 0}
+.post-content ul,.post-content ol{padding-left:1.5rem}
+.post-content li+li{margin-top:.4rem}
+footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);padding:1.5rem var(--gap);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-name{font-family:var(--serif);color:var(--silver);font-size:.95rem}
+.footer-copy{font-family:var(--mono);font-size:.65rem;letter-spacing:.06em}
+@media(max-width:600px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav role="navigation" aria-label="Main navigation">
+  <a href="/" class="nav-logo">Lucho Escobedo</a>
+  <ul class="nav-links">
+    <li><a href="/">About</a></li>
+    <li><a href="/#ventures">Ventures</a></li>
+    <li><a href="/#career">Career</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+</nav>
+<main>
+  <a href="/blog/" class="back-link">The Wolf's Den</a>
+  <div class="post-eyebrow">{{ page.date | date: '%B %d, %Y' }}</div>
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.description %}<p class="post-desc">{{ page.description }}</p>{% endif %}
   <article class="post-content">
-    {% if page.toc %}
-      <div id="table-of-contents">
-        {% include toc.html %}
-      </div>
-    {% endif %}
-
-    <div id="markdown-content">
-      {{ content }}
-    </div>
+    {{ content }}
   </article>
-
-  {% if page.citation %}
-    {% include citation.liquid %}
-  {% endif %}
-
-  {% if site.scholar and page.related_publications %}
-    <h2>References</h2>
-    <div class="publications">
-      {% bibliography --group_by none --cited_in_order %}
-    </div>
-  {% endif %}
-
-  {% if site.related_blog_posts and site.related_blog_posts.enabled %}
-    {% if page.related_posts == null or page.related_posts %}
-      {% include related_posts.liquid %}
-    {% endif %}
-  {% endif %}
-
-  {% if site.disqus_shortname and page.disqus_comments %}
-    {% include disqus.liquid %}
-  {% endif %}
-  {% if site.giscus and page.giscus_comments %}
-    {% include giscus.liquid %}
-  {% endif %}
-</div>
+</main>
+<footer>
+  <span class="footer-name">Lucho Escobedo</span>
+  <span class="footer-copy">© 2026 · Lima, Peru</span>
+</footer>
+</body>
+</html>
