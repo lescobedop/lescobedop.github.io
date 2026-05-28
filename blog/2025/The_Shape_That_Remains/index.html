@@ -75,6 +75,13 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
 .lang-btn.active{color:var(--gold);border-bottom:1px solid var(--gold)}
 .lang-sep{color:var(--mid)}
 @media(max-width:720px){.related-grid{grid-template-columns:1fr}}
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle{font-family:var(--mono);font-size:.68rem;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;cursor:default;user-select:none}
+.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + .6rem);right:0;background:var(--charcoal);border:1px solid var(--mid);padding:.35rem 0;z-index:200;min-width:195px}
+.nav-dropdown:hover .nav-dropdown-menu{display:block}
+.nav-dropdown-menu li{list-style:none}
+.nav-dropdown-menu a{display:block;padding:.45rem 1.1rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.07em;text-transform:uppercase;color:var(--dim);text-decoration:none;white-space:nowrap;transition:color .2s}
+.nav-dropdown-menu a:hover,.nav-dropdown-menu a.active{color:var(--gold)}
 </style>
 </head>
 <body>
@@ -84,7 +91,13 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
     <li><a href="/">About</a></li>
     <li><a href="/#ventures">Ventures</a></li>
     <li><a href="/#career">Career</a></li>
-    <li><a href="/blog/">Blog</a></li>
+    <li class="nav-dropdown">
+      <span class="nav-dropdown-toggle">Writing</span>
+      <ul class="nav-dropdown-menu">
+        <li><a href="/institutional-intelligence/">Institutional Intelligence</a></li>
+        <li><a href="/blog/" class="active">The Wolf's Den</a></li>
+      </ul>
+    </li>
     <li><a href="/#contact">Contact</a></li>
     <li>
       <div class="lang-toggle" role="group" aria-label="Language">
@@ -97,6 +110,7 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
 </nav>
 <main>
   <a href="/blog/" class="back-link">The Wolf's Den</a>
+  <div class="post-eyebrow" style="color:var(--gold-deep);margin-bottom:.2rem">The Wolf's Den</div>
   <div class="post-eyebrow">October 11, 2025</div>
   <h1 class="post-title">The Shape That Remains</h1>
   <p class="post-desc">On endurance, refinement, and the slow transformations that define us.</p>
@@ -126,6 +140,21 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
     </p>
     <div class="related-grid">
       
+      
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
       
         
         
@@ -215,6 +244,15 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
         <p class="related-desc">The quiet discovery that mastery is a transferable way of being.</p>
       </a>
       
+      <a href="/institutional-intelligence/2026/institutional-intelligence-launch/" class="related-card">
+        <div class="related-meta">
+          <span class="related-tags">ai strategy · data leadership · organizational design</span>
+          <span class="related-date">May 28, 2026</span>
+        </div>
+        <h3 class="related-title">What Institutional Intelligence Actually Means</h3>
+        <p class="related-desc">Organizations do not fail at AI because they lack access to models. They fail because they have not built the internal structures that allow intelligence to compound.</p>
+      </a>
+      
       <a href="/blog/2025/The-Flight-home/" class="related-card">
         <div class="related-meta">
           <span class="related-tags">identity · family · return · legacy · purpose</span>
@@ -224,19 +262,10 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
         <p class="related-desc">Tracing the invisible current between movement and meaning.</p>
       </a>
       
-      <a href="/blog/2025/On-Change/" class="related-card">
-        <div class="related-meta">
-          <span class="related-tags">change · identity · growth · mindset · leadership</span>
-          <span class="related-date">Jul 18, 2025</span>
-        </div>
-        <h3 class="related-title">All Things Change When We Do</h3>
-        <p class="related-desc">A personal reflection on change, identity, and the quiet power of internal transformation.</p>
-      </a>
-      
     </div>
   </div>
 
-  <a href="/blog/" class="back-link back-link--bottom">Back to The Wolf's Den</a>
+  <a href="/blog/" class="back-link back-link--bottom">The Wolf's Den</a>
 </main>
 <footer>
   <span class="footer-name">Lucho Escobedo</span>
