@@ -114,6 +114,7 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
   <div class="post-eyebrow" style="color:var(--gold-deep);margin-bottom:.2rem">The Wolf's Den</div>
   <div class="post-eyebrow">{{ page.date | date: '%B %d, %Y' }}</div>
   <h1 class="post-title">{{ page.title }}</h1>
+  <p class="post-eyebrow">By <a href="https://luchoescobedo.com" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--mid)">Lucho Escobedo</a> · {{ page.date | date: '%B %d, %Y' }}</p>
   {% if page.description %}<p class="post-desc">{{ page.description }}</p>{% endif %}
   <article class="post-content">
     {{ content }}
