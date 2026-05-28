@@ -1,15 +1,15 @@
 ---
 layout: null
-permalink: /blog/
-title: "The Wolf's Den"
+permalink: /institutional-intelligence/
+title: "Institutional Intelligence"
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Wolf's Den — Lucho Escobedo</title>
-<meta name="description" content="On Clarity, Growth, and Inner Strength">
+<title>Institutional Intelligence — Lucho Escobedo</title>
+<meta name="description" content="AI, strategy, and organizational decision-making for executives.">
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,6 +45,7 @@ h2.section-title em{font-style:italic;color:var(--gold)}
 .blog-card h3{font-family:var(--serif);font-size:1.05rem;color:var(--silver);line-height:1.2}
 .blog-card p{font-size:.82rem;color:var(--dim);line-height:1.5;flex:1}
 .blog-date{font-family:var(--mono);font-size:.62rem;color:var(--dim);margin-top:auto}
+.no-posts{font-family:var(--mono);font-size:.75rem;color:var(--dim);letter-spacing:.06em;padding:3rem 0}
 footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);padding:1.5rem var(--gap);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-name{font-family:var(--serif);color:var(--silver);font-size:.95rem}
 .footer-copy{font-family:var(--mono);font-size:.65rem;letter-spacing:.06em}
@@ -71,8 +72,8 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
     <li class="nav-dropdown">
       <span class="nav-dropdown-toggle">Writing</span>
       <ul class="nav-dropdown-menu">
-        <li><a href="/institutional-intelligence/">Institutional Intelligence</a></li>
-        <li><a href="/blog/" class="active">The Wolf's Den</a></li>
+        <li><a href="/institutional-intelligence/" class="active">Institutional Intelligence</a></li>
+        <li><a href="/blog/">The Wolf's Den</a></li>
       </ul>
     </li>
     <li><a href="/#contact">Contact</a></li>
@@ -82,19 +83,22 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
 <section>
   <div class="section-inner">
     <div class="section-label">Writing</div>
-    <h2 class="section-title">The Wolf's <em>Den</em></h2>
-    <p class="section-sub">The person behind the leader.</p>
+    <h2 class="section-title">Institutional <em>Intelligence</em></h2>
+    <p class="section-sub">AI, strategy, and organizational decision-making for executives.</p>
     <div class="blog-grid">
-      {% for post in site.posts %}
+      {% assign ii_posts = site.posts | where_exp: "post", "post.categories contains 'institutional-intelligence'" %}
+      {% for post in ii_posts %}
       <a href="{{ post.url | prepend: site.baseurl }}" class="blog-card fade-up">
         <div class="blog-meta">
-          <span class="blog-tag">{% if post.tags.size > 0 %}{{ post.tags | join: ' · ' }}{% elsif post.categories.size > 0 %}{{ post.categories | first }}{% else %}reflections{% endif %}</span>
+          <span class="blog-tag">{% if post.tags.size > 0 %}{{ post.tags | join: ' · ' }}{% else %}institutional intelligence{% endif %}</span>
           <span class="blog-read">{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min</span>
         </div>
         <h3>{{ post.title }}</h3>
         {% if post.description %}<p>{{ post.description }}</p>{% endif %}
         <span class="blog-date">{{ post.date | date: '%B %d, %Y' }}</span>
       </a>
+      {% else %}
+      <p class="no-posts">No essays published yet.</p>
       {% endfor %}
     </div>
   </div>
