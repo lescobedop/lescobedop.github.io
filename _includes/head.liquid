@@ -1,24 +1,44 @@
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
-<!-- Person JSON-LD structured data -->
+{% if page.url == "/" %}
+<!-- Person JSON-LD structured data (homepage only) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Lucho Escobedo",
-  "url": "https://luchoescobedo.com",
-  "image": "https://luchoescobedo.com/assets/img/prof_pic.png",
+  "alternateName": "Luis Escobedo",
   "jobTitle": "Corporate Director of Data",
-  "worksFor": { "@type": "Organization", "name": "Yanbal International" },
-  "alumniOf": "University of Illinois",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Yanbal"
+  },
+  "description": "Executive leader with 20 years of global experience designing and scaling enterprise systems that translate data into decision advantage. Operates at the Chief Data Officer level, leading the corporatization of data and development of AI-ready platforms — enabling organizations to move from fragmented analytics to integrated, governed, and intelligent operations. Recognized for closing the gap between data, technology, and business execution across consulting, platform-driven technology companies, and Fortune 500 environments. Experience spans Latin America, the United States, Europe, and the Middle East.",
+  "knowsAbout": [
+    "Chief Data Officer responsibilities",
+    "Enterprise Data Strategy",
+    "AI Transformation",
+    "Data Platform Architecture",
+    "Executive Data Leadership",
+    "Digital Transformation",
+    "Fortune 500 Data Operations",
+    "Latin America",
+    "United States",
+    "Europe",
+    "Middle East"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Illinois at Urbana-Champaign"
+  },
+  "url": "https://luchoescobedo.com",
   "sameAs": [
-    "https://linkedin.com/in/luchoescobedo",
-    "https://kipuai.com",
-    "https://greenstreet-holdings.com"
+    "https://www.linkedin.com/in/luchoescobedo/"
   ]
 }
 </script>
+{% endif %}
 
 <!-- PostHog Analytics -->
 <script>
