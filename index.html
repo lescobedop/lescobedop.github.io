@@ -124,8 +124,18 @@ layout: null
     "https://www.linkedin.com/in/luchoescobedo/",
     "https://kipuai.com",
     "https://greenstreet-holding.com",
-    "https://primedeals.global"
-  ]
+    "https://primedeals.global",
+    "https://luchoescobedo.com/institutional-intelligence/"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Lucho Escobedo",
+    "url": "https://luchoescobedo.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://luchoescobedo.com/institutional-intelligence/"
+  }
 }
 </script>
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
@@ -268,6 +278,14 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
   .impact-grid{grid-template-columns:1fr}
   .blog-grid{grid-template-columns:1fr}
 }
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle{font-family:var(--mono);font-size:.68rem;color:var(--dim);letter-spacing:.08em;text-transform:uppercase;cursor:default;user-select:none}
+.nav-dropdown:hover .nav-dropdown-toggle{color:var(--gold)}
+.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + .6rem);right:0;background:var(--charcoal);border:1px solid var(--mid);padding:.35rem 0;z-index:200;min-width:195px}
+.nav-dropdown:hover .nav-dropdown-menu{display:block}
+.nav-dropdown-menu li{list-style:none}
+.nav-dropdown-menu a{display:block;padding:.45rem 1.1rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.07em;text-transform:uppercase;color:var(--dim);text-decoration:none;white-space:nowrap;transition:color .2s}
+.nav-dropdown-menu a:hover,.nav-dropdown-menu a.active{color:var(--gold)}
 </style>
 </head>
 <body>
@@ -278,7 +296,13 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
     <li><a href="#hero" data-en="About" data-es="Sobre mí">About</a></li>
     <li><a href="#ventures" data-en="Ventures" data-es="Emprendimientos">Ventures</a></li>
     <li><a href="#career" data-en="Career" data-es="Trayectoria">Career</a></li>
-    <li><a href="#writing" data-en="Blog" data-es="Blog">Blog</a></li>
+    <li class="nav-dropdown">
+      <span class="nav-dropdown-toggle">Writing</span>
+      <ul class="nav-dropdown-menu">
+        <li><a href="/institutional-intelligence/">Institutional Intelligence</a></li>
+        <li><a href="/blog/">The Wolf's Den</a></li>
+      </ul>
+    </li>
     <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
   </ul>
   <div class="lang-toggle">
@@ -376,15 +400,24 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
 
 <section class="writing-bg" id="writing">
   <div class="section-inner">
-    <p class="section-label" data-en="Blog" data-es="Blog">Blog</p>
-    <h2 class="section-title">The Wolf's Den</h2>
+    <p class="section-label">Writing</p>
+    <h2 class="section-title">Writing</h2>
     <div class="blog-grid">
-      <a href="https://luchoescobedo.com/blog/2025/The_Shape_That_Remains/" class="blog-card fade-up" target="_blank" rel="noopener noreferrer"><div class="blog-meta"><span class="blog-tag">endurance · refinement</span><span class="blog-read">2 min</span></div><h3>The Shape That Remains</h3><p>On endurance, refinement, and the slow transformations that define us.</p><span class="blog-date">Oct 11, 2025</span></a>
-      <a href="https://luchoescobedo.com/blog/2025/The_Way_Is/" class="blog-card fade-up" target="_blank" rel="noopener noreferrer" style="transition-delay:.07s"><div class="blog-meta"><span class="blog-tag">mastery · adaptability</span><span class="blog-read">2 min</span></div><h3>The Way in All Things</h3><p>The quiet discovery that mastery is a transferable way of being.</p><span class="blog-date">Aug 28, 2025</span></a>
-      <a href="https://luchoescobedo.com/blog/2025/The-Flight-home/" class="blog-card fade-up" target="_blank" rel="noopener noreferrer" style="transition-delay:.14s"><div class="blog-meta"><span class="blog-tag">identity · legacy</span><span class="blog-read">3 min</span></div><h3>The Flight Home</h3><p>Tracing the invisible current between movement and meaning.</p><span class="blog-date">Aug 04, 2025</span></a>
-      <a href="https://luchoescobedo.com/blog/2025/On-Change/" class="blog-card fade-up" target="_blank" rel="noopener noreferrer" style="transition-delay:.21s"><div class="blog-meta"><span class="blog-tag">change · identity</span><span class="blog-read">4 min</span></div><h3>All Things Change When We Do</h3><p>A reflection on change, identity, and the quiet power of internal transformation.</p><span class="blog-date">Jul 18, 2025</span></a>
-      <a href="https://luchoescobedo.com/blog/2025/The_Wolfs_Den/" class="blog-card fade-up" target="_blank" rel="noopener noreferrer" style="transition-delay:.28s"><div class="blog-meta"><span class="blog-tag">identity · independence</span><span class="blog-read">3 min</span></div><h3>From Independence to Strength</h3><p>Reflections on independence, identity, and the purpose behind The Wolf's Den.</p><span class="blog-date">May 06, 2025</span></a>
-      <a href="/blog/" class="blog-card blog-card--all fade-up" style="transition-delay:.35s"><span class="blog-all-label en-txt">All writing</span><span class="blog-all-label es-txt" style="display:none">Otros Posts</span><p class="en-txt">View every post at The Wolf's Den</p><p class="es-txt" style="display:none">Todos los artículos en The Wolf's Den</p></a>
+      {% for post in site.posts limit:3 %}
+      <a href="{{ post.url | prepend: site.baseurl }}" class="blog-card fade-up">
+        <div class="blog-meta">
+          <span class="blog-tag">{% if post.categories contains 'institutional-intelligence' %}Institutional Intelligence{% else %}The Wolf's Den{% endif %}</span>
+          <span class="blog-read">{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min</span>
+        </div>
+        <h3>{{ post.title }}</h3>
+        {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+        <span class="blog-date">{{ post.date | date: '%B %d, %Y' }}</span>
+      </a>
+      {% endfor %}
+      <div class="blog-card blog-card--all fade-up" style="flex-direction:column;justify-content:flex-start;gap:.75rem;text-decoration:none">
+        <a href="/institutional-intelligence/" class="blog-all-label" style="display:block;text-decoration:none">Institutional Intelligence &rarr;</a>
+        <a href="/blog/" class="blog-all-label" style="display:block;text-decoration:none">The Wolf's Den &rarr;</a>
+      </div>
     </div>
   </div>
 </section>
