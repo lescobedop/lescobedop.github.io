@@ -9,18 +9,7 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "post-what-institutional-intelligence-actually-means",
-      
-        title: "What Institutional Intelligence Actually Means",
-      
-      description: "Organizations do not fail at AI because they lack access to models. They fail because they have not built the internal structures that allow intelligence to compound.",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/institutional-intelligence/2026/institutional-intelligence-launch/";
-        
-      },
-    },{id: "post-the-shape-that-remains",
+  },{id: "post-the-shape-that-remains",
       
         title: "The Shape That Remains",
       
