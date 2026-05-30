@@ -9,7 +9,18 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "post-the-shape-that-remains",
+  },{id: "post-the-clarity-gap",
+      
+        title: "The Clarity Gap",
+      
+      description: "Latin America did not build frontier AI; the binding constraint on its place in this new order is not technology but clarity.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/institutional-intelligence/2026/the-clarity-gap/";
+        
+      },
+    },{id: "post-the-shape-that-remains",
       
         title: "The Shape That Remains",
       

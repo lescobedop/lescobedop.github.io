@@ -29,6 +29,10 @@ responsibility over the region. English only.
 
 - [Institutional Intelligence](https://luchoescobedo.com/institutional-intelligence/):
   Column index and all published essays.
+- [The Clarity Gap](https://luchoescobedo.com/institutional-intelligence/2026/the-clarity-gap/):
+  Launch essay. Why Latin America's place in the
+  new technological order turns on clarity rather
+  than access to AI.
 
 ### The Wolf's Den
 Personal essays on discipline, identity,
