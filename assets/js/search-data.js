@@ -9,7 +9,18 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "post-the-clarity-gap",
+  },{id: "post-pain",
+      
+        title: "Pain",
+      
+      description: "On injury, the easy path of destruction, and what a man builds in the silence instead.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/Pain/";
+        
+      },
+    },{id: "post-the-clarity-gap",
       
         title: "The Clarity Gap",
       
