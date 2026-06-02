@@ -31,6 +31,17 @@ ninja.data = [{
           window.location.href = "/institutional-intelligence/2026/the-clarity-gap/";
         
       },
+    },{id: "post-peru-39-s-position",
+      
+        title: "Peru&#39;s Position",
+      
+      description: "Peru leads in governance and adoption but lags in innovation capacity. The gap is strategic, not regulatory.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/institutional-intelligence/2026/peru-position/";
+        
+      },
     },{id: "post-the-governance-advantage",
       
         title: "The Governance Advantage",
