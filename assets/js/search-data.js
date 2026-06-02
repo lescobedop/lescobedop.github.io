@@ -53,6 +53,17 @@ ninja.data = [{
           window.location.href = "/institutional-intelligence/2026/governance-advantage/";
         
       },
+    },{id: "post-credit-clarity-and-ai",
+      
+        title: "Credit, Clarity, and AI",
+      
+      description: "When algorithms decide who gets credit, clarity is not a regulatory choice. It is the foundation for trust and access.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/institutional-intelligence/2026/credit-clarity-ai/";
+        
+      },
     },{id: "post-the-architecture-of-power",
       
         title: "The Architecture of Power",
