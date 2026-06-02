@@ -31,6 +31,17 @@ ninja.data = [{
           window.location.href = "/institutional-intelligence/2026/the-clarity-gap/";
         
       },
+    },{id: "post-the-architecture-of-power",
+      
+        title: "The Architecture of Power",
+      
+      description: "Nvidia&#39;s dominance, Intel&#39;s acquisition by the U.S. government, and what it means for Latin America&#39;s position in the semiconductor value chain.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/institutional-intelligence/2026/architecture-of-power/";
+        
+      },
     },{id: "post-institutional-intelligence",
       
         title: "Institutional Intelligence",
