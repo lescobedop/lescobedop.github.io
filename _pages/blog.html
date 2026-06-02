@@ -85,7 +85,8 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
     <h2 class="section-title">The Wolf's <em>Den</em></h2>
     <p class="section-sub">The person behind the leader.</p>
     <div class="blog-grid">
-      {% for post in site.posts %}
+      {% assign wd_posts = site.posts | where_exp: "post", "post.categories contains 'reflections'" %}
+      {% for post in wd_posts %}
       <a href="{{ post.url | prepend: site.baseurl }}" class="blog-card fade-up">
         <div class="blog-meta">
           <span class="blog-tag">{% if post.tags.size > 0 %}{{ post.tags | join: ' · ' }}{% elsif post.categories.size > 0 %}{{ post.categories | first }}{% else %}reflections{% endif %}</span>
@@ -95,6 +96,8 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
         {% if post.description %}<p>{{ post.description }}</p>{% endif %}
         <span class="blog-date">{{ post.date | date: '%B %d, %Y' }}</span>
       </a>
+      {% else %}
+      <p class="no-posts">No essays published yet.</p>
       {% endfor %}
     </div>
   </div>
