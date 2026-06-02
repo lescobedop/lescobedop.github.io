@@ -9,7 +9,18 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "post-pain",
+  },{id: "post-peru-and-artificial-intelligence-fifty-years-compressed",
+      
+        title: "Peru and Artificial Intelligence: Fifty Years Compressed",
+      
+      description: "When speed becomes a form of discipline, institutions are built while the economy moves. Peru is attempting the compression now.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/institutional-intelligence/2026/fifty-years-compressed/";
+        
+      },
+    },{id: "post-pain",
       
         title: "Pain",
       
