@@ -20,17 +20,6 @@ ninja.data = [{
           window.location.href = "/blog/2026/Pain/";
         
       },
-    },{id: "post-the-clarity-gap",
-      
-        title: "The Clarity Gap",
-      
-      description: "Latin America did not build frontier AI; the binding constraint on its place in this new order is not technology but clarity.",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/institutional-intelligence/2026/the-clarity-gap/";
-        
-      },
     },{id: "post-peru-39-s-position",
       
         title: "Peru&#39;s Position",
