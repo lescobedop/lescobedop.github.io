@@ -31,6 +31,17 @@ ninja.data = [{
           window.location.href = "/institutional-intelligence/2026/the-clarity-gap/";
         
       },
+    },{id: "post-the-governance-advantage",
+      
+        title: "The Governance Advantage",
+      
+      description: "Peru&#39;s AI regulation on credit evaluation is not a constraint. It is a competitive advantage earned by moving first on responsible governance.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/institutional-intelligence/2026/governance-advantage/";
+        
+      },
     },{id: "post-the-architecture-of-power",
       
         title: "The Architecture of Power",
