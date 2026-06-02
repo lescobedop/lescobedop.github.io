@@ -31,6 +31,17 @@ ninja.data = [{
           window.location.href = "/blog/2026/Pain/";
         
       },
+    },{id: "post-the-strategic-choice",
+      
+        title: "The Strategic Choice",
+      
+      description: "When governance arrives after infrastructure begins to move, the test is whether strategy becomes action.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/institutional-intelligence/2026/strategic-choice/";
+        
+      },
     },{id: "post-the-window-of-opportunity",
       
         title: "The Window of Opportunity",
@@ -51,17 +62,6 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/institutional-intelligence/2026/peru-position/";
-        
-      },
-    },{id: "post-the-governance-advantage",
-      
-        title: "The Governance Advantage",
-      
-      description: "Peru&#39;s AI regulation on credit evaluation is not a constraint. It is a competitive advantage earned by moving first on responsible governance.",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/institutional-intelligence/2026/governance-advantage/";
         
       },
     },{id: "post-credit-clarity-and-ai",
