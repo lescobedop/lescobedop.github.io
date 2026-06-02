@@ -31,6 +31,17 @@ ninja.data = [{
           window.location.href = "/institutional-intelligence/2026/the-clarity-gap/";
         
       },
+    },{id: "post-institutional-intelligence",
+      
+        title: "Institutional Intelligence",
+      
+      description: "The region&#39;s binding constraint is not technology but clarity. A column concerned with that deficit.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/institutional-intelligence/2025/inaugural/";
+        
+      },
     },{id: "post-the-shape-that-remains",
       
         title: "The Shape That Remains",
