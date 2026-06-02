@@ -31,6 +31,17 @@ ninja.data = [{
           window.location.href = "/blog/2026/Pain/";
         
       },
+    },{id: "post-the-window-of-opportunity",
+      
+        title: "The Window of Opportunity",
+      
+      description: "When open-weight AI democratizes access, the region has months to move. The window is closing.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/institutional-intelligence/2026/window-of-opportunity/";
+        
+      },
     },{id: "post-peru-39-s-position",
       
         title: "Peru&#39;s Position",
