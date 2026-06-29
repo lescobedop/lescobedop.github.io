@@ -9,7 +9,18 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "post-peru-and-artificial-intelligence-fifty-years-compressed",
+  },{id: "post-the-new-commodity",
+      
+        title: "The New Commodity",
+      
+      description: "Latin America holds precisely the reserves the AI buildout requires. The structural position it is being assigned is one it has held before.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/institutional-intelligence/2026/the-new-commodity/";
+        
+      },
+    },{id: "post-peru-and-artificial-intelligence-fifty-years-compressed",
       
         title: "Peru and Artificial Intelligence: Fifty Years Compressed",
       
