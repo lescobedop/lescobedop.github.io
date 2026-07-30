@@ -9,7 +9,18 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "post-the-new-commodity",
+  },{id: "post-exclusions-apply",
+      
+        title: "Exclusions Apply",
+      
+      description: "Microsoft cut the cost of intelligence by up to ninety percent and raised its spending anyway. A price collapse reaches only what can be replaced.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/institutional-intelligence/2026/exclusions-apply/";
+        
+      },
+    },{id: "post-the-new-commodity",
       
         title: "The New Commodity",
       
