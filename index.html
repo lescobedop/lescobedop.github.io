@@ -29,7 +29,10 @@ layout: null
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@graph": [
+  {
   "@type": "Person",
+  "@id": "https://luchoescobedo.com/#person",
   "name": "Lucho Escobedo",
   "alternateName": "Luis Escobedo",
   "jobTitle": "Corporate Director of Data",
@@ -38,78 +41,6 @@ layout: null
     "name": "Yanbal",
     "url": "https://www.yanbal.com"
   },
-  "workHistory": [
-    {
-      "@type": "EmployeeRole",
-      "position": "Corporate Director of Data",
-      "organization": {
-        "@type": "Organization",
-        "name": "Yanbal / FERBEL"
-      },
-      "startDate": "2026-04",
-      "endDate": null
-    },
-    {
-      "@type": "EmployeeRole",
-      "position": "Head of Data & Advanced Analytics, Credit Risk",
-      "organization": {
-        "@type": "Organization",
-        "name": "Banco de Crédito del Perú (BCP)"
-      },
-      "startDate": "2025-08",
-      "endDate": "2026-04"
-    },
-    {
-      "@type": "EmployeeRole",
-      "position": "Head of Data & Analytics Engineering, HRO",
-      "organization": {
-        "@type": "Organization",
-        "name": "ADP"
-      },
-      "startDate": "2023-06",
-      "endDate": "2025-07"
-    },
-    {
-      "@type": "EmployeeRole",
-      "position": "Director to VP, Data Science & Analytics",
-      "organization": {
-        "@type": "Organization",
-        "name": "REEF Technology"
-      },
-      "startDate": "2020-05",
-      "endDate": "2023-06"
-    },
-    {
-      "@type": "EmployeeRole",
-      "position": "Senior Data Scientist, McKinsey & Company (QuantumBlack)",
-      "organization": {
-        "@type": "Organization",
-        "name": "McKinsey & Company"
-      },
-      "startDate": "2017-08",
-      "endDate": "2019-08"
-    },
-    {
-      "@type": "EmployeeRole",
-      "position": "Analytics Consultant",
-      "organization": {
-        "@type": "Organization",
-        "name": "CITL, University of Illinois Urbana-Champaign"
-      },
-      "startDate": "2013-08",
-      "endDate": "2017-07"
-    },
-    {
-      "@type": "EmployeeRole",
-      "position": "Researcher",
-      "organization": {
-        "@type": "Organization",
-        "name": "GRADE - Group for the Analysis of Development"
-      },
-      "startDate": "2006-06",
-      "endDate": "2010-06"
-    }
-  ],
   "description": "Data and AI executive with 20 years designing and scaling enterprise systems that convert data into decisions, value, and durable competitive advantage — across McKinsey, Fortune 500 corporations, and unicorn startups like REEF Technology, spanning four continents. Founder and investor across ventures in AI consulting, real estate, small business acquisition, and B2B commerce infrastructure.",
   "knowsLanguage": ["Spanish", "English", "Portuguese"],
   "award": [
@@ -215,30 +146,24 @@ layout: null
   "mainEntityOfPage": {
     "@type": "WebSite",
     "@id": "https://luchoescobedo.com"
+  }
   },
-  "author": [
-    {
-      "@type": "CreativeWorkSeries",
-      "name": "Institutional Intelligence",
-      "url": "https://luchoescobedo.com/institutional-intelligence/",
-      "description": "Weekly column on AI, strategy, and organizational decision-making interpreted through a Latin American lens. Written for investors, CEOs, policy makers, and founders with institutional responsibility over the region.",
-      "inLanguage": "en",
-      "author": {
-        "@type": "Person",
-        "name": "Lucho Escobedo"
-      }
-    },
-    {
-      "@type": "CreativeWorkSeries",
-      "name": "The Wolf's Den",
-      "url": "https://luchoescobedo.com/blog/",
-      "description": "Personal essays on discipline, identity, leadership, and the person behind the work.",
-      "inLanguage": "en",
-      "author": {
-        "@type": "Person",
-        "name": "Lucho Escobedo"
-      }
-    }
+  {
+    "@type": "CreativeWorkSeries",
+    "name": "Institutional Intelligence",
+    "url": "https://luchoescobedo.com/institutional-intelligence/",
+    "description": "Weekly column on AI, strategy, and organizational decision-making interpreted through a Latin American lens. Written for investors, CEOs, policy makers, and founders with institutional responsibility over the region.",
+    "inLanguage": "en",
+    "author": { "@id": "https://luchoescobedo.com/#person" }
+  },
+  {
+    "@type": "CreativeWorkSeries",
+    "name": "The Wolf's Den",
+    "url": "https://luchoescobedo.com/blog/",
+    "description": "Personal essays on discipline, identity, leadership, and the person behind the work.",
+    "inLanguage": "en",
+    "author": { "@id": "https://luchoescobedo.com/#person" }
+  }
   ]
 }
 </script>
