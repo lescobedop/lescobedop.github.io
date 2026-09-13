@@ -9,7 +9,18 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "post-exclusions-apply",
+  },{id: "post-what-kept-making-room",
+      
+        title: "What Kept Making Room",
+      
+      description: "On pruning, neglect, and the difference between a thing that dies and a thing that simply waits.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/What-Kept-Making-Room/";
+        
+      },
+    },{id: "post-exclusions-apply",
       
         title: "Exclusions Apply",
       
