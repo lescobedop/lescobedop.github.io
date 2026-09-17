@@ -9,7 +9,18 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "post-what-kept-making-room",
+  },{id: "post-the-authorship-of-a-forecast",
+      
+        title: "The Authorship of a Forecast",
+      
+      description: "Serious estimates of what AI will do to the global economy span two orders of magnitude, and who produced each number explains more than the number itself.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/institutional-intelligence/2026/authorship-of-a-forecast/";
+        
+      },
+    },{id: "post-what-kept-making-room",
       
         title: "What Kept Making Room",
       
