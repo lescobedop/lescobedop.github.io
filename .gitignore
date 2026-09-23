@@ -12,3 +12,5 @@ node_modules/
 vendor
 .idea
 _posts/*institutional-intelligence*
+# Claude Code worktrees should never be committed to the parent repo
+.claude/worktrees/
