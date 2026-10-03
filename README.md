@@ -43,8 +43,9 @@ permalink: /institutional-intelligence/2026/authorship-of-a-forecast/
 ---
 ```
 
-The Wolf's Den: use `layout: post` and `categories: reflections`, and omit `permalink`
-(the URL becomes `/blog/:year/:title/`).
+The Wolf's Den: use `layout: post`, `categories: reflections`, and an explicit lowercase
+`permalink: /blog/YYYY/title-in-lowercase/`. Without it the URL copies the filename's casing
+(`/blog/2026/What-Kept-Making-Room/`). Do not change the URL of a post that is already published.
 
 Optional: `og_image: /assets/img/…` overrides the default 1200×630 preview image (`assets/img/og-card.jpg`).
 
