@@ -18,14 +18,7 @@ layout: null
 <link rel="canonical" href="https://luchoescobedo.com">
 <link rel="sitemap" type="application/xml" href="https://luchoescobedo.com/sitemap.xml">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8J7JKD12YC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-8J7JKD12YC');
-</script>
+{% include analytics.liquid content_group="Home" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
