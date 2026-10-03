@@ -29,8 +29,10 @@
 | `language_switch` | EN/ES toggle | `language` |
 | `article_progress` | 25/50/75/100% of the essay body seen | `article_title`, `percent_scrolled`, `active_seconds`, `word_count`, `published_date` |
 | `article_read` | Reached 90% of the essay **and** active time ≥ a third of expected reading time (230 wpm, 20 s floor) | `article_title`, `active_seconds`, `word_count`, `published_date` |
+| `page_not_found` | Someone lands on a missing address (404 page) | `missing_path`, `referrer_url` |
 
-All events carry `content_group`: `Home`, `Institutional Intelligence` or `Wolf's Den`.
+All events carry `content_group`: `Home`, `Institutional Intelligence`, `Wolf's Den` or `404`.
+Broken inbound links without extra setup: Explorations → filter Content group = `404`, dimensions Page path + Page referrer.
 `link_location` is the page region: `nav`, `hero`, `ventures`, `career`, `contact`, `essay_list`, `related_essays`, `article_body`, `back_link`, `footer`.
 Add `?ga_debug=1` to any URL to see its hits in GA4 → Admin → DebugView.
 
@@ -40,14 +42,22 @@ Add `?ga_debug=1` to any URL to see its hits in GA4 → Admin → DebugView.
 - **Decision:** Remove unused al-folio template material (placeholder projects, theme docs and screenshots, Docker workflows, issue templates). LICENSE and the sample bibliography stay.
 - **Decision:** Kipu role is "Founder and Partner" (search description keeps "Founder" for length).
 - **Decision:** Keep existing mixed-case Wolf's Den URLs; new Wolf's Den posts use an explicit lowercase `permalink`.
+- **Decision (2026-10-03, second pass):** CV is shared by email only. Removed `assets/pdf/LEscobedo_Resume.pdf` and `assets/json/resume.json`; the "Request my CV" mailto stays.
+  - Unused theme assets (~92 MB: photos, fonts, demo pages, theme CSS/JS) excluded from the build; the site publishes 8 asset files (~0.9 MB total site).
+  - 404 page rebuilt in the site design with GA (`content_group` 404, `page_not_found` event), noindex, no auto-redirect.
+  - Deploy workflow on Ruby 3.3 (3.1 is end-of-life).
 
 ---
 
 ## Blockers or Decisions Needed
 
-- [ ] **GA4 Admin → Custom definitions:** register event-scoped custom dimensions `article_title`, `link_location`, `link_domain`, `link_text`, `contact_subject`, `percent_scrolled`, `language`, and custom metrics `active_seconds` (seconds), `list_position`. Parameters are collected without this but cannot be used in reports until registered; registration is not retroactive.
+- [x] 2026-10-03 **GA4 Admin → Custom definitions:** register event-scoped custom dimensions `article_title`, `link_location`, `link_domain`, `link_text`, `contact_subject`, `percent_scrolled`, `language`, and custom metrics `active_seconds` (seconds), `list_position`. Parameters are collected without this but cannot be used in reports until registered; registration is not retroactive.
 - [ ] **GA4 Admin → Events:** mark `contact_click` and `article_read` as key events.
-- [ ] After deploy, Search Console: resubmit `sitemap.xml` and request indexing for the newest essays (they now carry canonical + BlogPosting markup).
+- [x] 2026-10-03 (correct property `https://luchoescobedo.com/`) Search Console: resubmit `sitemap.xml` and request indexing for the newest essays (they now carry canonical + BlogPosting markup).
+- [ ] Optional: register `missing_path` and `referrer_url` as event-scoped custom dimensions for the 404 report.
+- [ ] Remove stray Search Console properties (www / http / Netlify) to avoid submitting to the wrong one again.
+- [ ] The old CV PDF (Miami address, US phone) is removed from the repo and site but remains in git history of this public repo. Purging it needs a history rewrite and force-push of `main` and `gh-pages`; decision pending.
+- [ ] Add in-repo copies of personal-brand.md and master-voice-principles.md so cloud sessions can follow voice rules (CLAUDE.md points to local Mac paths).
 
 ---
 
