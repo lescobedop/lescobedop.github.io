@@ -1,0 +1,59 @@
+{%- comment -%}
+  Search and link-preview metadata for essay pages.
+  Usage: {% include post-meta.liquid series_name="Institutional Intelligence" series_url="/institutional-intelligence/" %}
+  The series and person @ids match the JSON-LD graph in index.html.
+{%- endcomment -%}
+{%- assign post_url = page.url | prepend: site.url -%}
+{%- assign series_url = include.series_url | prepend: site.url -%}
+{%- assign og_image = page.og_image | default: "/assets/img/og-card.jpg" | prepend: site.url -%}
+{%- assign post_desc = page.description | default: site.description | strip_newlines -%}
+<link rel="canonical" href="{{ post_url }}">
+<link rel="alternate" type="application/atom+xml" title="Lucho Escobedo" href="{{ '/feed.xml' | prepend: site.url }}">
+<meta name="author" content="Lucho Escobedo">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Lucho Escobedo">
+<meta property="og:description" content="{{ post_desc | escape }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+<meta property="article:section" content="{{ include.series_name | escape }}">
+{%- for tag in page.tags %}
+<meta property="article:tag" content="{{ tag | escape }}">
+{%- endfor %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | escape }}">
+<meta name="twitter:description" content="{{ post_desc | escape }}">
+<meta name="twitter:image" content="{{ og_image }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": {{ post_url | append: "#article" | jsonify }},
+  "headline": {{ page.title | jsonify }},
+  "description": {{ post_desc | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+  "inLanguage": "en",
+  "wordCount": {{ content | strip_html | number_of_words }},
+  {%- if page.tags.size > 0 %}
+  "keywords": {{ page.tags | join: ", " | jsonify }},
+  {%- endif %}
+  "image": {{ og_image | jsonify }},
+  "url": {{ post_url | jsonify }},
+  "mainEntityOfPage": {{ post_url | jsonify }},
+  "author": {
+    "@type": "Person",
+    "@id": "https://luchoescobedo.com/#person",
+    "name": "Lucho Escobedo",
+    "url": "https://luchoescobedo.com"
+  },
+  "publisher": { "@id": "https://luchoescobedo.com/#person" },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "@id": {{ series_url | append: "#series" | jsonify }},
+    "name": {{ include.series_name | jsonify }},
+    "url": {{ series_url | jsonify }}
+  }
+}
+</script>
