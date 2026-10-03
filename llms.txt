@@ -20,7 +20,7 @@
 ## Writing
 
 ### Institutional Intelligence
-Weekly column on AI, strategy, and organizational
+Column on AI, strategy, and organizational
 decision-making for executives. Written from Peru,
 interpreting global technological shifts through
 a Latin American lens. For investors, CEOs, policy
@@ -29,14 +29,26 @@ responsibility over the region. English only.
 
 - [Institutional Intelligence](https://luchoescobedo.com/institutional-intelligence/):
   Column index and all published essays.
-- [The New Commodity](https://luchoescobedo.com/institutional-intelligence/2026/the-new-commodity/):
-  Latin America holds the copper and lithium the
-  AI buildout requires. The structural position
-  it is being assigned is one it has held before.
-- [The Clarity Gap](https://luchoescobedo.com/institutional-intelligence/2026/the-clarity-gap/):
-  Launch essay. Why Latin America's place in the
-  new technological order turns on clarity rather
-  than access to AI.
+- [The Authorship of a Forecast](https://luchoescobedo.com/institutional-intelligence/2026/authorship-of-a-forecast/) (2026-09-17):
+  Serious estimates of what AI will do to the global economy span two orders of magnitude, and who produced each number explains more than the number itself.
+- [Exclusions Apply](https://luchoescobedo.com/institutional-intelligence/2026/exclusions-apply/) (2026-07-29):
+  Microsoft cut the cost of intelligence by up to ninety percent and raised its spending anyway. A price collapse reaches only what can be replaced.
+- [The New Commodity](https://luchoescobedo.com/institutional-intelligence/2026/the-new-commodity/) (2026-06-29):
+  Latin America holds precisely the reserves the AI buildout requires. The structural position it is being assigned is one it has held before.
+- [Peru and Artificial Intelligence: Fifty Years Compressed](https://luchoescobedo.com/institutional-intelligence/2026/fifty-years-compressed/) (2026-06-01):
+  When speed becomes a form of discipline, institutions are built while the economy moves. Peru is attempting the compression now.
+- [The Strategic Choice](https://luchoescobedo.com/institutional-intelligence/2026/strategic-choice/) (2026-05-10):
+  When governance arrives after infrastructure begins to move, the test is whether strategy becomes action.
+- [The Window of Opportunity](https://luchoescobedo.com/institutional-intelligence/2026/window-of-opportunity/) (2026-04-01):
+  When open-weight AI democratizes access, the region has months to move. The window is closing.
+- [Peru's Position](https://luchoescobedo.com/institutional-intelligence/2026/peru-position/) (2026-03-01):
+  Peru leads in governance and adoption but lags in innovation capacity. The gap is strategic, not regulatory.
+- [Credit, Clarity, and AI](https://luchoescobedo.com/institutional-intelligence/2026/credit-clarity-ai/) (2026-02-01):
+  When algorithms decide who gets credit, clarity is not a regulatory choice. It is the foundation for trust and access.
+- [The Architecture of Power](https://luchoescobedo.com/institutional-intelligence/2026/architecture-of-power/) (2026-01-01):
+  Nvidia's dominance, Intel's acquisition by the U.S. government, and what it means for Latin America's position in the semiconductor value chain.
+- [Institutional Intelligence](https://luchoescobedo.com/institutional-intelligence/2025/inaugural/) (2025-12-01):
+  The region's binding constraint is not technology but clarity. A column concerned with that deficit.
 
 ### The Wolf's Den
 Personal essays on discipline, identity,
@@ -45,12 +57,26 @@ English only.
 
 - [The Wolf's Den](https://luchoescobedo.com/blog/):
   Personal writing archive.
+- [What Kept Making Room](https://luchoescobedo.com/blog/2026/What-Kept-Making-Room/) (2026-09-01):
+  On pruning, neglect, and the difference between a thing that dies and a thing that simply waits.
+- [Pain](https://luchoescobedo.com/blog/2026/Pain/) (2026-05-30):
+  On injury, the easy path of destruction, and what a man builds in the silence instead.
+- [The Shape That Remains](https://luchoescobedo.com/blog/2025/The_Shape_That_Remains/) (2025-10-11):
+  On endurance, refinement, and the slow transformations that define us.
+- [The Way in All Things](https://luchoescobedo.com/blog/2025/The_Way_Is/) (2025-08-28):
+  The quiet discovery that mastery is a transferable way of being.
+- [The Flight Home](https://luchoescobedo.com/blog/2025/The-Flight-home/) (2025-08-04):
+  Tracing the invisible current between movement and meaning.
+- [All Things Change When We Do](https://luchoescobedo.com/blog/2025/On-Change/) (2025-07-18):
+  A personal reflection on change, identity, and the quiet power of internal transformation.
+- [From Solitude to Strength: On Having A Personal Den](https://luchoescobedo.com/blog/2025/The_Wolfs_Den/) (2025-05-06):
+  Reflections on solitude, identity, and the purpose behind The Wolf's Den.
 
 ## Ventures
 
 - [Kipu](https://kipuai.com): Data and AI consulting
   firm serving Latin America and the Caribbean.
-  Partner: Lucho Escobedo.
+  Founder and Partner: Lucho Escobedo.
 - [Green Street Holdings](https://greenstreet-holding.com):
   Real estate and small business acquisition firm.
   Founder and Managing Partner: Lucho Escobedo.
