@@ -19,6 +19,7 @@ The public pages are hand-built and bypass the al-folio theme layouts (`layout: 
 | `_layouts/post.liquid` | Wolf's Den essay page |
 | `_includes/post-meta.liquid` | Essay canonical, Open Graph, Twitter card and BlogPosting JSON-LD |
 | `_includes/analytics.liquid` | GA4 tag and per-page configuration |
+| `_includes/newsletter-signup.liquid` | Institutional Intelligence email signup (Buttondown); hidden until `buttondown.username` is set |
 | `assets/js/le-analytics.js` | GA4 click and reading events (schema in `SESSION-STATE.md`) |
 | `llms.txt` | Summary for AI assistants; essay lists are generated from `_posts/` |
 | `blog/2025/*/index.html` | Redirects from old lowercase Wolf's Den URLs |
@@ -51,9 +52,15 @@ Optional: `og_image: /assets/img/…` overrides the default 1200×630 preview im
 
 The index pages, homepage writing section, RSS feed, sitemap and `llms.txt` pick up the new post automatically.
 
+## Newsletter
+
+Institutional Intelligence essays end with an email signup form (also on the series index) once
+`buttondown.username` is set in `_config.yml`. Buttondown drafts one email per new essay from
+`/feed/institutional-intelligence.xml` (RSS-to-email automation, set to draft); review and send it there.
+
 ## Local development
 
-Requires Ruby 3.1+ and Bundler.
+Requires Ruby 3.3 and Bundler.
 
 ```bash
 bundle install
