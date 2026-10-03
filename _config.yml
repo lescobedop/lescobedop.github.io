@@ -230,11 +230,38 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts"]
+include: ["_pages"]
 # Single list: YAML keeps only the last `exclude:` key, so a second one silently
 # replaces this and publishes internal files.
 exclude:
   - assets/jupyter/blog.ipynb
+  # Theme assets no page uses. The hand-built pages need only the favicons,
+  # hero-portrait.*, og-card.jpg and js/le-analytics.js.
+  - assets/audio/
+  - assets/bibliography/
+  - assets/css/
+  - assets/fonts/
+  - assets/html/
+  - assets/json/
+  - assets/jupyter/
+  - assets/pdf/
+  - assets/plotly/
+  - assets/webfonts/
+  - assets/js/[!l]*
+  - assets/js/leaflet*
+  - assets/js/distillpub/
+  - assets/js/search/
+  - assets/img/[0-9]*
+  - assets/img/CBurga*
+  - assets/img/Inca_Quipu*
+  - assets/img/JEscobedo*
+  - assets/img/bjjnearme*
+  - assets/img/gsh/
+  - assets/img/kipu_consulting*
+  - assets/img/prof_pic*
+  - assets/img/publication_preview/
+  - assets/img/samurai_face*
+  - assets/img/template_error*
   - bin/
   - CLAUDE.md
   - docs/
@@ -680,9 +707,7 @@ third_party_libraries:
 # Get external JSON data
 # -----------------------------------------------------------------------------
 
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
+jekyll_get_json: []
 
 jsonresume:
   - basics
