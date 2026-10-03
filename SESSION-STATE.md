@@ -37,6 +37,9 @@ Add `?ga_debug=1` to any URL to see its hits in GA4 → Admin → DebugView.
 - **Decision:** Stop publishing internal files and give essays full search metadata (commit "Stop publishing internal files…").
   - **Rationale:** Three `exclude:` keys in `_config.yml` meant only the last applied; CLAUDE.md, this file, the SEO audit and ADRs were public. Essays lacked canonical, preview image and structured data.
   - **Also:** removed failing duplicate `deploy.yml`; removed Medium feed dependency; hero photo moved out of inline base64; `llms.txt` generated from posts; redirect stubs out of sitemap; README rewritten for this site.
+- **Decision:** Remove unused al-folio template material (placeholder projects, theme docs and screenshots, Docker workflows, issue templates). LICENSE and the sample bibliography stay.
+- **Decision:** Kipu role is "Founder and Partner" (search description keeps "Founder" for length).
+- **Decision:** Keep existing mixed-case Wolf's Den URLs; new Wolf's Den posts use an explicit lowercase `permalink`.
 
 ---
 
@@ -45,7 +48,6 @@ Add `?ga_debug=1` to any URL to see its hits in GA4 → Admin → DebugView.
 - [ ] **GA4 Admin → Custom definitions:** register event-scoped custom dimensions `article_title`, `link_location`, `link_domain`, `link_text`, `contact_subject`, `percent_scrolled`, `language`, and custom metrics `active_seconds` (seconds), `list_position`. Parameters are collected without this but cannot be used in reports until registered; registration is not retroactive.
 - [ ] **GA4 Admin → Events:** mark `contact_click` and `article_read` as key events.
 - [ ] After deploy, Search Console: resubmit `sitemap.xml` and request indexing for the newest essays (they now carry canonical + BlogPosting markup).
-- [ ] Decide on leftover al-folio template material (placeholder projects 5–9, 11, 12; CUSTOMIZE/FAQ/INSTALL/CONTRIBUTING; readme_preview/; Docker workflows; ISSUE_TEMPLATE). None of it is published.
 
 ---
 
