@@ -1,3 +1,8 @@
+---
+permalink: /llms.txt
+layout: null
+sitemap: false
+---
 # Lucho Escobedo
 
 > Data and AI executive with 20 years designing and
@@ -20,37 +25,37 @@
 ## Writing
 
 ### Institutional Intelligence
-Weekly column on AI, strategy, and organizational
+Column on AI, strategy, and organizational
 decision-making for executives. Written from Peru,
 interpreting global technological shifts through
 a Latin American lens. For investors, CEOs, policy
 makers, and founders with institutional
 responsibility over the region. English only.
 
-- [Institutional Intelligence](https://luchoescobedo.com/institutional-intelligence/):
+- [Institutional Intelligence]({{ site.url }}/institutional-intelligence/):
   Column index and all published essays.
-- [The New Commodity](https://luchoescobedo.com/institutional-intelligence/2026/the-new-commodity/):
-  Latin America holds the copper and lithium the
-  AI buildout requires. The structural position
-  it is being assigned is one it has held before.
-- [The Clarity Gap](https://luchoescobedo.com/institutional-intelligence/2026/the-clarity-gap/):
-  Launch essay. Why Latin America's place in the
-  new technological order turns on clarity rather
-  than access to AI.
+{%- for post in site.categories["institutional-intelligence"] %}
+- [{{ post.title }}]({{ post.url | prepend: site.url }}) ({{ post.date | date: "%Y-%m-%d" }}):
+  {{ post.description | strip_newlines }}
+{%- endfor %}
 
 ### The Wolf's Den
 Personal essays on discipline, identity,
 leadership, and the person behind the work.
 English only.
 
-- [The Wolf's Den](https://luchoescobedo.com/blog/):
+- [The Wolf's Den]({{ site.url }}/blog/):
   Personal writing archive.
+{%- for post in site.categories["reflections"] %}
+- [{{ post.title }}]({{ post.url | prepend: site.url }}) ({{ post.date | date: "%Y-%m-%d" }}):
+  {{ post.description | strip_newlines }}
+{%- endfor %}
 
 ## Ventures
 
 - [Kipu](https://kipuai.com): Data and AI consulting
   firm serving Latin America and the Caribbean.
-  Partner: Lucho Escobedo.
+  Founder and Partner: Lucho Escobedo.
 - [Green Street Holdings](https://greenstreet-holding.com):
   Real estate and small business acquisition firm.
   Founder and Managing Partner: Lucho Escobedo.
