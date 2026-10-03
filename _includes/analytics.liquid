@@ -1,0 +1,27 @@
+{%- comment -%}
+  GA4 tag + custom event tracking, shared by every hand-built layout.
+  Usage: {% include analytics.liquid content_group="Institutional Intelligence" %}
+  Pass article=true on post layouts to enable read-depth tracking.
+{%- endcomment -%}
+{%- if site.enable_google_analytics and site.google_analytics -%}
+{%- assign ga_group = include.content_group | default: "Site" -%}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  window.leAnalytics = {
+    contentGroup: {{ ga_group | jsonify }}{% if include.article %},
+    article: {
+      title: {{ page.title | jsonify }},
+      published: {{ page.date | date: "%Y-%m-%d" | jsonify }},
+      words: {{ content | strip_html | number_of_words }}
+    }{% endif %}
+  };
+  var leConfig = { content_group: window.leAnalytics.contentGroup };
+  // ?ga_debug=1 routes this browser's hits to GA4 DebugView for verification.
+  if (/[?&]ga_debug=1/.test(location.search)) leConfig.debug_mode = true;
+  gtag('config', {{ site.google_analytics | jsonify }}, leConfig);
+</script>
+<script defer src="{{ '/assets/js/le-analytics.js' | relative_url }}"></script>
+{%- endif -%}

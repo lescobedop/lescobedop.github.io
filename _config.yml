@@ -8,12 +8,12 @@ middle_name:
 last_name: Escobedo
 email: contact@luchoescobedo.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Lucho Escobedo is an executive, entrepreneur, and investor. Fulbright Scholar. PhD, University of Illinois. McKinsey, ADP, REEF. Founder of Kipu and Green Street Holdings. Based in Lima, Peru.
+  Corporate Director of Data at Yanbal. Founder: Kipu (AI strategy), Green Street Holdings (acquisitions), Prime Deals (commerce). 20 years scaling data & AI systems at McKinsey, REEF, ADP. PhD Geospatial Economics. Based in Lima, Peru.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: data, technology, entrepreneurship, consulting # add your own keywords or leave empty
+keywords: data, artificial intelligence, data strategy, AI strategy, Latin America, Peru, entrepreneurship # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.png # favicon image (relative to /assets/img/)
 
@@ -26,15 +26,6 @@ sitemap:
   priority: 0.7
   changefreq: weekly
 
-exclude:
-  - /vendor/
-  - .gitignore
-  - README.md
-  - CONTRIBUTING.md
-  - CUSTOMIZE.md
-  - FAQ.md
-  - INSTALL.md
-  - LICENSE
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
 
@@ -178,15 +169,15 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/feed/@luchoescobedo
+external_sources: []
+#  - name: medium.com
+#    rss_url: https://medium.com/feed/@luchoescobedo
 #  - name: Google Blog
 #    posts:
 #      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
@@ -240,24 +231,28 @@ kramdown:
 
 # Includes & excludes
 include: ["_pages", "_scripts"]
+# Single list: YAML keeps only the last `exclude:` key, so a second one silently
+# replaces this and publishes internal files.
 exclude:
+  - assets/jupyter/blog.ipynb
   - bin/
-  - CONTRIBUTING.md
-  - CUSTOMIZE.md
+  - CLAUDE.md
+  - docs/
+  - node_modules/
+  - requirements.txt
+  - SEO-AUDIT-*.md
+  - SESSION-STATE.md
   - Dockerfile
   - docker-compose.yml
   - docker-compose-slim.yml
-  - FAQ.md
   - Gemfile
   - Gemfile.lock
-  - INSTALL.md
   - LICENSE
   - lighthouse_results/
   - package.json
   - package-lock.json
   - purgecss.config.js
   - README.md
-  - readme_preview/
   - vendor
 keep_files:
   - CNAME
@@ -702,6 +697,3 @@ jsonresume:
   - languages
   - interests
   - references
-
-exclude:
-  - assets/jupyter/blog.ipynb
