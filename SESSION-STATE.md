@@ -52,12 +52,15 @@ Add `?ga_debug=1` to any URL to see its hits in GA4 → Admin → DebugView.
 ## Blockers or Decisions Needed
 
 - [x] 2026-10-03 **GA4 Admin → Custom definitions:** register event-scoped custom dimensions `article_title`, `link_location`, `link_domain`, `link_text`, `contact_subject`, `percent_scrolled`, `language`, and custom metrics `active_seconds` (seconds), `list_position`. Parameters are collected without this but cannot be used in reports until registered; registration is not retroactive.
-- [ ] **GA4 Admin → Events:** mark `contact_click` and `article_read` as key events.
+- [x] 2026-10-03 **GA4 Admin → Events:** mark `contact_click` and `article_read` as key events.
 - [x] 2026-10-03 (correct property `https://luchoescobedo.com/`) Search Console: resubmit `sitemap.xml` and request indexing for the newest essays (they now carry canonical + BlogPosting markup).
 - [ ] Optional: register `missing_path` and `referrer_url` as event-scoped custom dimensions for the 404 report.
 - [ ] Remove stray Search Console properties (www / http / Netlify) to avoid submitting to the wrong one again.
-- [ ] The old CV PDF (Miami address, US phone) is removed from the repo and site but remains in git history of this public repo. Purging it needs a history rewrite and force-push of `main` and `gh-pages`; decision pending.
-- [ ] Add in-repo copies of personal-brand.md and master-voice-principles.md so cloud sessions can follow voice rules (CLAUDE.md points to local Mac paths).
+- [x] 2026-10-03 CV purged from git history: `git filter-repo` removed `*LEscobedo_Resume*` (three versions) and `assets/json/resume.json` from `main`, `gh-pages`, `prod-backup`; force-pushed. Site content unchanged. Re-clone any older local copy; never push from one.
+- [x] 2026-10-03 Netlify project `luchoescobedo` deleted (it held a June 2 copy of the site). DNS is at GoDaddy and points to GitHub Pages; Netlify never served the domain after the migration.
+- [ ] GitHub Support: ask to remove PR refs `refs/pull/1/head`, `refs/pull/2/head` and cached views; PR #1's snapshot still serves the old CV (support.github.com/contact/private-information).
+- [ ] Newsletter (Buttondown, RSS-to-email draft from an Institutional Intelligence feed): waiting on account + scope decision.
+- [ ] Voice rules for cloud sessions: CLAUDE.md points to local Mac paths. Option A: point to private repo `lescobedop/second-brain` (if it is my-brain) and attach it to writing sessions. Option B: public-safe summary in `docs/voice.md`. Decision pending.
 
 ---
 
