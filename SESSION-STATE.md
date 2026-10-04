@@ -31,6 +31,8 @@
 | `article_read` | Reached 90% of the essay **and** active time ≥ a third of expected reading time (230 wpm, 20 s floor) | `article_title`, `active_seconds`, `word_count`, `published_date` |
 | `page_not_found` | Someone lands on a missing address (404 page) | `missing_path`, `referrer_url` |
 | `newsletter_signup` | Email signup form submitted | `link_location` (`essay_end`, `essay_index`) |
+| `newsletter_pending` | Buttondown redirects to `/newsletter/check-email/` after signup | — |
+| `newsletter_confirmed` | Buttondown redirects to `/newsletter/confirmed/` after the subscriber confirms (best key event for subscriber growth) | — |
 
 All events carry `content_group`: `Home`, `Institutional Intelligence`, `Wolf's Den` or `404`.
 Broken inbound links without extra setup: Explorations → filter Content group = `404`, dimensions Page path + Page referrer.
@@ -60,7 +62,7 @@ Add `?ga_debug=1` to any URL to see its hits in GA4 → Admin → DebugView.
 - [x] 2026-10-03 CV purged from git history: `git filter-repo` removed `*LEscobedo_Resume*` (three versions) and `assets/json/resume.json` from `main`, `gh-pages`, `prod-backup`; force-pushed. Site content unchanged. Re-clone any older local copy; never push from one.
 - [x] 2026-10-03 Netlify project `luchoescobedo` deleted (it held a June 2 copy of the site). DNS is at GoDaddy and points to GitHub Pages; Netlify never served the domain after the migration.
 - [x] 2026-10-03 GitHub Support request sent: remove PR refs `refs/pull/1/head`, `refs/pull/2/head` and cached views; PR #1's snapshot still serves the old CV (support.github.com/contact/private-information).
-- [ ] Newsletter: code is in place and hidden. To launch: create the Buttondown account, set `buttondown.username` in `_config.yml`, then in Buttondown → Automations add RSS-to-email from `https://luchoescobedo.com/feed/institutional-intelligence.xml` as **draft**. Mark `newsletter_signup` as a GA key event (its location uses the already registered `link_location`).
+- [ ] Newsletter: code is in place and hidden. To launch: create the Buttondown account, set `buttondown.username` in `_config.yml`, then in Buttondown → Automations add RSS-to-email from `https://luchoescobedo.com/feed/institutional-intelligence.xml` as **draft**. In Buttondown → Settings → Subscribing → Redirects set *After subscribing* `https://luchoescobedo.com/newsletter/check-email/` and *After confirming* `https://luchoescobedo.com/newsletter/confirmed/`. Mark `newsletter_confirmed` as a GA key event.
 - [x] 2026-10-03 Voice rules: my-brain = private repo `lescobedop/second-brain`. CLAUDE.md now gives repo-relative paths; select that repo with this one in writing sessions. Never copy its contents here (public repo).
 
 ---
