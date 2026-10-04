@@ -190,7 +190,7 @@ external_sources: []
 # Institutional Intelligence email signup (_includes/newsletter-signup.liquid).
 # Forms stay hidden until username is set.
 buttondown:
-  username:
+  username: luchoescobedo
 
 # Extra feed with Institutional Intelligence only, at /feed/institutional-intelligence.xml,
 # used by Buttondown to draft one email per new essay. /feed.xml keeps both series.
