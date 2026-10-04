@@ -8,6 +8,7 @@
 //   language_switch  EN/ES toggle
 //   article_progress read-depth milestones (25/50/75/100% of the article body)
 //   article_read     reader reached the end AND spent plausible reading time
+//   newsletter_signup email signup form submitted (Buttondown)
 (function () {
   "use strict";
   if (typeof window.gtag !== "function") return;
@@ -101,6 +102,13 @@
     },
     true
   );
+
+  // ---- Newsletter -----------------------------------------------------------
+  document.addEventListener("submit", function (e) {
+    var form = e.target;
+    if (!(form instanceof Element) || !form.classList.contains("nl-form")) return;
+    send("newsletter_signup", { link_location: form.dataset.location || "page" });
+  });
 
   // ---- Article reading ----------------------------------------------------
   var article = cfg.article;

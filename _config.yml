@@ -187,6 +187,17 @@ external_sources: []
 # Newsletter
 # -----------------------------------------------------------------------------
 
+# Institutional Intelligence email signup (_includes/newsletter-signup.liquid).
+# Forms stay hidden until username is set.
+buttondown:
+  username:
+
+# Extra feed with Institutional Intelligence only, at /feed/institutional-intelligence.xml,
+# used by Buttondown to draft one email per new essay. /feed.xml keeps both series.
+feed:
+  categories:
+    - institutional-intelligence
+
 newsletter:
   enabled: false
   endpoint: # your loops endpoint (e.g., https://app.loops.so/api/newsletter-form/YOUR-ENDPOINT)

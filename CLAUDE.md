@@ -8,18 +8,23 @@
 
 ## Context Files (Always Load When Working Here)
 
+`my-brain` is the private GitHub repo **`lescobedop/second-brain`**. Paths below are relative to its root.
+- **On the Mac:** `/Users/lescobedo/Documents/my-brain/<path>`
+- **In cloud sessions:** select `lescobedop/second-brain` alongside this repo when starting the session (or attach it), then read `<path>` from its checkout.
+- **Never copy its contents into this repo.** This repo is public; brand and positioning notes stay private.
+
 - `README.md` — Site architecture, Jekyll setup, deployment, build process
-- `/Users/lescobedo/Documents/my-brain/02-identity/personal-brand.md` — Personal brand identity, positioning, audience, voice
-- `/Users/lescobedo/Documents/my-brain/03-voices/master-voice-principles.md` — Voice rules for all writing
+- `my-brain/02-identity/personal-brand.md` — Personal brand identity, positioning, audience, voice
+- `my-brain/03-voices/master-voice-principles.md` — Voice rules for all writing
 - `ADR-0002` (in my-brain) — Schema optimization + GSC setup for portfolio discoverability
 
 ---
 
 ## Cross-Functional Links
 
-**Brand voice:** When writing new content, load `/Users/lescobedo/Documents/my-brain/02-identity/personal-brand.md` to ensure consistency with how you present yourself.
+**Brand voice:** When writing new content, load `my-brain/02-identity/personal-brand.md` to ensure consistency with how you present yourself.
 
-**Architecture decisions:** When making schema, GA/GSC, or deployment decisions, link to `/Users/lescobedo/Documents/my-brain/00-system/decisions/adr_merlin-dashboard-migration.md` for precedent on tech modernization (portfolio is similar size/complexity to dashboard).
+**Architecture decisions:** When making schema, GA/GSC, or deployment decisions, link to `my-brain/00-system/decisions/adr_merlin-dashboard-migration.md` for precedent on tech modernization (portfolio is similar size/complexity to dashboard).
 
 ---
 
@@ -57,7 +62,7 @@
 
 ## Related Context
 
-**Personal brand:** `/Users/lescobedo/Documents/my-brain/02-identity/personal-brand.md` (voice, positioning, audience)
-**Writing voice:** `/Users/lescobedo/Documents/my-brain/03-voices/master-voice-principles.md` (register, tone, style)
-**Portfolio ADR:** `/Users/lescobedo/Documents/my-brain/00-system/decisions/ADR-0002-optimize-schema-and-gsc-indexation.md` (schema strategy)
-**Venture context:** `/Users/lescobedo/Documents/my-brain/04-brands/portfolio-overview.md` (how portfolio fits your ecosystem)
+**Personal brand:** `my-brain/02-identity/personal-brand.md` (voice, positioning, audience)
+**Writing voice:** `my-brain/03-voices/master-voice-principles.md` (register, tone, style)
+**Portfolio ADR:** `my-brain/00-system/decisions/ADR-0002-optimize-schema-and-gsc-indexation.md` (schema strategy)
+**Venture context:** `my-brain/04-brands/portfolio-overview.md` (how portfolio fits your ecosystem)

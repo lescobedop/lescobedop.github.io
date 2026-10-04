@@ -30,6 +30,9 @@
 | `article_progress` | 25/50/75/100% of the essay body seen | `article_title`, `percent_scrolled`, `active_seconds`, `word_count`, `published_date` |
 | `article_read` | Reached 90% of the essay **and** active time ≥ a third of expected reading time (230 wpm, 20 s floor) | `article_title`, `active_seconds`, `word_count`, `published_date` |
 | `page_not_found` | Someone lands on a missing address (404 page) | `missing_path`, `referrer_url` |
+| `newsletter_signup` | Email signup form submitted | `link_location` (`essay_end`, `essay_index`) |
+| `newsletter_pending` | Buttondown redirects to `/newsletter/check-email/` after signup | — |
+| `newsletter_confirmed` | Buttondown redirects to `/newsletter/confirmed/` after the subscriber confirms (best key event for subscriber growth) | — |
 
 All events carry `content_group`: `Home`, `Institutional Intelligence`, `Wolf's Den` or `404`.
 Broken inbound links without extra setup: Explorations → filter Content group = `404`, dimensions Page path + Page referrer.
@@ -52,12 +55,15 @@ Add `?ga_debug=1` to any URL to see its hits in GA4 → Admin → DebugView.
 ## Blockers or Decisions Needed
 
 - [x] 2026-10-03 **GA4 Admin → Custom definitions:** register event-scoped custom dimensions `article_title`, `link_location`, `link_domain`, `link_text`, `contact_subject`, `percent_scrolled`, `language`, and custom metrics `active_seconds` (seconds), `list_position`. Parameters are collected without this but cannot be used in reports until registered; registration is not retroactive.
-- [ ] **GA4 Admin → Events:** mark `contact_click` and `article_read` as key events.
+- [x] 2026-10-03 **GA4 Admin → Events:** mark `contact_click` and `article_read` as key events.
 - [x] 2026-10-03 (correct property `https://luchoescobedo.com/`) Search Console: resubmit `sitemap.xml` and request indexing for the newest essays (they now carry canonical + BlogPosting markup).
 - [ ] Optional: register `missing_path` and `referrer_url` as event-scoped custom dimensions for the 404 report.
 - [ ] Remove stray Search Console properties (www / http / Netlify) to avoid submitting to the wrong one again.
-- [ ] The old CV PDF (Miami address, US phone) is removed from the repo and site but remains in git history of this public repo. Purging it needs a history rewrite and force-push of `main` and `gh-pages`; decision pending.
-- [ ] Add in-repo copies of personal-brand.md and master-voice-principles.md so cloud sessions can follow voice rules (CLAUDE.md points to local Mac paths).
+- [x] 2026-10-03 CV purged from git history: `git filter-repo` removed `*LEscobedo_Resume*` (three versions) and `assets/json/resume.json` from `main`, `gh-pages`, `prod-backup`; force-pushed. Site content unchanged. Re-clone any older local copy; never push from one.
+- [x] 2026-10-03 Netlify project `luchoescobedo` deleted (it held a June 2 copy of the site). DNS is at GoDaddy and points to GitHub Pages; Netlify never served the domain after the migration.
+- [x] 2026-10-03 GitHub Support request sent: remove PR refs `refs/pull/1/head`, `refs/pull/2/head` and cached views; PR #1's snapshot still serves the old CV (support.github.com/contact/private-information).
+- [ ] Newsletter: code is in place and hidden. To launch: create the Buttondown account, set `buttondown.username` in `_config.yml`, send each new essay by hand from Buttondown (free plan; RSS-to-email needs the $9/mo Basic plan and can use `https://luchoescobedo.com/feed/institutional-intelligence.xml` later). In Buttondown → Settings → Subscribing → Redirects set *After subscribing* `https://luchoescobedo.com/newsletter/check-email/` and *After confirming* `https://luchoescobedo.com/newsletter/confirmed/`. Mark `newsletter_confirmed` as a GA key event.
+- [x] 2026-10-03 Voice rules: my-brain = private repo `lescobedop/second-brain`. CLAUDE.md now gives repo-relative paths; select that repo with this one in writing sessions. Never copy its contents here (public repo).
 
 ---
 
