@@ -206,7 +206,31 @@ footer{background:var(--black);border-top:1px solid var(--mid);color:var(--dim);
 
   </article>
 
-  
+  <style>
+.nl{margin-top:4rem;padding:2rem;border:1px solid var(--mid);background:var(--charcoal)}
+.nl-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:.6rem}
+.nl h2{font-family:var(--serif);font-size:1.45rem;line-height:1.15;color:var(--silver);margin-bottom:.5rem;font-weight:400}
+.nl p{font-size:.88rem;color:var(--dim);line-height:1.6;margin-bottom:1.25rem;max-width:520px}
+.nl-form{display:flex;gap:.6rem;flex-wrap:wrap}
+.nl-form input[type=email]{flex:1 1 240px;min-width:0;background:var(--black);border:1px solid var(--mid);color:var(--silver);font-family:var(--sans);font-size:.9rem;padding:.8rem 1rem}
+.nl-form input[type=email]:focus{outline:none;border-color:var(--gold)}
+.nl-form button{background:var(--gold);border:1px solid var(--gold);color:var(--black);font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.8rem 1.4rem;cursor:pointer}
+.nl-form button:hover{background:var(--gold-hi);border-color:var(--gold-hi)}
+.nl-note{font-family:var(--mono);font-size:.6rem;letter-spacing:.04em;color:var(--dim);margin-top:.8rem}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+<aside class="nl" aria-labelledby="nl-title-essay_end">
+  <div class="nl-label">Institutional Intelligence by email</div>
+  <h2 id="nl-title-essay_end">Receive each new essay when it is published.</h2>
+  <p>AI, strategy, and organizational decision-making, read through a Latin American lens. One email per essay, nothing else.</p>
+  <form class="nl-form" action="https://buttondown.com/api/emails/embed-subscribe/luchoescobedo" method="post" target="_blank" data-location="essay_end">
+    <label class="sr-only" for="nl-email-essay_end">Email address</label>
+    <input type="email" name="email" id="nl-email-essay_end" placeholder="name@company.com" autocomplete="email" required>
+    <input type="hidden" name="embed" value="1">
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="nl-note">Confirm by email. Unsubscribe from any issue.</div>
+</aside>
 
   <div class="related-section">
     <p class="related-label">
