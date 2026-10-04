@@ -1,7 +1,7 @@
 ---
 layout: post-ii
 title: "Defined Terms"
-date: 2026-10-15 08:00:00
+date: 2026-10-05 08:00:00
 description: "As many as 90 percent of enterprises are still deploying tools, while the leaders did the work every budget deferred. A restaurant franchise is a recipe to which everyone has agreed."
 tags: [artificial-intelligence, data-governance, pilots, ai-strategy]
 categories: institutional-intelligence
