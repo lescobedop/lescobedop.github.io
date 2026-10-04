@@ -55,8 +55,9 @@ The index pages, homepage writing section, RSS feed, sitemap and `llms.txt` pick
 ## Newsletter
 
 Institutional Intelligence essays end with an email signup form (also on the series index) once
-`buttondown.username` is set in `_config.yml`. Buttondown drafts one email per new essay from
-`/feed/institutional-intelligence.xml` (RSS-to-email automation, set to draft); review and send it there.
+`buttondown.username` is set in `_config.yml`. On Buttondown's free plan each issue is sent by hand:
+Emails → New email, subject = essay title, body = description + link. `/feed/institutional-intelligence.xml`
+is ready for RSS-to-email (paid Basic plan) if that is enabled later.
 Buttondown redirects new subscribers to `/newsletter/check-email/` and, after they confirm, to `/newsletter/confirmed/`
 (both `noindex`, out of the sitemap); the confirmed page fires the GA4 `newsletter_confirmed` event.
 
